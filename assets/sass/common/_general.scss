@@ -27,19 +27,20 @@
 
 .cs_fs_20 {
   font-size: 20px;
-  line-height: 1.3em;
-
-  @media (max-width:575px) {
-    font-size: 18px;
-  }
+  line-height: 1.5em;
+  letter-spacing: -0.4px;
 }
 
+.cs_fs_22 {
+  font-size: 24px;
+  line-height: .909em;
+}
 .cs_fs_24 {
   font-size: 24px;
-  line-height: 1.25em;
+  line-height: normal;
 
   @media (max-width:575px) {
-    font-size: 22px;
+    
   }
 }
 
@@ -54,30 +55,21 @@
 
 }
 
-.cs_fs_46 {
-  font-size: 46px;
-  line-height: 1.28em;
-
-  @media (max-width:1199px) {
-    font-size: 42px;
-  }
-
-  @media (max-width:575px) {
-    font-size: 28px;
-  }
-
+.cs_fs_40 {
+  font-size: 40px;
+  line-height: normal;
 }
 
-.cs_fs_56 {
-  font-size: 56px;
-  line-height: 1.25em;
+.cs_fs_50 {
+  font-size: 50px;
+  line-height: 1.2em;
 
   @media (max-width:991px) {
-    font-size: 46px;
+    
   }
 
   @media (max-width:575px) {
-    font-size: 28px;
+    
   }
 }
 
@@ -95,6 +87,14 @@
 
   @media (max-width:575px) {
     font-size: 30px;
+  }
+}
+.cs_fs_120 {
+  font-size: 120px;
+  line-height: 1.16667em;
+
+  @media (max-width:1399px) {
+    font-size: 100px;
   }
 }
 
@@ -312,11 +312,15 @@
 =========================================================*/
 .cs_btn_style_1 {
   display: inline-flex;
-  padding: 9px 20px;
-  font-weight: 600;
+  padding: 18px 42px 17px;
+  font-size: 20;
+  font-weight: 500;
+  border-radius: 30px;
   border: 0;
   outline: 0;
   font-family: var(--primary-font);
+  color: var(--white-color);
+  background-color: var(--accent-color);
   position: relative;
   overflow: hidden;
 

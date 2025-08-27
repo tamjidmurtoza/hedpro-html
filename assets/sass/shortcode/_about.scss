@@ -1,3 +1,44 @@
 /*==============================================================
   10. About
 ================================================================*/
+.cs_layer_img_box {
+  padding-right: 14%;
+  .cs_layer_img_1 {
+    img{
+      width: 100%;
+    }
+  }
+  .cs_layer_img_2{
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    padding-left: 40%;
+    border-radius: 190px;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+
+    img {
+    border: 10px solid var(--white-color);    
+    }
+  }
+}
+
+.cs_about_wraper {
+  max-width: min(100%, 520px);
+  padding-left: 10px;
+
+  li {
+    position: relative;
+    padding-left: 33px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  .cs_feature_list_icon {
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+  }
+}
