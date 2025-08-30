@@ -28,7 +28,6 @@
 .cs_fs_20 {
   font-size: 20px;
   line-height: 1.5em;
-  letter-spacing: -0.4px;
 }
 
 .cs_fs_22 {
@@ -45,12 +44,11 @@
 }
 
 
-.cs_fs_36 {
-  font-size: 36px;
-  line-height: 1.28em;
+.cs_fs_30 {
+  font-size: 30px;
+  line-height: 1.5em;
 
   @media (max-width:575px) {
-    font-size: 24px;
   }
 
 }
@@ -58,6 +56,10 @@
 .cs_fs_40 {
   font-size: 40px;
   line-height: normal;
+}
+.cs_fs_45 {
+  font-size: 45px;
+  line-height: 1.33em;
 }
 
 .cs_fs_50 {
@@ -95,6 +97,9 @@
 
   @media (max-width:1399px) {
     font-size: 100px;
+  }
+  @media (max-width:1199px) {
+    font-size: 80px;
   }
 }
 
@@ -313,9 +318,10 @@
 .cs_btn_style_1 {
   display: inline-flex;
   padding: 18px 42px 17px;
-  font-size: 20;
+  font-size: 20px;
   font-weight: 500;
   border-radius: 30px;
+  text-wrap: nowrap;
   border: 0;
   outline: 0;
   font-family: var(--primary-font);
@@ -499,43 +505,50 @@
 .cs_gap_y_24 {
   gap: 24px 0;
 }
+.cs_gap_y_30 {
+  gap: 30px 0;
+}
 
 /*===========================================================  
   Rating Component
 =============================================================*/
-.cs_rating,
-.cs_rating_percentage {
+.cs_rating {
   overflow: hidden;
 
   &::before {
     content: '\f005\f005\f005\f005\f005';
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-family: 'Font Awesome 6 Free';
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 18px;
+    // height: 18px;
   }
 }
 
 .cs_rating {
-  max-width: 170px;
+  max-width: 125px;
   height: 26px;
   position: relative;
-  color: var(--accent-color);
-  font-size: 20px;
+  font-size: 16px;
+    color: #F90;
   letter-spacing: 14px;
-}
-
-.cs_rating_percentage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
 
   &::before {
     font-weight: 900;
   }
 }
+
+// .cs_rating_percentage {
+//   // position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+
+//   &::before {
+//     font-weight: 900;
+//   }
+// }
 
 /*===========================================================  
   All Common Animations
@@ -544,6 +557,16 @@
   100% {
     transform: translate(-50%, -50%) scale(1.7);
     opacity: 0;
+  }
+}
+
+@keyframes animo-x {
+    0% {
+        transform: translateX(0);
+    }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-40px);
   }
 }
 

@@ -70,36 +70,39 @@
 
 .cs_pagination.cs_style_1 {
 
-  border-radius: 20px;
   margin: 0 auto;
 
   ul {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: start;
+    gap: 20px;
     list-style: none;
-    background-color: var(--gray-color1);
-    border-radius: 30px;
     margin: 0;
     padding: 0;
   }
 
   li {
-    height: 12px;
-    width: 50px;
-    opacity: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: var(--dark-blue);
-    position: relative;
-    transition: all 0.3s ease;
 
     button {
-      display: none;
+      height: 7px;
+      width: 7px;
+      background-color: transparent;
+      border: 2px solid #010D09;
+      border-radius: 50%;
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      padding: 0;
+      font-size: 0;
     }
 
     &.slick-active {
-      opacity: 1;
+      button {
+        background-color: #010D09;
+      }
     }
   }
 }

@@ -1,3 +1,114 @@
 /*==============================================================
  06. All Footer
 ================================================================*/
+.cs_footer_section_style_1 {
+    background-color: #121212;
+
+    .cs_footer_row {
+        display: flex;
+        gap: 40px 85px;
+    }
+    
+    .cs_footer_col {
+        flex: 1;
+
+        &:first-child {
+            flex: 1.2;
+        }
+
+        &:nth-child(3) {
+            flex: 1.2;
+        }
+        &:last-child {
+            flex: 2.2;
+        }
+    }
+
+    .cs_footer_newsletter {
+        input {
+            background: transparent;
+            width: 300px;
+            height: 60px;
+            border-radius: 999px;
+            border: 1px solid var(--Gray-800, #616670);
+
+            &::placeholder {
+                padding-left: 20px;
+                font-size: 20px;
+                opacity: 0.5;
+            }
+        }
+
+        .cs_btn_style_1 {
+            position: absolute;
+            right: 1px;
+            bottom: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 999px;
+            padding: 0;
+        }
+    }
+
+    .cs_footer_text_widget {
+        p {
+            margin: 30px 0 ;
+            opacity: 0.7;
+        }
+    }
+
+    .cs_footer_widget_menu {
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        } 
+    }
+    .cs_contact_widget {
+            li {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top : 2px;
+                    color: var(--accent-color);
+                }
+                div {
+                    padding-left: 36px;
+                }
+            }
+    }
+
+
+    .cs_footer_bottom_in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 20px 0;
+        opacity: 0.7;
+         border-top: 1px solid rgba(255, 255, 255, 1);
+    }
+    @media (max-width: 1399px) {
+            .cs_footer_row {
+              gap: 60px;
+            }
+        }
+    @media (max-width: 1199px) {
+        .cs_footer_row {
+            flex-wrap: wrap;
+            gap: 60px 80px;
+        }
+        .cs_footer_col {
+             width: calc(50% - 40px);
+            flex: none !important;
+        }
+        
+        .cs_footer_newsletter {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

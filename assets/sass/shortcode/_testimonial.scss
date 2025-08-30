@@ -1,3 +1,76 @@
 /*=============================================================
  20. Testimonials
 ===============================================================*/
+.cs_testimonial_style_1 {
+    .cs_testimonial_header_icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.cs_testimonial_header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.cs_testimonial_body {
+    blockquote {
+        max-width: 572px;
+        letter-spacing: -0.66px;
+        line-height: 1.36364em;
+        font-style: initial;
+    }
+}
+.cs_rating_wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cs_raiting_percentage_in_text{
+        letter-spacing: -0.54px;
+        span {
+            color: #08C16A;
+        }
+    }
+}
+
+}
+.cs_testimonial_thumbnail {
+    position: relative;
+    border-radius:  6px;
+    
+    img {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: '';
+        background-color: var(--accent-color);
+        opacity: 0.2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: inherit;
+    }
+
+    .cs_rating_box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--white-color);
+        position: absolute;
+        bottom: 40px;
+        left: -15%;
+        z-index: 2;
+        padding: 20px 45px 20px 35px;
+        box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 40px;
+        animation: animo-x 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    
+    @media (max-width: 991px) {
+        
+    }
+}
+

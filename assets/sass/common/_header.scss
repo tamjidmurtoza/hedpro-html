@@ -366,5 +366,51 @@
     .cs_menu_toggle {
       display: inline-block;
     }
+
+    .menu-item-has-children {
+      position: relative;
+    }
+    .cs_menu_dropdown_toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+      padding: 18px 24px;
+
+      span {
+        position: relative;
+        display: block;
+        width: 10px;
+        height: 10px;
+
+        &::before ,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 10px;
+          height: 2px;
+          background-color: currentColor;
+          transition: all 0.3s ease;
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+
+      &.active {
+        span {
+          &::after {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+        }
+      }
+    }
   }
 }

@@ -3,26 +3,29 @@
 ================================================================*/
 .cs_accordian_wraper_style_1 {
     max-width: 740px;
-  margin: 0 auto;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
 }
 .cs_accordian.cs_style_1 {
-  padding: 20px 30px;
   margin-bottom: 15px;
 
   .cs_accordian_head {
     position: relative;
+    padding: 20px 70px 20px 30px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--primary-color);
+    letter-spacing: -0.4px;
 
     .cs_accordian_toggle {
       border:  2px solid #001726;
       border-radius: 50%;
       position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30px;
-      height: 30px;
+      right: 30px;
+      top: 27px;
+      width: 18px;
+      height: 18px;
       pointer-events: none;
 
       &::before,
@@ -32,10 +35,13 @@
         width: 60%;
         background-color: #001726;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: all 0.3s ease;
       }
       &::after {
-        transform: rotate(90deg);
+        transform: translate(-50%, -50%) rotate(90deg);
       }
     }
 
@@ -52,7 +58,7 @@
   }
 
   .cs_accordian_body {
-    margin-top: 30px;
+    padding: 0 56px 40px 30px;
     color: #696969;
   }
 
@@ -67,7 +73,7 @@
         &::before,
         &::after {
           background-color: var(--accent-color);
-          transform: rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
         }
       }
     }
@@ -96,7 +102,7 @@
 
     &:nth-child(1) {
       top: 300px;
-      left: 270px;
+      left: 15%;
 
       &::before {
         top: 0px;
@@ -113,12 +119,12 @@
         top: -12px;
         right: -20px;
         bottom: -8px;
-        left: 0px;
+        left: 0;
       }
     }
     &:nth-child(3) {
       bottom: 162px;
-      left: 245px;
+      left: 17%;
 
        &::before {
         top: -14px;
@@ -129,7 +135,7 @@
     }
     &:nth-child(4) {
       top: 300px;
-      right: 340px;
+      right: 15%;
 
        &::before {
         top: -2px;
@@ -140,7 +146,7 @@
     }
     &:nth-child(5) {
       top: 500px;
-      right: 130px;
+      right: 9%;
 
        &::before {
         top: -5px;
@@ -151,7 +157,7 @@
     }
     &:nth-child(6) {
       bottom: 145px;
-      right: 270px;
+      right: 17%;
 
        &::before {
         top: -4px;
@@ -159,6 +165,35 @@
         bottom: -11px;
         left: -14px;
       }
+    }
+  }
+
+  @media (max-width : 1399px) {
+    .cs_avatar {
+      &:nth-child(1) {
+        left: 12%;
+      }
+      &:nth-child(2) {
+        left: 6%;
+      }
+      &:nth-child(3) {
+        left: 11%;
+      }
+      &:nth-child(4) {
+        right: 12%;
+      }
+      &:nth-child(5) {
+        right: 6%;
+      }
+      &:nth-child(6) {
+        right: 11%;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_avatar {
+      display: none;
     }
   }
 }

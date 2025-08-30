@@ -6,7 +6,7 @@
     height: 100%;
     min-height: 600px;
     width: 50vw;
-    margin-left: -10px;
+    margin-left: -16px;
   }
 
   .cs_cta_text {
@@ -41,7 +41,6 @@
 }
 
 @media (min-width: 1400px) {
-
   .cs_cta_style_1,
   .cs_cta_style_2 {
     .container {
@@ -51,13 +50,14 @@
 }
 
 @media (max-width: 991px) {
-
   .cs_cta_style_1,
   .cs_cta_style_2 {
+    .cs_cta_text {
+      padding: 80px 0;
+    }
     .cs_cta_thumbnail {
       width: 100%;
       margin-left: 0;
     }
   }
-
 }
