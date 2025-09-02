@@ -20,7 +20,7 @@
   font-size: 18px;
   line-height: 1.67em;
 
-  @media (max-width:575px) {
+  @media (max-width: 991px) {
     font-size: 16px;
   }
 }
@@ -28,11 +28,19 @@
 .cs_fs_20 {
   font-size: 20px;
   line-height: 1.5em;
+
+  @media (max-width:575px) {
+    font-size: 16px;
+  }
 }
 
 .cs_fs_22 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: .909em;
+
+  @media (max-width:575px) {
+    font-size: 18px;
+  }
 }
 .cs_fs_24 {
   font-size: 24px;
@@ -42,7 +50,6 @@
     
   }
 }
-
 
 .cs_fs_30 {
   font-size: 30px;
@@ -55,51 +62,68 @@
 
 .cs_fs_40 {
   font-size: 40px;
-  line-height: normal;
+  line-height: 1em;
+
+@media (max-width: 1199px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 30px;
+  }
+
 }
 .cs_fs_45 {
   font-size: 45px;
   line-height: 1.33em;
+
+   @media (max-width: 991px) {
+    font-size: 40px;
+  }
 }
 
 .cs_fs_50 {
   font-size: 50px;
   line-height: 1.2em;
 
-  @media (max-width:991px) {
-    
+  @media (max-width: 1199px) {
+    font-size: 45px;
   }
 
-  @media (max-width:575px) {
-    
+  @media (max-width: 991px) {
+    font-size: 32px;
+  }
+}
+
+.cs_fs_55 {
+  font-size: 55px;
+}
+
+.cs_fs_65 {
+  font-size: 65px;
+  line-height: 1.308em;
+
+  @media (max-width: 1199px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 32px;
   }
 }
 
-.cs_fs_72 {
-  font-size: 72px;
-  line-height: 1.25em;
-
-  @media (max-width:1199px) {
-    font-size: 64px;
-  }
-
-  @media (max-width:991px) {
-    font-size: 56px;
-  }
-
-  @media (max-width:575px) {
-    font-size: 30px;
-  }
-}
 .cs_fs_120 {
   font-size: 120px;
   line-height: 1.16667em;
 
-  @media (max-width:1399px) {
+  @media (max-width: 1399px) {
     font-size: 100px;
   }
-  @media (max-width:1199px) {
+  @media (max-width: 1199px) {
     font-size: 80px;
+  }
+  @media (max-width: 768px) {
+    font-size: 60px;
   }
 }
 
@@ -371,6 +395,62 @@
     }
   }
 }
+.cs_btn_style_2 {
+  display: inline-flex;
+  padding: 17px 42px;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 7px;
+  text-wrap: nowrap;
+  border: 0;
+  outline: 0;
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: 32px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    transition: transform 0.4s ease;
+  }
+
+  &::before {
+    left: 0;
+    border-radius: 32px 0 0 32px;
+    transform: scale(0, 1);
+    transform-origin: bottom left;
+  }
+
+  &::after {
+    right: 0;
+    border-radius: 0 32px 32px 0;
+    transform: scale(0, 1);
+    transform-origin: top right;
+  }
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      transform: scale(1, 1);
+    }
+  }
+}
 
 .cs_player_btn_style_1 {
   span {
@@ -433,58 +513,6 @@
 /*=======================================================
   Section Heading
 =========================================================*/
-.cs_section_subtitle {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.86em;
-  color: var(--dark-blue);
-  text-transform: uppercase;
-  display: inline-flex;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-family: var(--primary-font);
-}
-
-.cs_section_heading_style_1 {
-  .cs_section_title {
-    letter-spacing: -1px;
-  }
-
-  @media (max-width:991px) {
-    align-items: flex-start;
-    text-align: left !important;
-  }
-}
-
-.cs_section_heading_style_2 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px 30px;
-
-  .cs_section_heading_left {
-    width: 45%;
-  }
-
-  .cs_section_heading_right {
-    width: 40%;
-  }
-
-  .cs_section_title {
-    letter-spacing: -1px;
-  }
-
-
-  @media (max-width:991px) {
-    flex-direction: column;
-
-    .cs_section_heading_left,
-    .cs_section_heading_right {
-      width: 100%;
-    }
-  }
-
-}
 
 .cs_zoom {
   img {

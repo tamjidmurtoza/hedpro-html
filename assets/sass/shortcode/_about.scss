@@ -2,7 +2,8 @@
   10. About
 ================================================================*/
 .cs_layer_img_box {
-  padding-right: 14%;
+  padding-right: 19%;
+  
   .cs_layer_img_1 {
     img{
       width: 100%;
@@ -18,6 +19,7 @@
 
     img {
     border: 10px solid var(--white-color);    
+    width: 100%;
     }
   }
 }

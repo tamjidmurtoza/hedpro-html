@@ -3,11 +3,13 @@
 ================================================================*/
 
 .cs_card_style_1 {
+    height: 100%;
+    width: 100%;
     .cs_card_thumbnail {
-        height: 510px;
         border-radius: 8px;
         position: relative;
         overflow: hidden;
+        height: 100%;
 
         img {
             width: 100%;
@@ -32,19 +34,15 @@
     .cs_card_info {
         position: absolute;
         bottom: 56px;
-        padding: 0 55px;
+        left: 50%;
+        transform: translate(-50%);
+        width: min(300px , 100%);
         z-index: 2;
     }
 
     &:hover {
         img {
             transform: scale(1.03);
-        }
-    }
-
-    @media (max-width: 1399px) {
-        .cs_card_info {
-            padding: 0 25px;
         }
     }
 }
