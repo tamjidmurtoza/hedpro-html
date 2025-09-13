@@ -25,7 +25,7 @@
   | 12. Steps Animation
   | 13. Dynamic contact form
   | 14. AOS Animation
-  |
+  | 15. hobbleEffect
   */
 
   /*--------------------------------------------------------------
@@ -62,6 +62,7 @@
     counterInit();
     smoothScroll();
     aosInit();
+    hobbleEffect()
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
@@ -461,4 +462,51 @@
       mirror: false,
     });
   }
+
+   /*--------------------------------------------------------------
+    15. Hobble Effect
+  --------------------------------------------------------------*/
+  function hobbleEffect() {
+    $(document)
+      .on("mousemove", ".cs_hobble", function (event) {
+        var halfW = this.clientWidth / 2;
+        var halfH = this.clientHeight / 2;
+        var coorX = halfW - (event.pageX - $(this).offset().left);
+        var coorY = halfH - (event.pageY - $(this).offset().top);
+        var degX1 = (coorY / halfH) * 8 + "deg";
+        var degY1 = (coorX / halfW) * -8 + "deg";
+        var degX3 = (coorY / halfH) * -15 + "px";
+        var degY3 = (coorX / halfW) * 15 + "px";
+
+        $(this)
+          .find(".cs_hover_layer_1")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translate3d( 0, 0, 0 ) rotateX(" +
+              degX1 +
+              ") rotateY(" +
+              degY1 +
+              ")"
+            );
+          });
+        $(this)
+          .find(".cs_hover_layer_2")
+          .css("transform", function () {
+            console.log('hello');
+            return (
+              "perspective( 800px ) translateX(" +
+              degX3 +
+              ") translateY(" +
+              degY3 +
+              ") scale(1.04)"
+            );
+          });
+      })
+      .on("mouseout", ".cs_hobble", function () {
+        $(this).find(".cs_hover_layer_1").removeAttr("style");
+        $(this).find(".cs_hover_layer_2").removeAttr("style");
+      });
+  }
+
+
 })(jQuery); // End of use strict

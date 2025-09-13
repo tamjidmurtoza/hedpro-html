@@ -3,6 +3,21 @@
 =================================================================*/
 .cs_slider {
   position: relative;
+
+   &.cs_overflow_visible {
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-slide {
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .slick-active {
+      opacity: 1;
+    }
+  }
 }
 
 .slick-arrow {
@@ -110,3 +125,74 @@
 /*=======================================================
  Horizontal Slider
 =========================================================*/
+.cs_brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cs_brand_title {
+      position: relative;
+      width: min(284px , 100%);
+      padding-right: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-left: 1px solid var(--accent-color);
+        height: 44px;
+        padding-right: 30px;
+        right: 0;
+      } 
+    }
+
+    .cs_brand_slider_wrapper_style_1 {
+      width: min(920px, 100%);
+      overflow: hidden;
+
+  .cs_slider_in {   
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .cs_brands_list {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0px 90px;
+    margin: 0 45px;
+    flex: none;
+    animation: slider-left 30s linear infinite;
+  }
+
+}
+
+@media (max-width: 991px) {
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+
+  .cs_brand_title {
+    &::before {
+      display: none;
+    }
+  }
+  .cs_brand_slider_wrapper_style_1 {
+    .cs_brands_list {
+    gap: 0 40px;
+    margin: 0 20px;
+  }
+  }
+}
+}
+
+
+@keyframes slider-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

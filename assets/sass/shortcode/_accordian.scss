@@ -1,12 +1,12 @@
 /*==============================================================
   11. Accordians
 ================================================================*/
-.cs_accordian_wraper_style_1 {
+.cs_accordian_wrapper_style_1 {
     max-width: 740px;
     margin: 0 auto;
     position: relative;
     z-index: 5;
-}
+
 .cs_accordian.cs_style_1 {
   margin-bottom: 15px;
 
@@ -79,7 +79,8 @@
     }
   }
 }
-.cs_avatar_wraper_style_1 {
+}
+.cs_avatar_wrapper_style_1 {
   .cs_avatar {
     position: absolute;
     display: inline-block;
@@ -194,6 +195,51 @@
   @media (max-width: 1199px) {
     .cs_avatar {
       display: none;
+    }
+  }
+}
+
+// 
+.cs_accordian_wrapper_style_2 {
+  .cs_accordian {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #D9D9D9;
+    background: #F9F9F9;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+  .cs_accordian_head {
+    padding: 15px 66px 15px 32px;
+    position: relative;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+
+    .cs_accordian_toggle {
+      position: absolute;
+      right: 30px;
+      top: 15px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .cs_accordian_body {
+    padding: 20px 30px 30px;
+    color: var(--secondary-color);
+  }
+  
+    &.active {
+      .cs_accordian_head {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+
+        .cs_accordian_toggle {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 }

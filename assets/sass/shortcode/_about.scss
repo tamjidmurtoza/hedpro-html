@@ -1,7 +1,8 @@
 /*==============================================================
   10. About
 ================================================================*/
-.cs_layer_img_box {
+.cs_about_style_1 {
+  .cs_layer_img_box {
   padding-right: 19%;
   
   .cs_layer_img_1 {
@@ -24,7 +25,7 @@
   }
 }
 
-.cs_about_wraper {
+.cs_about_text_wrapper {
   max-width: min(100%, 520px);
   padding-left: 10px;
 
@@ -42,5 +43,56 @@
     left: 0;
     top: 0;
     
+  }
+}
+
+@media (max-width: 1199px) {
+  .cs_layer_img_box {
+    padding-right: 14%;
+  }
+  .cs_about_text_wrapper {
+    padding-left: 0;
+  }
+}
+}
+
+.cs_about_style_2 {
+  .cs_iconbox_style_4 {
+    display: flex;
+    gap: 20px 60px;
+  }
+  .cs_iconbox_info {
+    width: min(366px, 100%);
+  }
+  .cs_iconbox_icon {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+      background-color: var(--accent-color);
+      opacity: .10;
+      border-radius: 50%;
+      left: 23px;
+    }
+  }
+  .cs_about_left {
+    padding-top: 20px;
+  }
+
+   .cs_about_img_left{
+      padding-left: 102px;
+      img {
+        width: 100%;
+      }
+    }
+
+  @media (max-width: 991px) {
+      .cs_about_img_left {
+        padding-left: 0;
+      }
   }
 }

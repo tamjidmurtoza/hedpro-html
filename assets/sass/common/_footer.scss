@@ -1,7 +1,7 @@
 /*==============================================================
  06. All Footer
 ================================================================*/
-.cs_footer_section_style_1 {
+.cs_footer_style_1 {
     background-color: #121212;
 
     .cs_footer_row {
@@ -105,6 +105,169 @@
         .cs_footer_row {
             flex-wrap: wrap;
             gap: 60px 40px;
+        }
+        .cs_footer_col {
+            &:first-child {
+                width: calc(100% - 40px);
+                 flex: none !important;
+
+            }
+            
+            &:nth-child(3) {
+                flex: 1.2;
+            }
+        }
+        
+        .cs_footer_newsletter {
+            input {
+                width: 100%;
+                flex: initial;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        .cs_footer_col {
+           
+            &:nth-child(3) {
+                flex: 1.5;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cs_footer_col {
+                width: calc(100% - 40px);   
+                flex: none !important;         
+        }
+    }
+}
+.cs_footer_style_2 {
+    background-color: #121212;
+
+    .cs_footer_row {
+        display: flex;
+        gap: 40px 85px;
+    }
+    
+    .cs_footer_col {
+        flex: 1;
+
+        &:first-child {
+            flex: 1.2;
+        }
+
+        &:nth-child(4) {
+            flex: 2.2;
+        }
+    }
+
+    .cs_footer_newsletter {
+        input {
+            background: var(--white-color);
+            width: 300px;
+            height: 60px;
+            border-radius: 5px;
+            border: 1px solid var(--Gray-800, #616670);
+            outline: none;
+            color: var(--primary-color);
+            padding-left: 20px;
+
+            &:focus {
+                border-color: var(--white-color);
+            }
+
+            &::placeholder {
+                font-size: 20px;
+                color: #696969;
+            }
+        }
+
+        .cs_btn_style_1 {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 5px;
+            padding: 0;
+        }
+    }
+
+    .cs_footer_text_widget {
+        img {
+            filter: brightness(0) saturate(100%) invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+        }
+
+        p {
+            margin: 30px 0 ;
+            opacity: 0.7;
+        }
+    }
+
+    .cs_footer_widget_menu {
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        } 
+        a {
+                    &:hover {
+                       color: var(--accent-color);
+                }
+                }
+    }
+    .cs_contact_widget {
+            li {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top : 2px;
+                    color: var(--accent-color);
+                }
+                div {
+                    padding-left: 36px;
+                }
+            }
+    }
+
+
+    .cs_footer_bottom {
+        background-color: var(--accent-color);
+
+        .cs_footer_bottom_in {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px 40px;
+            padding: 28px 0;
+            flex-wrap: wrap;
+        }
+
+        .cs_footer_widget_menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+            li {               
+            &:not(:last-child) {
+                margin-bottom: 0px;
+            }
+            }
+        }
+    }
+
+    @media (max-width: 1399px) {
+            .cs_footer_row {
+              gap: 60px;
+            }
+        }
+    @media (max-width: 1199px) {
+        .cs_footer_row {
+            flex-wrap: wrap;
+            gap: 50px 40px;
         }
         .cs_footer_col {
             &:first-child {

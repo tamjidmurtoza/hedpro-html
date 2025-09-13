@@ -50,14 +50,23 @@
     
   }
 }
+.cs_fs_26 {
+  font-size: 26px;
+  line-height: normal;
+
+  @media (max-width:575px) {
+    
+  }
+}
 
 .cs_fs_30 {
   font-size: 30px;
   line-height: 1.5em;
-
-  @media (max-width:575px) {
   }
 
+.cs_fs_32 {
+  font-size: 32px;
+  line-height: 1.3em;
 }
 
 .cs_fs_40 {
@@ -111,7 +120,10 @@
     font-size: 32px;
   }
 }
-
+.cs_fs_80 {
+  font-size: 80px;
+  line-height: 1.125em;
+}
 .cs_fs_120 {
   font-size: 120px;
   line-height: 1.16667em;
@@ -451,6 +463,27 @@
     }
   }
 }
+.cs_btn_style_3 {
+  display: inline-flex;
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 7px;
+  text-wrap: nowrap;
+  border: 0;
+  outline: 0;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+  }
+}
 
 .cs_player_btn_style_1 {
   span {
@@ -540,7 +573,8 @@
 /*===========================================================  
   Rating Component
 =============================================================*/
-.cs_rating {
+.cs_rating,
+.cs_rating_percentage {
   overflow: hidden;
 
   &::before {
@@ -559,7 +593,7 @@
   height: 26px;
   position: relative;
   font-size: 16px;
-    color: #F90;
+  color: #F90;
   letter-spacing: 14px;
 
   &::before {
@@ -567,16 +601,16 @@
   }
 }
 
-// .cs_rating_percentage {
-//   // position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
+.cs_rating_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 
-//   &::before {
-//     font-weight: 900;
-//   }
-// }
+  &::before {
+    font-weight: 900;
+  }
+}
 
 /*===========================================================  
   All Common Animations
