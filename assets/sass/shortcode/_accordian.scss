@@ -58,13 +58,14 @@
   }
 
   .cs_accordian_body {
-    padding: 0 56px 40px 30px;
-    color: #696969;
+    padding: 0 56px 30px 30px;
   }
 
   &.active {
     .cs_accordian_head {
       color: var(--accent-color);
+      pointer-events: none;
+      
       span {
         border-bottom: 1px solid var(--accent-color);
       }

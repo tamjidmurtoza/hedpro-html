@@ -131,6 +131,13 @@
                 background-color: var(--white-color);
                 border-radius: 50%;
                 flex-shrink: 0;
+                border: 1px solid var(--accent-color);
+            }
+
+            .cs_iconbox_info {
+                h3 {
+                    text-transform: capitalize;
+                }
             }
         }
         
@@ -138,7 +145,7 @@
 
     .cs_hero_botton {
       display: flex;
-      gap: 20px 40px;
+      gap: 20px 30px;
       align-items: center;
       flex-wrap: wrap;
 
@@ -146,6 +153,11 @@
         font-size: 18px;
         top: -1.8em !important;
         margin-left: -10px;
+        font-weight: 500;
       }
+    }
+    .cs_btn_style_2 {
+        padding: 17px 22px;
+        font-weight: 600;
     }
 }

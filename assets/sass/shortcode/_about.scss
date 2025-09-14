@@ -57,6 +57,10 @@
 }
 
 .cs_about_style_2 {
+  .cs_section_heading {
+    width: min(995px, 100%);
+  }
+
   .cs_iconbox_style_4 {
     display: flex;
     gap: 20px 60px;
@@ -84,11 +88,16 @@
   }
 
    .cs_about_img_left{
-      padding-left: 102px;
+      padding-left: 90px;
       img {
         width: 100%;
       }
     }
+    .cs_about_img_right {
+      img {
+        width: 100%;
+      }
+    } 
 
   @media (max-width: 991px) {
       .cs_about_img_left {

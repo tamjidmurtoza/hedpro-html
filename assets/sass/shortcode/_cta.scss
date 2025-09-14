@@ -42,8 +42,8 @@
 }
 
 @media (min-width: 1400px) {
-  .cs_cta_style_1,
-  .cs_cta_style_2 {
+  .cs_cta_in_style_1,
+  .cs_cta_in_style_2 {
     .container {
       max-width: 1620px;
     }
@@ -51,8 +51,8 @@
 }
 
 @media (max-width: 991px) {
-  .cs_cta_style_1,
-  .cs_cta_style_2 {
+  .cs_cta_in_style_1,
+  .cs_cta_in_style_2 {
     padding: 80px;
 
     .cs_cta_text {
@@ -68,7 +68,16 @@
 
 
 .cs_cta_style_2 {
- 
+ .cs_cta_rotate_icon {
+  display: inline-block;
+  animation: animo-x2 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  
+
+  img {
+     transform-origin: center center;
+     animation: animo-y 22s linear infinite;
+  }
+ }
   .cs_cta_subtitle {
     width: min(467px , 100%);
     letter-spacing: 1.6px;
@@ -92,7 +101,7 @@
       width: 124px;
       height: 368px;
       background-color: var(--accent-color);
-      top: 0px;
+      top: -60px;
       left: 60px;
     }
     &::after {
@@ -101,14 +110,24 @@
       width: 116px;
       height: 258px;
       background-color: var(--primary-color);
-      top: 0px;
+      top: -60px;
       left: 184px;
     }
+  }
+
+  .cs_btn_style_2 {
+    padding: 17px 29px;
+    font-weight: 600;
   }
 
   @media (max-width: 991px) {
     .cs_cta_right {
       width: 100%;
+
+      &::after,
+      &::before {
+        top: 0;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 /*=============================================================
  20. Testimonials
 ===============================================================*/
-.cs_testimonial_section_style_1 {
+.cs_testimonial_wrapper {
     .cs_testimonial_style_1 {
     .cs_testimonial_header_icon {
     width: 50px;
@@ -43,7 +43,8 @@
     position: relative;
     border-radius:  6px;
     
-    img {
+   > img {
+        width: 100%;
         position: relative;
         z-index: 2;
     }
@@ -57,6 +58,11 @@
         left: 0;
         bottom: 0;
         border-radius: inherit;
+    }
+    .cs_rating {
+        &::before {
+            position: initial;
+        }
     }
 
     .cs_rating_box {

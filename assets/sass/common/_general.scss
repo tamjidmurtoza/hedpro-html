@@ -353,7 +353,7 @@
 =========================================================*/
 .cs_btn_style_1 {
   display: inline-flex;
-  padding: 18px 42px 17px;
+  padding: 13px 42px;
   font-size: 20px;
   font-weight: 500;
   border-radius: 30px;
@@ -573,31 +573,31 @@
 /*===========================================================  
   Rating Component
 =============================================================*/
-.cs_rating,
-.cs_rating_percentage {
+
+.cs_rating_percentage,
+.cs_rating {
   overflow: hidden;
 
   &::before {
-    content: '\f005\f005\f005\f005\f005';
-    font-family: 'Font Awesome 6 Free';
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 18px;
-    // height: 18px;
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
 .cs_rating {
-  max-width: 125px;
-  height: 26px;
+  max-width: 120px;
+  flex: none;
+  height: 24px;
   position: relative;
+  color: #FFC107;
   font-size: 16px;
-  color: #F90;
-  letter-spacing: 14px;
+  letter-spacing: 7px;
 
   &::before {
-    font-weight: 900;
+    font-weight: 400;
   }
 }
 
@@ -611,7 +611,6 @@
     font-weight: 900;
   }
 }
-
 /*===========================================================  
   All Common Animations
 =============================================================*/
@@ -629,6 +628,24 @@
   50% {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(-40px);
+  }
+}
+@keyframes animo-x2 {
+    0% {
+        transform: translateX(0);
+    }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100px);
+  }
+}
+@keyframes animo-y {
+    0% {
+        transform: rotate(0deg);
+    }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(360deg);
   }
 }
 

@@ -91,7 +91,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 40px;
+        gap: 20px 40px;
+        flex-wrap: wrap;
         padding: 20px 0;
         opacity: 0.7;
          border-top: 1px solid rgba(255, 255, 255, 1);
@@ -195,10 +196,6 @@
     }
 
     .cs_footer_text_widget {
-        img {
-            filter: brightness(0) saturate(100%) invert(96%) sepia(97%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
-        }
-
         p {
             margin: 30px 0 ;
             opacity: 0.7;
