@@ -7,7 +7,11 @@
     position: relative;
     z-index: 5;
 
-.cs_accordian.cs_style_1 {
+    .cs_section_title {
+      letter-spacing: -1.35px;
+    }
+
+.cs_accordian{
   margin-bottom: 15px;
 
   .cs_accordian_head {
@@ -58,7 +62,7 @@
   }
 
   .cs_accordian_body {
-    padding: 0 56px 30px 30px;
+    padding: 10px 56px 30px 30px;
   }
 
   &.active {
@@ -78,6 +82,14 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_accordian {
+    .cs_accordian_body {
+    padding: 10px 30px 30px;
+  }
   }
 }
 }
