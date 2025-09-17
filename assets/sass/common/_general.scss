@@ -107,6 +107,10 @@
 .cs_fs_55 {
   font-size: 55px;
 }
+.cs_fs_58 {
+  font-size: 58px;
+  line-height: 1.17em;
+}
 
 .cs_fs_65 {
   font-size: 65px;
@@ -482,6 +486,58 @@
   &:hover {
     color: var(--white-color);
     background-color: var(--accent-color);
+  }
+}
+.cs_btn_style_4 {
+  display: inline-flex;
+  padding: 15px 22px 16px 62px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 44px;
+  text-wrap: nowrap;
+  border: 0;
+  outline: 0;
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 21px;
+    z-index: 5;
+    font-size: 20px;
+    color: var(--accent-color);
+  }
+
+  &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        height: 44px;
+        width: 44px;
+        display: inline-block;
+        left: 5px;
+        z-index: 1;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        background: var(--white-color);
+  }
+
+  &:hover {
+    color: var(--accent-color);
+    &::after {
+      width: 94%;
+      border-radius: 44px;
+      z-index: -1;
+    }
   }
 }
 

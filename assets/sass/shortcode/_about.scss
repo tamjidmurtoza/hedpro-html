@@ -105,3 +105,23 @@
       }
   }
 }
+
+.cs_about_style_3 {
+
+  .cs_about_img {
+  position: relative;
+    img {
+      // width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    &::before {
+      content: '';
+      background-color: var(--accent-color);
+      position: absolute;
+      top: 105px;
+      width: 671px;
+      height: 368px;
+    }
+  }
+}

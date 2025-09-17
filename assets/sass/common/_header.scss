@@ -500,4 +500,57 @@
   }
 
   }
+  /*-------------------------------------------------------------------------
+-------------------------style-3 -----------------------------------------*/
+  &.cs_style_3 {
+    color: #0B0D26;
+        border-bottom: 1px solid #EFEDED;
+         background-color: transparent;
+    
+    .cs_main_header_in {
+        height: 105px;
+    }
+
+  .cs_main_header_center {
+        .cs_main_header_right {
+          display: flex;
+          gap: 30px;
+          
+          .cs_cart {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+          }
+        }
+      }
+    
+
+    @media (min-width: 1200px) {
+       .cs_main_header_center {
+        .cs_main_header_right {
+          margin-left: 72px;
+        }
+      }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_header_top {
+      display: none;
+    }
+
+    .cs_main_header_center {
+      .cs_main_header_right {
+        padding-right: 60px;
+      }
+    }
+  }
+
+   @media (max-width: 575px) { 
+    .cs_main_header_right {
+        display: none !important;
+    }
+  }
+
+  }
 }

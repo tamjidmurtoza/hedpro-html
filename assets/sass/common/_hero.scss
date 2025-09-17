@@ -161,3 +161,77 @@
         font-weight: 600;
     }
 }
+
+.cs_hero_style_3 {
+    padding: 125px 0 0;
+
+    .cs_section_heading {
+        width: min(445px , 100%);
+        position: relative;
+        z-index: 3;
+    }
+
+    .cs_hero_center_img {
+        position: relative;
+        img {
+            position: relative;
+            z-index: 5;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -245px;
+            top: -115px;
+            z-index: 2;
+            width: 683px;
+            height: 803px;
+            background: #FFF9F9;
+        }
+    }
+
+    .cs_hero_right_img {
+        position: absolute;
+        right: 9%;
+    }
+    .cs_hero_right_info {
+            margin-left: 60px;
+        .cs_hd_camera {
+            border: 1px solid rgba(254, 104, 6, 0.55);
+            padding: 23px 36px;
+            width: 233px;
+        }
+
+        .cs_rating {
+            color: var(--accent-color);
+            &::before {
+                font-weight: 900;
+            }
+            .cs_rating_percentage {
+                color: #C8C8C8;
+            }
+        }
+    }
+
+    .cs_camera_feature_style_1 {
+        background-color: #f9f9f9;
+        padding: 76px 0 ;
+        .cs_iconbox_style_1 {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+
+            .cs_iconbox_icon {
+                width: 104px;
+                height: 104px;
+                flex: none;
+                background-color: #f4f4f4;
+                border-radius: 50%;
+            }
+
+            .cs_iconbox_info {
+                width: min(259px , 100%);
+            }
+        }
+    }
+}
