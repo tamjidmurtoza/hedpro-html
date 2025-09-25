@@ -75,3 +75,17 @@
           width: 100%;
         }
       }
+
+.cs_iconbox_wrapper_style_2 {
+
+  .cs_iconbox {
+    display: flex;
+    gap: 31px;
+  }
+  .cs_iconbox_style_5 {
+    display: flex;
+    gap: 15px;
+    padding: 14px;
+    border: 1px solid #D0D0D0;
+  }
+}
