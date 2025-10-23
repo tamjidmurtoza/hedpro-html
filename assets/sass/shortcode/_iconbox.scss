@@ -2,6 +2,22 @@
   16. Iconbox
 ================================================================*/
 
+.cs_iconbox_style_1 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: var(--white-color);
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--white-color);
+    padding-right: 40px;
+    margin-right: 40px;
+  }
+
+  .cs_iconbox_title {
+    color: var(--white-color);
+  }
+}
 .cs_iconbox_style_3 {
   position: relative;
   padding-left: 118px;
@@ -27,18 +43,18 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       background-color: var(--accent-color);
       width: 100%;
       height: 100%;
       position: absolute;
       border-radius: inherit;
-      opacity: .1;
+      opacity: 0.1;
       top: 0;
       left: 0;
     }
     &::after {
-      content: '';
+      content: "";
       background-color: var(--white-color);
       width: 76%;
       height: 76%;
@@ -50,42 +66,157 @@
       transition: all 0.4s ease;
     }
   }
-    &:hover {
-      .cs_iconbox_icon {
-        img {
-          filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
-        }
-        &::after {
-          background-color: var(--accent-color);
-        }
+  &:hover {
+    .cs_iconbox_icon {
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(4%)
+          saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
+      }
+      &::after {
+        background-color: var(--accent-color);
       }
     }
+  }
 
   @media (max-width: 575px) {
-    padding-left:  90px;
+    padding-left: 90px;
     .cs_iconbox_icon {
       width: 70px;
       height: 70px;
     }
   }
 }
-  .cs_iconbox_middle {
-        border-radius: 4px;
-        img {
-          width: 100%;
-        }
-      }
+.cs_iconbox_style_5 {
+  display: flex;
+  gap: 15px;
+  padding: 14px;
+  border: 1px solid #d0d0d0;
+}
 
-.cs_iconbox_wrapper_style_2 {
+.cs_iconbox_style_6 {
+  max-width: 400px;
+  display: flex;
+  gap: 28px;
 
-  .cs_iconbox {
-    display: flex;
-    gap: 31px;
+  .cs_iconbox_icon {
+    width: 65px;
+    height: 65px;
+    flex: none;
   }
-  .cs_iconbox_style_5 {
-    display: flex;
-    gap: 15px;
-    padding: 14px;
-    border: 1px solid #D0D0D0;
+  &:hover {
+    .cs_iconbox_title {
+      background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.cs_iconbox_style_7 {
+  width: min(260px, 100%);
+  padding-left: 66px;
+  padding-bottom: 25px;
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 17px;
+
+  .cs_iconbox_icon {
+    position: absolute;
+    left: 0;
+  }
+  .cs_iconbox_info {
+    color: #e2e2e2;
+  }
+
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.cs_iconbox_middle_img {
+  border-radius: 4px;
+  img {
+    width: 100%;
+  }
+}
+
+.cs_iconbox_wraper_1 {
+  padding: 58px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs_iconbox_wrapper_3 {
+  display: flex;
+  gap: 30px;
+}
+
+.cs_iconbox_wrapper_4 {
+  gap: 60px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(1, auto);
+    gap: 30px;
+
+    .cs_iconbox_style_6 {
+      max-width: 100%;
+    }
+  }
+}
+.cs_iconbox_wrapper_5 {
+  .cs_section_title {
+    span {
+      color: var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+    }
+  }
+  .cs_left_iconbox {
+    padding-top: 18px;
+    padding-left: 30px;
+    .cs_iconbox_style_7:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+  .cs_right_iconbox {
+    .cs_iconbox_style_7:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+  .cs_iconbox_middle_img {
+    border-radius: 0;
+    transform: translateY(-70px);
+  }
+  .cs_img {
+    right: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .cs_shape_1 {
+    width: 677px;
+    height: 536px;
+    background-color: var(--accent-color);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media (max-width: 1400px) {
+    .cs_left_iconbox {
+      padding-left: 0;
+    }
+    .cs_iconbox_middle_img {
+      transform: none;
+    }
   }
 }

@@ -1,0 +1,39 @@
+.cs_gallery_wrapper_1 {
+  .cs_gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 42px;
+  }
+
+  .cs_text {
+    // grid-row: 1 / span 2;
+    grid-row: auto / span 2;
+    grid-column: auto / span 2;
+    border-radius: 24px;
+    background: #070312;
+    padding: 90px 40px;
+    color: white;
+    gap: 115px 0;
+  }
+
+  .cs_gallery_img {
+    border-radius: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cs_text {
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+      gap: 40px;
+      padding: 40px 40px 45px;
+    }
+  }
+}

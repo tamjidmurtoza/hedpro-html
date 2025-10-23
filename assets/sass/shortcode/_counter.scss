@@ -1,0 +1,31 @@
+.cs_counter_wrapper_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 75px;
+
+  @media (max-width: 1400px) {
+    gap: 10px 25px;
+  }
+}
+.cs_counter_style_1 {
+  position: relative;
+
+  &:not(:first-child) {
+    &::before {
+      content: "";
+      height: 100%;
+      width: 1px;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: -35px;
+      bottom: -50%;
+      transform: translateY(-50%);
+    }
+  }
+  .cs_counter_top {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+}

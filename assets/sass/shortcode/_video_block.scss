@@ -1,17 +1,18 @@
 .cs_video_block_style_1 {
   padding-top: 490px;
   padding-bottom: 178px;
-  
+
   .cs_video_thumbnail {
     margin-left: 46%;
   }
 
   .cs_player_btn {
     position: relative;
+    transition: all 0.3s ease;
 
-    &::after ,
+    &::after,
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 111px;
       height: 111px;
@@ -20,18 +21,23 @@
     }
 
     &::after {
-      transform: translate(4px, -8px);
+      animation: rotateCircle 3s infinite;
+    }
+    &::before {
+      animation: rotateCircle2 3s infinite;
+      // // animation-delay: 1.5s;
+      // border-color: red;
     }
   }
 }
 
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
+@keyframes rotateCircle {
+  50% {
+    transform: translate(3px, 6px);
   }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
+}
+@keyframes rotateCircle2 {
+  50% {
+    transform: translate(-3px, -6px);
   }
 }

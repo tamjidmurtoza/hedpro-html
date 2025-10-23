@@ -1,48 +1,100 @@
-/*==============================================================
- 13. Cards
-================================================================*/
-
 .cs_card_style_1 {
+  height: 100%;
+  width: 100%;
+  .cs_card_thumbnail {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
     height: 100%;
-    width: 100%;
-    .cs_card_thumbnail {
-        border-radius: 8px;
-        position: relative;
-        overflow: hidden;
-        height: 100%;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 01s ease;
-        }
-        
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: 1;
-            background-color: rgba(0, 0, 0, 0.25);
-            border-radius: inherit;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 01s ease;
     }
 
-    .cs_card_info {
-        position: absolute;
-        bottom: 56px;
-        left: 50%;
-        transform: translate(-50%);
-        width: min(300px , 100%);
-        z-index: 2;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: inherit;
     }
+  }
 
-    &:hover {
-        img {
-            transform: scale(1.03);
-        }
+  .cs_card_info {
+    position: absolute;
+    bottom: 56px;
+    left: 50%;
+    transform: translate(-50%);
+    width: min(300px, 100%);
+    z-index: 2;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.03);
     }
+  }
+}
+
+.cs_text_content {
+  border-bottom: 1px solid #e6e5e5;
+
+  .cs_text_wrapper {
+    max-width: 360px;
+    .cs_text {
+      &:nth-child(even) {
+        padding-left: 80px;
+      }
+    }
+  }
+
+  .cs_order_card {
+    padding: 105px 44px 175px 35px;
+    background-color: var(--accent-color);
+    clip-path: polygon(
+      50% 2%,
+      100% 0,
+      100% 60%,
+      100% 100%,
+      50% 98%,
+      0 100%,
+      0 0
+    );
+  }
+
+  @media (max-width: 991px) {
+    .cs_text_wrapper {
+      margin-left: 0px !important;
+    }
+  }
+}
+
+.cs_card_style_3 {
+  border-radius: 5px;
+  background: #f2f5fa;
+  padding: 38px 20px 30px;
+
+  .cs_price {
+    background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.cs_card_style_4 {
+  width: min(100%, 1045px);
+
+  .cs_card_thumbnail {
+    img {
+      width: 100%;
+    }
+  }
 }

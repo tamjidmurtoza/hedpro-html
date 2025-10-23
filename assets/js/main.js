@@ -326,9 +326,9 @@
   /*===========================================================
     10. Counter Animation
   =============================================================*/
-  function counterInit() {
-    if ($.exists(".odometer")) {
-      $(window).on("scroll", function () {
+    function counterInit() {
+    if ($.exists('.odometer')) {
+      $(window).on('scroll', function () {
         function winScrollPosition() {
           var scrollPos = $(window).scrollTop(),
             winHeight = $(window).height();
@@ -336,10 +336,10 @@
           return scrollPosition;
         }
 
-        $(".odometer").each(function () {
+        $('.odometer').each(function () {
           var elemOffset = $(this).offset().top;
           if (elemOffset < winScrollPosition()) {
-            $(this).html($(this).data("count-to"));
+            $(this).html($(this).data('count-to'));
           }
         });
       });
