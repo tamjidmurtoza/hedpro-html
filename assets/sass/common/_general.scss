@@ -151,6 +151,10 @@
   font-size: 70px;
   line-height: 1.57143em;
 }
+.cs_fs_72 {
+  font-size: 70px;
+  line-height: 1.194em;
+}
 .cs_fs_77 {
   font-size: 77px;
   line-height: 1.19em;
@@ -158,6 +162,11 @@
 .cs_fs_80 {
   font-size: 80px;
   line-height: 1.125em;
+}
+
+.cs_fs_100 {
+  font-size: 100px;
+  line-height: 1.2em;
 }
 .cs_fs_120 {
   font-size: 120px;
@@ -645,6 +654,21 @@
     i {
       font-size: 14px;
     }
+  }
+}
+
+.cs_arrow_btn {
+  display: inline-flex;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: var(--white-color);
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--accent-color);
+    color: var(--white-color);
   }
 }
 

@@ -275,3 +275,25 @@
     }
   }
 }
+
+.cs_hero_style_6 {
+  padding: 315px 0 285px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+  }
+
+  .cs_hero_content {
+    width: min(820px, 100%);
+    margin: 0 auto;
+  }
+}

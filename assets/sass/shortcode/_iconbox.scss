@@ -130,7 +130,18 @@
   }
 
   @media (max-width: 1199px) {
-    width: 100%;
+    width: min(450px, 100%);
+  }
+}
+
+.cs_iconbox_style_8 {
+  .cs_card_title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  i {
+    color: var(--accent-color);
   }
 }
 
@@ -218,5 +229,18 @@
     .cs_iconbox_middle_img {
       transform: none;
     }
+  }
+}
+.cs_iconbox_wrapper_6 {
+  padding-left: 170px;
+
+  @media (max-width: 1400px) {
+    padding-left: 100px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 50px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 0px;
   }
 }

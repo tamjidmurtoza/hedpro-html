@@ -711,6 +711,58 @@
     }
   }
   /*-------------------------------------------------------------------------
+-------------------------style-6 -----------------------------------------*/
+  &.cs_style_6 {
+    background: rgba(58, 61, 63, 0.68);
+    border-bottom: 0;
+    margin-top: 44px;
+    color: var(--white-color);
+
+    &.cs_sticky_active {
+      margin-top: 0;
+    }
+
+    .cs_main_header_center {
+      gap: 80px;
+      .cs_main_header_right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .cs_cart {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.11);
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(0 0, 100% 0, 99% 50%, 100% 100%, 0 100%, 1% 50%);
+
+      .cs_nav_list {
+        .menu-item-has-children {
+          > a {
+            &::before {
+              content: "+";
+            }
+          }
+        }
+      }
+      .cs_main_header_in {
+        height: 90px;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      width: 78%;
+    }
+  }
+  /*-------------------------------------------------------------------------
 -------------------------style-10 -----------------------------------------*/
   &.cs_style_10 {
     color: var(--primary-color);
