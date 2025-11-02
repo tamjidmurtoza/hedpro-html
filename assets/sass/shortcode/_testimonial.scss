@@ -220,3 +220,27 @@
     }
   }
 }
+
+.cs_testimonial_style_4 {
+  padding-top: 35px;
+  .cs_testimonial_in {
+    background: var(--white-color);
+    padding: 55px 25px 50px 25px;
+  }
+
+  .cs_testimonial_avatar {
+    margin-top: -100px;
+    position: relative;
+
+    img {
+      border: 10px solid var(--gray-color3);
+      border-radius: 50%;
+    }
+  }
+
+  .cs_rating_wrapper {
+    right: 25px;
+    top: 48px;
+    width: 120px;
+  }
+}

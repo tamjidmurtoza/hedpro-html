@@ -1,0 +1,48 @@
+.cs_banner_img {
+  padding: 55px 89px 0 80px;
+  animation: animo-up-down 2s linear infinite;
+  img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .cs_discount_img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .cs_shape_img {
+    top: -16px;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.cs_italian_burger {
+  .cs_italian_burger_left {
+    padding: 0 85px 0 100px;
+    .cs_italian_burger_left_img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .cs_italian_burger_right {
+    margin-left: -10px;
+
+    .cs_italian_burger_right_img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_italian_burger_left {
+      padding: 0;
+    }
+  }
+}

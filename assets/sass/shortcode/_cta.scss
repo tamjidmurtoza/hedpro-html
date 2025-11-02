@@ -378,3 +378,119 @@
     }
   }
 }
+
+.cs_cta_style_5 {
+  width: 100%;
+  height: 730px;
+
+  .cs_video_block {
+    width: 214px;
+    height: 355px;
+    border-radius: 120px 120px 0 0;
+    border: 3px solid #fff;
+    background: #fb9015;
+    backdrop-filter: blur(7.5px);
+    position: absolute;
+    bottom: 0;
+  }
+
+  .cs_btn_style_2 {
+    font-size: 18px;
+    padding: 21px 40px;
+
+    span {
+      i {
+        padding-left: 7px;
+        font-size: 16px;
+      }
+    }
+  }
+  .cs_player_btn_style_2 {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      border: 8px solid rgba(251, 155, 44);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.01);
+      animation: pulseBorder 3s linear infinite;
+    }
+  }
+
+  .cs_cta_form {
+    width: min(526px, 100%);
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+    padding: 40px 60px;
+    margin-left: auto;
+
+    input,
+    .cs_input_wrapper {
+      border: none;
+      border-bottom: 1px dotted var(--accent-color);
+      outline: none;
+      width: 100%;
+      padding: 15px 0 10px;
+      cursor: pointer;
+
+      &::placeholder {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .ts-control {
+    border: none;
+    padding: 0;
+    position: relative;
+    font-size: 16px;
+
+    input {
+      width: 0;
+    }
+    &::after {
+      content: "\f107";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      right: 12px;
+      color: var(--accent-color);
+    }
+  }
+
+  .cs_input_icon {
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--accent-color);
+  }
+
+  @media (max-width: 991px) {
+    .cs_cta_form {
+      padding: 30px;
+    }
+    .cs_video_block {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs_video_block {
+      height: 250px;
+    }
+  }
+}

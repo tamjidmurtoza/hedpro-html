@@ -82,17 +82,18 @@
 }
 
 .cs_product_style_5 {
-  overflow: hidden;
   .cs_product_thumbnail {
+    overflow: hidden;
+    display: block;
     img {
       width: 100%;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
   }
   &:hover {
     .cs_product_thumbnail {
       img {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
@@ -145,5 +146,17 @@
   }
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    .cs_product_style_5 {
+      width: min(312px, 100%);
+      margin: 0 auto;
+    }
+
+    .cs_product_banner {
+      grid-column: auto / span 1;
+    }
   }
 }

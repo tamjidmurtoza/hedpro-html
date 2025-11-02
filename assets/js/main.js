@@ -63,8 +63,9 @@
     counterInit();
     smoothScroll();
     aosInit();
-    hobbleEffect()
-    beforeAfterSlider()
+    hobbleEffect();
+    beforeAfterSlider();
+    dateTimePicker()
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
@@ -591,6 +592,40 @@
       });
     }
   }
+
+  /*--------------------------------------------------------------
+    15. Date And Time Picker
+
+  --------------------------------------------------------------*/
+  function dateTimePicker() {
+    flatpickr("#timePicker", {
+      enableTime: true,
+      allowInput: true,
+      noCalendar: true,
+      dateFormat: "G:i: K", // Only time in 24-hour format
+    });
+    flatpickr("#datePicker", {
+      enableTime: false,
+      allowInput: true,
+    });
+  }
+
+    // Language Update Functionality
+    $(".cs_language_switcher").on("click", function () {
+      $(this).siblings(".cs_language_dropdown").slideToggle();
+      updateLanguage();
+    });
+    function updateLanguage() {
+      $(".cs_language_dropdown input").on("click", function () {
+        var selectedValue = $(this).val();
+        $(this)
+          .closest(".cs_language_select")
+          .find(".cs_language_switcher input")
+          .val(selectedValue);
+        $(".cs_language_dropdown").slideUp();
+      });
+    }
+
 
 
 })(jQuery); // End of use strict

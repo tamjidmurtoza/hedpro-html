@@ -4,7 +4,6 @@
   grid-gap: 30px 42px;
 
   .cs_text {
-    // grid-row: 1 / span 2;
     grid-row: auto / span 2;
     grid-column: auto / span 2;
     border-radius: 24px;
@@ -55,20 +54,18 @@
       grid-column: auto / span 2;
     }
     &:nth-child(2),
-    &:nth-child(3) {
-      .cs_gallery_overlay {
+    &:nth-child(3),
+    &:nth-child(4) {
+      .cs_gallery_details {
         padding: 15px;
       }
-      .cs_gallery_info {
+      .cs_gallery_text {
         h3 {
           font-size: 22px !important;
         }
       }
     }
     &:nth-child(4) {
-      .cs_gallery_overlay {
-        padding: 15px;
-      }
       grid-column: auto / span 2;
     }
 
@@ -79,10 +76,19 @@
       bottom: 0;
       width: 100%;
       height: 100%;
+      opacity: 0;
+    }
+
+    .cs_gallery_details {
       padding: 64px 55px 50px 83px;
+      top: 0;
+      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
       opacity: 0;
       transition: all 0.3s ease;
 
@@ -96,8 +102,35 @@
       }
     }
 
+    // .cs_gallery_overlay {
+    //   z-index: 2;
+    //   background: rgba(49, 49, 49, 0.55);
+    //   left: 0;
+    //   bottom: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   padding: 64px 55px 50px 83px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   opacity: 0;
+    //   transition: all 0.3s ease;
+
+    //   .cs_gallery_icon {
+    //     width: 60px;
+    //     height: 60px;
+    //     background: var(--white-color);
+    //     border-radius: 50%;
+    //     align-self: flex-end;
+    //     flex: none;
+    //   }
+    // }
+
     &:hover {
       .cs_gallery_overlay {
+        opacity: 1;
+      }
+      .cs_gallery_details {
         opacity: 1;
       }
     }
@@ -108,5 +141,15 @@
   }
   @media (max-width: 575px) {
     grid-template-columns: repeat(1, 1fr);
+
+    .cs_gallery_img {
+      &:nth-child(1) {
+        grid-row: auto / span 1;
+        grid-column: auto / span 1;
+      }
+      &:nth-child(4) {
+        grid-column: auto / span 1;
+      }
+    }
   }
 }
