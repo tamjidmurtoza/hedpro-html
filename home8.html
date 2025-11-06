@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/slick.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/tom-select.min.css">
+  <link rel="stylesheet" href="assets/css/odometer.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Site Title -->
@@ -82,9 +83,9 @@
               </a>
               <a href="#">
                 <span><svg xmlns="http://www.w3.org/2000/svg" width="54" height="19" viewBox="0 0 54 19" fill="none">
-                    <rect width="54" height="3" fill="white" />
-                    <rect y="16" width="54" height="3" fill="white" />
-                    <rect x="14" y="8" width="40" height="3" fill="white" />
+                    <rect width="54" height="3" fill="currentColor" />
+                    <rect y="16" width="54" height="3" fill="currentColor" />
+                    <rect x="14" y="8" width="40" height="3" fill="currentColor" />
                   </svg></span>
               </a>
             </div>
@@ -95,11 +96,11 @@
   </header>
   <!-- End Header -->
   <!-- Start Hero -->
-  <section class="cs_hero_style_8 cs_bg_filed" data-src="assets/img/smart_watch_hero_bg.png">
+  <section class="cs_hero_style_8">
     <div class="container">
-      <div class="row">
+      <div class="row cs_gap_y_30">
         <div class="col-lg-6">
-          <div class="cs_left_hero">
+          <div class="cs_left_hero cs_bg_filed h-100 d-flex align-items-center" data-src="assets/img/watch_bg.png">
             <div class="cs_hero_content position-relative">
               <p class="cs_hero_subtitle cs_fs_18 cs_mb_lg_35">DJI Air 3 is an advanced all-around drone</p>
               <h2 class="cs_hero_title cs_fs_72 cs_mb_28">We sell Best quality Product.</h2>
@@ -135,8 +136,13 @@
         </div>
         <div class="col-lg-6">
           <div class="cs_right_hero">
-            <div class="cs_right_hero_img position-relative z-1">
+            <div class="cs_right_hero_img position-relative z-2">
               <img src="assets/img/watch_1.png" alt="watch">
+            </div>
+            <div class="cs_hero_img_details position-absolute z-1 cs_white_color">
+              <p class="cs_fs_22">24 hours battery life</p>
+              <p class="cs_fs_22">Call, Track, Volume</p>
+              <p class="cs_fs_22">Seamless Connectivity</p>
             </div>
           </div>
         </div>
@@ -144,97 +150,662 @@
     </div>
   </section>
   <!-- End Hero -->
-
-  <!-- Start Footer -->
-  <footer class="cs_footer_style_1">
-    <div class="cs_height_90 cs_height_lg_40"></div>
+  <!-- Start About -->
+  <section>
+    <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
-      <div class="cs_footer_row cs_white_color">
-        <div class="cs_footer_col">
-          <div class="cs_footer_widget">
-            <div class="cs_footer_text_widget">
-              <img src="assets/img/logo_v2.svg" alt="logo">
-              <p>The Link Between Better Sleep and Better Skin (That No One Talks)</p>
+      <div class="row cs_gap_y_30">
+        <div class="col-xl-5 col-lg-6">
+          <div class="cs_section_heading_style_4">
+            <p class="cs_section_subtitle cs_mb_lg_35">Features</p>
+            <h2 class="cs_section_title cs_fs_45 cs_bold">
+              Smart tech for calmer commutes. Intuitive controls, connectivity, and safety features.
+            </h2>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-6">
+          <div class="cs_iconbox_wrapper_8">
+            <div class="cs_top_iconbox">
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/connectivity.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">Seamless Connectivity</p>
+                </div>
+              </div>
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/leaf.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">SIPX4: Sweat and Splash Resistant</p>
+                </div>
+              </div>
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/batterysvg.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">Extended Battery Life</p>
+                </div>
+              </div>
             </div>
-            <div class="cs_footer_newsletter position-relative">
-              <input type="email" placeholder="Enter your email">
-              <a href="#" class="cs_btn_style_1 cs_center">
-                <i class="fa-solid fa-paper-plane"></i>
+            <div class="cs_bottom_iconbox">
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/air_purify.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">Advanced air purification</p>
+                </div>
+              </div>
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/volume.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">Secure: Noise cancellation</p>
+                </div>
+              </div>
+              <div class="cs_iconbox_style_11">
+                <div class="cs_iconbox_icon cs_mb_20">
+                  <img src="assets/img/icons/microphone._volume.svg" alt="icon">
+                </div>
+                <div class="cs_iconbox_info">
+                  <p class="mb-0">Microphone, Call, Track, Volume</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_120 cs_height_lg_80"></div>
+  </section>
+  <!-- End About -->
+  <!-- Start Iconbox -->
+  <section class="cs_bg_filed" data-src="assets/img/watch_black_bg.jpg">
+    <div class="cs_top">
+      <div class="cs_height_150 cs_height_lg_80"></div>
+      <div class="container">
+        <div class="cs_section_heading_style_4 text-center ">
+          <p class="cs_section_subtitle cs_mb_lg_35">Enhanced Optinns</p>
+          <h2 class="cs_section_title cs_fs_45 cs_bold">Elevate Your Workouts</h2>
+        </div>
+        <div class="cs_height_63 cs_height_lg_60"></div>
+        <div class="row cs_gap_y_30">
+          <div class="col-xl-4 col-lg-6 ">
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Weather Update</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/weather.svg" alt="Weather">
+              </div>
+            </div>
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Alarm Alert</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/alarm.svg" alt="Alarm">
+              </div>
+            </div>
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Weather Update</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/heart_monitor.svg" alt="heart">
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 order-xl-3">
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Distance Conunter</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/location.png" alt="location">
+              </div>
+            </div>
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Water Resistant</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/water_resistant.svg" alt="water_resistant">
+              </div>
+            </div>
+            <div class="cs_iconbox_style_12">
+              <div class="cs_iconbox_info text-end">
+                <h3 class="cs_iconbox_title cs_mb_20">Multi-Sport Modes</h3>
+                <p class="cs_mb_22">Adipiscing elit, sed do eiusmod tempor
+                  incididunt utenim ad nostrud Natus error stmel ussitue laudantiexercitation </p>
+              </div>
+              <div class="cs_iconbox_icon">
+                <img src="assets/img/icons/sports_mode.svg" alt="sports_mode">
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-12 cs_center order-xl-2">
+            <div class="cs_iconbox_middle_img">
+              <img src="assets/img/watch_2.png" alt="watch">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_136 cs_height_lg_80"></div>
+    </div>
+    <div class="cs_bottom">
+      <div class="cs_height_150 cs_height_lg_80"></div>
+      <div class="container-fluid">
+        <div class="row cs_gap_y_30">
+          <div class="col-xl-6">
+            <div class="cs_card_style_8 cs_white_color">
+              <div class="cs_card_img">
+                <img src="assets/img/watch_3.png" alt="watch">
+                <!-- <div class="cs_shape"></div> -->
+              </div>
+              <div class="cs_card_info position-relative z-1">
+                <p class="cs_fs_18 cs_mb_20">In Stock</p>
+                <h3 class="cs_card_title cs_fs_30 cs_white_color cs_semibold">Unisex Smartwatch</h3>
+                <div class="cs_rating cs_mb_20" data-rating="4">
+                  <div class="cs_rating_percentage"></div>
+                </div>
+                <p class="cs_card_subtitle cs_mb_32">Beyond more stoic this along goodness this sed
+                  wow manatee mongos flusterd impressive</p>
+                <div class="cs_price cs_mb_57">
+                  <p class="cs_fs_30 mb-0">$75.00</p>
+                  <p class="cs_fs_24 mb-0">$79.00</p>
+                </div>
+                <a href="#" aria-label="add to cart btn" class="cs_btn_style_2 text-uppercase"><span>Add To
+                    Cart</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="cs_counter_wrapper_2">
+              <div class="cs_counter_style_2 cs_white_color">
+                <div class="cs_coutner_number cs_fs_100 cs_semibold cs_accent_color d-flex">
+                  <span class="odometer odometer-auto-theme" data-count-to="45"></span>
+                  +
+                </div>
+                <div class="cs_counter_info">
+                  <h3 class="cs_counter_heading cs_fs_40 cs_mb_10 cs_white_color">Products Sold</h3>
+                  <p class="cs_fs_18 mb-0">Natus error sit voluptatem accusantium laudantium, totam rem aperiam..</p>
+                </div>
+              </div>
+              <div class="cs_counter_style_2 cs_white_color">
+                <div class="cs_coutner_number cs_fs_100 cs_semibold cs_accent_color d-flex">
+                  <span class="odometer odometer-auto-theme" data-count-to="24"></span>
+                  K
+                </div>
+                <div class="cs_counter_info">
+                  <h3 class="cs_counter_heading cs_fs_40 cs_mb_10 cs_white_color">Projects done</h3>
+                  <p class="cs_fs_18 mb-0">Natus error sit voluptatem accusantium laudantium, totam rem aperiam..</p>
+                </div>
+              </div>
+              <div class="cs_counter_style_2 cs_white_color">
+                <div class="cs_coutner_number cs_fs_100 cs_semibold cs_accent_color d-flex">
+                  <span class="odometer odometer-auto-theme" data-count-to="17"></span>
+                  M
+                </div>
+                <div class="cs_counter_info">
+                  <h3 class="cs_counter_heading cs_fs_40 cs_mb_10 cs_white_color">Happy clients</h3>
+                  <p class="cs_fs_18 mb-0">Natus error sit voluptatem accusantium laudantium, totam rem aperiam..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_120 cs_height_lg_80"></div>
+    </div>
+  </section>
+  <!-- End Iconbox -->
+  <!-- Start product -->
+  <section>
+    <div class="cs_height_120 cs_height_lg_80"></div>
+    <div class="container">
+      <div class="cs_section_heading_style_4 text-center cs_mb_60">
+        <p class="cs_section_subtitle cs_mb_lg_35">Leading Online</p>
+        <h2 class="cs_section_title cs_fs_55 cs_bold">New arrivals exclusive</h2>
+      </div>
+      <div class="row cs_gap_y_30">
+        <div class="col-xl-3 col-lg-6">
+          <div class="cs_product_style_2 cs_center_column">
+            <div class="cs_product_thumbnail cs_mb_21">
+              <img src="assets/img/watch_product_1.png" alt="watch">
+            </div>
+            <div class="cs_product_info text-center">
+              <h3 class="cs_fs_24 cs_product_title cs_mb_5">Apple watch 1</h3>
+              <p class="cs_fs_20 cs_mb_17">$344,37</p>
+              <a href="#" aria-label="Add to cart" class="cs_btn_style_3">
+                <span>Add To Cart</span>
               </a>
             </div>
           </div>
         </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="cs_product_style_2 cs_center_column">
+            <div class="cs_product_thumbnail cs_mb_21">
+              <img src="assets/img/watch_product_2.png" alt="watch">
+            </div>
+            <div class="cs_product_info text-center">
+              <h3 class="cs_fs_24 cs_product_title cs_mb_5">Apple watch 2</h3>
+              <p class="cs_fs_20 cs_mb_17">$744,37</p>
+              <a href="#" aria-label="Add to cart" class="cs_btn_style_3">
+                <span>Add To Cart</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="cs_product_style_2 cs_center_column">
+            <div class="cs_product_thumbnail cs_mb_21">
+              <img src="assets/img/watch_product_3.png" alt="watch">
+            </div>
+            <div class="cs_product_info text-center">
+              <h3 class="cs_fs_24 cs_product_title cs_mb_5">Apple watch 3</h3>
+              <p class="cs_fs_20 cs_mb_17">$544,11</p>
+              <a href="#" aria-label="Add to cart" class="cs_btn_style_3">
+                <span>Add To Cart</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="cs_product_style_2 cs_center_column">
+            <div class="cs_product_thumbnail cs_mb_21">
+              <img src="assets/img/watch_product_4.png" alt="watch">
+            </div>
+            <div class="cs_product_info text-center">
+              <h3 class="cs_fs_24 cs_product_title cs_mb_5">Apple watch 4</h3>
+              <p class="cs_fs_20 cs_mb_17">$689,72</p>
+              <a href="#" aria-label="Add to cart" class="cs_btn_style_3">
+                <span>Add To Cart</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_140 cs_height_lg_80"></div>
+  </section>
+  <!-- End product -->
+  <!-- Start FAQ -->
+  <section>
+    <div class="cs_height_140 cs_height_lg_80"></div>
+    <div class="container">
+      <div class="cs_accordian_wrapper_4">
+        <div class="row cs_gap_y_30">
+          <div class="col-lg-5">
+            <div class="cs_section_heading_style_4 cs_mb_40">
+              <p class="cs_section_subtitle cs_fs_18 cs_mb_lg_35">Asked Questions</p>
+              <h2 class="cs_section_title cs_fs_45">Have questions? <br> We’ve got <br> answers.</h2>
+            </div>
+            <div class="cs_accordian_btn">
+              <div class="cs_accordian_btn_head cs_fs_28 cs_semibold cs_mb_7 text-capitalize">
+                Have more qusetion in <br> mind?
+              </div>
+              <a href="#" class="cs_fs_20">View more</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="cs_accordian cs_style_1">
+              <div class="cs_accordian_head cs_fs_24 cs_semibold">
+                Can smartwatch work without phone?
+                <span class="cs_accordian_toggle cs_fs_18  position-absolute"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="cs_accordian_body">
+                Explore our diverse selection of high-end vehicles, choose your preferred pickup
+                and return dates, and select a location that best fits your needs
+              </div>
+            </div>
+            <div class="cs_accordian cs_style_1">
+              <div class="cs_accordian_head cs_fs_24 cs_semibold">
+                What are the features of a smart watch?
+                <span class="cs_accordian_toggle cs_fs_18  position-absolute"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="cs_accordian_body">
+                Explore our diverse selection of high-end vehicles, choose your preferred pickup
+                and return dates, and select a location that best fits your needs
+              </div>
+            </div>
+            <div class="cs_accordian cs_style_1">
+              <div class="cs_accordian_head cs_fs_24 cs_semibold">
+                Does a smartwatch need a SIM card?
+                <span class="cs_accordian_toggle cs_fs_18  position-absolute"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="cs_accordian_body">
+                Explore our diverse selection of high-end vehicles, choose your preferred pickup
+                and return dates, and select a location that best fits your needs
+              </div>
+            </div>
+            <div class="cs_accordian cs_style_1">
+              <div class="cs_accordian_head cs_fs_24 cs_semibold">
+                What is the value of business consulting?
+                <span class="cs_accordian_toggle cs_fs_18  position-absolute"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="cs_accordian_body">
+                Explore our diverse selection of high-end vehicles, choose your preferred pickup
+                and return dates, and select a location that best fits your needs
+              </div>
+            </div>
+            <div class="cs_accordian cs_style_1">
+              <div class="cs_accordian_head cs_fs_24 cs_semibold">
+                What is the value of business consulting?
+                <span class="cs_accordian_toggle cs_fs_18  position-absolute"><i
+                    class="fa-solid fa-angle-down"></i></span>
+              </div>
+              <div class="cs_accordian_body">
+                Explore our diverse selection of high-end vehicles, choose your preferred pickup
+                and return dates, and select a location that best fits your needs
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_120 cs_height_lg_80"></div>
+  </section>
+  <!-- End FAQ -->
+  <!-- Start Slider -->
+  <section class="cs_banner_slider">
+    <div class="cs_slider cs_style_1 cs_slider_gap_24 position-relative">
+      <div class="cs_slider_arrows_style_1">
+        <div class="cs_left_arrow"><i class="fa-solid fa-angle-left"></i></div>
+        <div class="cs_right_arrow"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+        data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1"
+        data-md-slides="1" data-lg-slides="1" data-add-slides="1">
+        <div class="cs_slider_wrapper">
+          <div class="cs_slide">
+            <div class="cs_card_style_9 cs_bg_filed" data-src="assets/img/watch_slider.jpg">
+              <div class="container">
+                <div class="cs_section_heading_style_4 cs_white_color">
+                  <p class="cs_section_subtitle cs_mb_lg_26">upgrade your lifestyle</p>
+                  <h2 class="cs_section_title cs_fs_55 cs_white_color cs_bold cs_mb_30">Best Digital Watch For Your
+                    Daily Life</h2>
+                  <p class="mb-0">Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite
+                    excellent son gentleman acuteness her.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs_slide">
+            <div class="cs_card_style_9 cs_bg_filed" data-src="assets/img/watch_slider.jpg">
+              <div class="container">
+                <div class="cs_section_heading_style_4 cs_white_color">
+                  <p class="cs_section_subtitle cs_mb_lg_26">upgrade your lifestyle</p>
+                  <h2 class="cs_section_title cs_fs_55 cs_white_color cs_bold cs_mb_30">Best Digital Watch For Your
+                    Daily Life</h2>
+                  <p class="mb-0">Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite
+                    excellent son gentleman acuteness her.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs_slide">
+            <div class="cs_card_style_9 cs_bg_filed" data-src="assets/img/watch_slider.jpg">
+              <div class="container">
+                <div class="cs_section_heading_style_4 cs_white_color">
+                  <p class="cs_section_subtitle cs_mb_lg_26">upgrade your lifestyle</p>
+                  <h2 class="cs_section_title cs_fs_55 cs_white_color cs_bold cs_mb_30">Best Digital Watch For Your
+                    Daily Life</h2>
+                  <p class="mb-0">Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite
+                    excellent son gentleman acuteness her.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_center">
+          <div class="cs_pagination cs_style_1"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Slider -->
+  <!-- Start Testimonial -->
+  <section>
+    <div class="cs_height_100 cs_height_lg_80"></div>
+    <div class="cs_height_100 cs_height_lg_0"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 overflow-hiddden">
+          <div class="cs_section_heading_style_4 cs_mb_50">
+            <p class="cs_section_subtitle cs_fs_18 cs_mb_lg_25">testimonials and reviews</p>
+            <h2 class="cs_section_title cs_fs_55 cs_bold">Feedback from Our Users</h2>
+          </div>
+          <div class="cs_testimonial_avatar cs_mb_20 cs_white_color">
+            <div class="cs_avatar_img"><img src="assets/img/gym_rating.jpg" alt="avatar"></div>
+            <div class="cs_avatar_img"><img src="assets/img/gym_rating_2.jpg" alt="avatar"></div>
+            <div class="cs_avatar_img"><img src="assets/img/gym_rating_3.jpg" alt="avatar"></div>
+            <div class="cs_avatar_img"><img src="assets/img/gym_rating.jpg" alt="avatar"></div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="cs_testimonial_wrapper_2">
+            <div class="cs_slider cs_style_1 cs_slider_gap_24">
+              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+                data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1"
+                data-md-slides="1" data-lg-slides="1" data-add-slides="1">
+                <div class="cs_slider_wrapper">
+                  <div class="cs_slide">
+                    <div class="cs_testimonial_style_5">
+                      <blockquote class="cs_mb_28">“ Amazing UI designer. Works fast and has a great aesthetic for
+                        modern
+                        design. This is the third time using this designer and won't be the last. Lorem ipsum dolor sit
+                        amet, oratio udnjddquaestio ex usu, regione mei te e </blockquote>
+                      <div class="cs_quote_img position-absolute"><img src="assets/img/coute.png" alt="quote"></div>
+                      <h3 class="cs_fs_33 cs_black_color mb-0">Google</h3>
+                      <div class="cs_testimial_review cs_mb_35">
+                        <p class="mb-0">Reviews</p>
+                        <div class="cs_rating" data-rating="3">
+                          <div class="cs_rating_percentage"></div>
+                        </div>
+                        <p class="mb-0">(5.0)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs_slide">
+                    <div class="cs_testimonial_style_5">
+                      <blockquote class="cs_mb_28">“ Amazing UI designer. Works fast and has a great aesthetic for
+                        modern </blockquote>
+                      <div class="cs_quote_img position-absolute"><img src="assets/img/coute.png" alt="quote"></div>
+                      <h3 class="cs_fs_33 cs_black_color mb-0">Google</h3>
+                      <div class="cs_testimial_review cs_mb_35">
+                        <p class="mb-0">Reviews</p>
+                        <div class="cs_rating" data-rating="3">
+                          <div class="cs_rating_percentage"></div>
+                        </div>
+                        <p class="mb-0">(5.0)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs_slide">
+                    <div class="cs_testimonial_style_5">
+                      <blockquote class="cs_mb_28">“ Amazing UI designer. Works fast and has a great aesthetic for
+                        modern
+                        design. This is the third time using this designer and won't be the last. Lorem ipsum dolor sit
+                        amet, oratio udnjddquaestio ex usu, regione mei te e </blockquote>
+                      <div class="cs_quote_img position-absolute"><img src="assets/img/coute.png" alt="quote"></div>
+                      <h3 class="cs_fs_33 cs_black_color mb-0">Google</h3>
+                      <div class="cs_testimial_review cs_mb_35">
+                        <p class="mb-0">Reviews</p>
+                        <div class="cs_rating" data-rating="3">
+                          <div class="cs_rating_percentage"></div>
+                        </div>
+                        <p class="mb-0">(5.0)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs_pagination cs_style_1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_120 cs_height_lg_80"></div>
+  </section>
+  <!-- End Testimonial -->
+  <!-- Start Footer -->
+  <footer class="cs_footer_style_8">
+    <div class="cs_height_150 cs_height_lg_40"></div>
+    <div class="cs_height_80 cs_height_lg_40"></div>
+    <div class="container">
+      <div class="cs_newslatter position-relative z-2">
+        <div class="cs_newslatter_headading">
+          <h3 class="cs_fs_45 cs_white_color cs_mb_30">join our newsletter</h3>
+          <p class="cs_white_color mb-0">Create a visual identity for your company, and an overall branding that stands
+            out.</p>
+        </div>
+        <form action="#" class="cs_newslatter_input">
+          <div class="cs_input_wrapper position-relative">
+            <input type="email" name="email" placeholder="Enter your Email" autocomplete="email" required>
+            <button type="submit" aria-label="Sign Up btn" class="cs_btn_style_2"><span>Subscribe</span></button>
+          </div>
+        </form>
+        <div class="cs_shape_1 position-absolute">
+          <img src="assets/img/icons/watch_newsletter_shape_1.svg" alt="icon">
+        </div>
+        <div class="cs_shape_2 position-absolute">
+          <img src="assets/img/icons/watch_newsletter_shape_2.svg" alt="icon">
+        </div>
+        <div class="cs_shape_3 position-absolute">
+          <img src="assets/img/icons/watch_newsletter_shape_3.svg" alt="icon">
+        </div>
+      </div>
+    </div>
+    <div class="cs_footer_top cs_mb_60">
+      <div class="cs_height_150 cs_height_lg_80"></div>
+      <div class="container">
+        <div class="cs_footer_top_in">
+          <div class="cs_item">
+            <div class="cs_icon cs_center"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="cs_details cs_white_color">
+              <h3 class="cs_fs_20 cs_white_color cs_medium mb-0">Address</h3>
+              <p class="cs_fs_20 mb-0">Oxford Ave. Cary, NC 27511</p>
+            </div>
+          </div>
+          <div class="cs_item">
+            <div class="cs_icon cs_center"><i class="fa-solid fa-envelope"></i></div>
+            <div class="cs_details cs_white_color">
+              <h3 class="cs_fs_20 cs_white_color cs_medium mb-0">Email</h3>
+              <p class="cs_fs_20 mb-0"><a href="mailto:info@pro.com">sahin@yahoo.com</a></p>
+            </div>
+          </div>
+          <div class="cs_item">
+            <div class="cs_icon cs_center"><i class="fa-solid fa-phone"></i></div>
+            <div class="cs_details cs_white_color">
+              <h3 class="cs_fs_20 cs_white_color cs_medium mb-0">Phone</h3>
+              <p class="cs_fs_20 mb-0"><a href="tel:12345">+537 547-6401</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cs_footer_row cs_white_color">
         <div class="cs_footer_col">
           <div class="cs_footer_widget">
-            <h2 class="cs_footer_widget_title cs_fs_30 cs_white_color cs_mb_60 cs_mb_lg_30">Page</h2>
+            <div class="cs_footer_text_widget cs_mb_26">
+              <div class="cs_footer_logo cs_mb_23"><img src="assets/img/icons/logo_blue_2.svg" alt="logo"></div>
+              <p class="mb-0">Justo odio dignissimos ducimus qui blanditiis voluptatum dti quos dolores et quas
+                molestias sint occaecati id est laborum</p>
+            </div>
+            <div class="cs_social_icons">
+              <a href="#"><span class="cs_icon cs_center cs_white_color"><i
+                    class="fa-brands fa-facebook-f"></i></span></a>
+              <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-twitter"></i></span></a>
+              <a href="#"><span class="cs_icon cs_center cs_white_color"><i
+                    class="fa-brands fa-linkedin-in"></i></span></a>
+              <a href="#"><span class="cs_icon cs_center cs_white_color"><i
+                    class="fa-brands fa-instagram"></i></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="cs_footer_col">
+          <div class="cs_footer_widget">
+            <h2 class="cs_footer_widget_title cs_fs_24 cs_white_color cs_mb_60 cs_mb_lg_30">Useful Links</h2>
             <ul class="cs_footer_widget_menu cs_mp_0">
               <li>
-                <a href="about.html" aria-label="about page link">About</a>
+                <a href="about.html" aria-label="about page link">Special Events</a>
               </li>
               <li>
-                <a href="shop.html">Buying Guide</a>
+                <a href="shop.html">Quadrone Shop</a>
               </li>
               <li>
-                <a href="shop.html">Student Discount</a>
+                <a href="shop.html">Long endurance</a>
+              </li>
+              <li>
+                <a href="shop.html">Blog and News</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="cs_footer_col">
           <div class="cs_footer_widget">
-            <h2 class="cs_footer_widget_title cs_fs_30 cs_white_color cs_mb_60 cs_mb_lg_30">Service</h2>
+            <h2 class="cs_footer_widget_title cs_fs_24 cs_white_color cs_mb_60 cs_mb_lg_30">Resources</h2>
             <ul class="cs_footer_widget_menu cs_mp_0">
               <li>
-                <a href="service.html">Purple vs Competitors</a>
+                <a href="service.html">Term & Conditions</a>
               </li>
               <li>
-                <a href="service.html">Track Your Order</a>
+                <a href="service.html">Privacy Policy</a>
               </li>
               <li>
-                <a href="service.html">Terms & Conditions</a>
+                <a href="service.html">Designer resources</a>
               </li>
               <li>
-                <a href="service.html">Returns + Exchanges</a>
+                <a href="service.html">Accessibility</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="cs_footer_col">
           <div class="cs_footer_widget">
-            <h2 class="cs_footer_widget_title cs_fs_30 cs_white_color cs_mb_60 cs_mb_lg_30">Contact info</h2>
+            <h2 class="cs_footer_widget_title cs_fs_24 cs_white_color cs_mb_60 cs_mb_lg_30">Download App</h2>
             <ul class="cs_footer_widget_menu cs_contact_widget cs_mp_0">
               <li class="cs_mb_20">
-                <span><i class="fa-solid fa-location-dot"></i></span>
-                <div> 455 West Orchard Street Kings Mountain, NC 280867</div>
+                <a href="#"><img src="assets/img/icons/apple.svg" alt="apple"></a>
               </li>
               <li class="cs_mb_10">
-                <span><i class="fa-solid fa-phone"></i></span>
-                <div>
-                  <a href="tel:+088 (246) 642-27-10">+088 (246) 642-27-10</a>
-                </div>
-              </li>
-              <li>
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <div>
-                  <a href="mailto:example@mail.com">example@mail.com</a>
-                </div>
+                <a href="#"><img src="assets/img/icons/play_store.svg" alt="play store"></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="cs_height_85 cs_height_lg_40"></div>
+      <div class="cs_height_42 cs_height_lg_30"></div>
       <div class="cs_footer_bottom">
-        <div class="cs_footer_bottom_in cs_white_color">
-          <p class="cs_copyright mb-0">Copyright &copy; <span class="cs_getting_year"></span> laralink. All Rights
-            Reserved.</p>
-          <ul class="cs_footer_widget_menu cs_mp_0">
-            <li>
-              <a href="#">Privacy & Cookie Policy</a>
-            </li>
-          </ul>
-        </div>
+        <p class="cs_copyright text-center cs_white_color mb-0">Copyright &copy;
+          <span class="cs_getting_year"></span> laralink. All Rights Reserved.
+        </p>
       </div>
+    </div>
+    <div class="cs_shape_1 position-absolute">
+      <img src="assets/img/icons/flower.svg" alt="icon">
     </div>
   </footer>
   <!-- End Footer -->
@@ -244,6 +815,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/date-time.min.js"></script>
   <script src="assets/js/tom-select.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

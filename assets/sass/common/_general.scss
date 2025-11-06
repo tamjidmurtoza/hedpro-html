@@ -91,6 +91,7 @@
     font-size: 30px;
   }
 }
+
 .cs_fs_45 {
   font-size: 45px;
   line-height: 1.33em;
@@ -167,6 +168,13 @@
 .cs_fs_100 {
   font-size: 100px;
   line-height: 1.2em;
+
+  @media (max-width: 1299px) {
+    font-size: 80px;
+  }
+  @media (max-width: 1199px) {
+    font-size: 70px;
+  }
 }
 .cs_fs_120 {
   font-size: 120px;
@@ -970,6 +978,18 @@
     font-family: var(--ternary-font);
   }
 }
+
+.cs_section_heading_style_4 {
+  .cs_section_subtitle {
+    display: inline-block;
+    background-color: var(--accent-color);
+    padding: 4px 37px;
+    font-size: 18px;
+    border-radius: 44px 0;
+    color: var(--white-color);
+  }
+}
+
 .cs_feature_style_1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

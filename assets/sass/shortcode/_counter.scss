@@ -29,3 +29,34 @@
     gap: 11px;
   }
 }
+
+.cs_counter_wrapper_2 {
+  padding-left: 95px;
+
+  .cs_counter_style_2 {
+    display: flex;
+    align-items: start;
+    gap: 36px;
+    padding-bottom: 38px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #242424;
+
+    .cs_counter_info {
+      width: min(340px, 100%);
+    }
+  }
+
+  @media (max-width: 1299px) {
+    padding-left: 80px;
+  }
+
+  @media (max-width: 1199px) {
+    padding-left: 60px;
+  }
+  @media (max-width: 767px) {
+    .cs_counter_style_2 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

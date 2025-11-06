@@ -48,24 +48,28 @@
 /*=================================================
  Slider Arrows and Pagination
 ===================================================*/
-.cs_slider_arrows.cs_style_1 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.cs_slider_arrows_style_1 {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 16px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
 
   .cs_left_arrow,
   .cs_right_arrow {
-    display: flex;
     width: 44px;
     height: 44px;
     padding: 10px;
-    background: var(--white-color);
+    color: var(--white-color);
+    font-size: 30px;
+    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
 
     &:hover {
       color: var(--white-color);
@@ -73,12 +77,19 @@
     }
   }
 
-  @media (max-width: 991px) {
-    position: initial;
-    transform: initial;
-    margin-top: 24px;
-    justify-content: space-between;
+  .cs_left_arrow {
+    left: 30px;
   }
+  .cs_right_arrow {
+    right: 30px;
+  }
+
+  // @media (max-width: 991px) {
+  //   position: initial;
+  //   transform: initial;
+  //   margin-top: 24px;
+  //   justify-content: space-between;
+  // }
 }
 
 .cs_pagination.cs_style_1 {
@@ -96,10 +107,9 @@
 
   li {
     button {
-      height: 7px;
-      width: 7px;
-      background-color: transparent;
-      border: 2px solid #010d09;
+      height: 13px;
+      width: 13px;
+      background-color: #c7c7c7;
       border-radius: 50%;
       margin: 0;
       cursor: pointer;
@@ -108,11 +118,27 @@
       transition: all 0.3s ease;
       padding: 0;
       font-size: 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border: 1px solid var(--accent-color);
+        border-radius: 50%;
+        display: none;
+      }
     }
 
     &.slick-active {
       button {
-        background-color: #010d09;
+        background-color: var(--accent-color);
+        &::after {
+          display: block;
+        }
       }
     }
   }
@@ -183,11 +209,42 @@
   }
 }
 
+.cs_banner_slider {
+  .cs_pagination.cs_style_1 {
+    width: 165px;
+    height: 31px;
+    border-radius: 66px 66px 0 0;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @keyframes slider-left {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs_slider_arrows_style_1 {
+    .cs_left_arrow {
+      left: 0;
+    }
+  }
+  .cs_slider_arrows_style_1 {
+    .cs_right_arrow {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_slider_arrows_style_1 {
+    display: none !important;
   }
 }

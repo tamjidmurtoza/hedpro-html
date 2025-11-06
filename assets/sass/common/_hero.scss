@@ -360,23 +360,21 @@
 }
 
 .cs_hero_style_8 {
-  .cs_left_hero {
-    padding: 315px 0 262px;
-  }
+  padding: 128px 0 36px;
+
   .cs_right_hero {
-    padding: 315px 0 262px;
     width: 70%;
     margin-left: auto;
     position: relative;
 
     &::after {
       content: "";
-      right: -9999px; /* make it extend far beyond container */
-      width: calc(100% + 9999px); /* extend full left side */
-      height: 100%;
+      right: -9999px;
+      width: calc(100% + 9999px);
+      height: calc(100% + 128px + 36px);
       position: absolute;
+      top: -128px;
       background-color: var(--accent-color);
-      top: 0;
     }
 
     &::before {
@@ -388,7 +386,8 @@
       transform: rotate(-38.752deg);
       position: absolute;
       z-index: 1;
-      top: 535px;
+      top: 273px;
+      right: -168px;
     }
 
     .cs_right_hero_img {
@@ -447,5 +446,86 @@
     position: absolute;
     right: -50px;
     bottom: -131px;
+    animation: shape1 3s infinite;
+  }
+
+  .cs_hero_img_details {
+    top: 25%;
+    right: -30px;
+
+    p {
+      padding-bottom: 13px;
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 75px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--white-color);
+        bottom: 0;
+        left: -104px;
+        z-index: 1;
+      }
+    }
+  }
+
+  @media (max-width: 1299px) {
+    .cs_right_hero {
+      &::before {
+        right: -305px;
+      }
+    }
+    .cs_price {
+      width: min(285px, 100%);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_review {
+      position: initial;
+      margin-top: 20px;
+    }
+    .cs_right_hero {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_right_hero {
+      &::after {
+        height: 100%;
+        top: 0;
+      }
+    }
+    .cs_shape {
+      bottom: -60px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs_right_hero {
+      .cs_right_hero_img {
+        right: 192px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .cs_right_hero {
+      .cs_right_hero_img {
+        right: 140px;
+      }
+    }
+  }
+}
+
+@keyframes shape1 {
+  50% {
+    transform: rotate(5deg);
   }
 }

@@ -174,6 +174,41 @@
   }
 }
 
+.cs_iconbox_style_11 {
+  display: flex;
+  flex-direction: column;
+  width: min(136px, 100%);
+}
+
+.cs_iconbox_style_12 {
+  padding-right: 115px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  .cs_iconbox_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .cs_iconbox_info {
+    border-bottom: 1px solid #e8e8e8;
+
+    .cs_iconbox_title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 .cs_iconbox_wraper_1 {
   padding: 58px 0 50px;
   display: flex;
@@ -287,5 +322,44 @@
   @media (max-width: 767px) {
     gap: 30px;
     flex-wrap: wrap;
+  }
+}
+
+.cs_iconbox_wrapper_8 {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    left: 0;
+    bottom: 187px;
+  }
+  .cs_top_iconbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(540px, 100%);
+    margin-left: auto;
+    padding-bottom: 40px;
+  }
+  .cs_bottom_iconbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(580px, 100%);
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  @media (max-width: 991px) {
+    .cs_top_iconbox {
+      margin-left: 0;
+    }
+    .cs_bottom_iconbox {
+      margin: 0;
+    }
   }
 }
