@@ -160,3 +160,50 @@
     }
   }
 }
+
+.cs_product_style_6 {
+  .cs_product_thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+  .cs_product_info {
+    .cs_rating {
+      width: 120px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        font-weight: 900;
+        color: var(--accent-color);
+      }
+
+      .cs_rating_percentage {
+        &::before {
+          color: var(--border-color);
+        }
+      }
+    }
+
+    .cs_price {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .cs_prev_price {
+        text-decoration: line-through;
+      }
+    }
+
+    .cs_btn_style_7 {
+      background-color: transparent;
+      color: var(--accent-color);
+      padding: 12px 45px 23px 45px;
+
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+      }
+    }
+  }
+}

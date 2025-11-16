@@ -524,8 +524,138 @@
   }
 }
 
-@keyframes shape1 {
-  50% {
-    transform: rotate(5deg);
+.cs_hero_style_9 {
+  padding: 240px 0 0px;
+  position: relative;
+
+  .container {
+    max-width: 1440px;
+  }
+
+  .cs_hero_img {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    z-index: 5;
+    transform: translateY(75px);
+    img {
+      width: 100%;
+    }
+  }
+
+  .cs_hero_info {
+    width: min(792px, 100%);
+    margin-left: auto;
+    padding-bottom: 180px;
+
+    .cs_btn_style_2 {
+      background-color: var(--white-color);
+      color: var(--accent-color);
+      padding: 16px 32px;
+      font-weight: 600;
+      border-radius: 0;
+      overflow: hidden;
+
+      &:hover {
+        border-radius: 32px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    background: var(--accent-color);
+    left: 0;
+    top: 0;
+  }
+  @media (max-width: 1600px) {
+    .cs_hero_img {
+      left: 60px;
+    }
+  }
+  @media (max-width: 1399px) {
+    .cs_hero_info {
+      width: min(692px, 100%);
+    }
+    .cs_hero_img {
+      img {
+        width: 90%;
+      }
+    }
+  }
+  @media (max-width: 1199px) {
+    .cs_hero_info {
+      width: min(648px, 51%);
+    }
+    .cs_hero_img {
+      img {
+        width: 80%;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .cs_hero_img {
+      position: initial;
+      transform: none;
+      width: 80%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+    .cs_hero_info {
+      padding-top: 60px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.cs_hero_style_10 {
+  padding: 166px 0 0;
+  border-bottom: 1px solid var(--border-color);
+
+  .cs_hero_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .cs_hero_left {
+    width: min(777px, 100%);
+  }
+  .cs_hero_right {
+    border: 1px solid var(--border-color);
+    border-bottom: 0;
+    border-radius: 444px 444px 0 0;
+    padding: 40px 20px 38px 54px;
+  }
+  .cs_hero_bg_img {
+    top: -30px;
+    right: 0;
+  }
+
+  .cs_color_shape {
+    width: 613px;
+    height: 637px;
+    background: rgba(126, 200, 145, 0.3);
+    filter: blur(165.5px);
+    top: -66px;
+    left: -266px;
+  }
+
+  @media (max-width: 1199px) {
+    .cs_hero_content {
+      align-items: flex-end;
+    }
+  }
+  @media (max-width: 992px) {
+    .cs_hero_content {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

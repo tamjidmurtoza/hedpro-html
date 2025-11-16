@@ -31,6 +31,31 @@
   }
 }
 
+.cs_video_block_style_2 {
+  .cs_video_thumbnail {
+    img {
+      width: 100%;
+    }
+
+    .cs_play_img {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate 16s infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 @keyframes rotateCircle {
   50% {
     transform: translate(3px, 6px);

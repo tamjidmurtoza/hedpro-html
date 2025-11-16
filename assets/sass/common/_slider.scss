@@ -92,9 +92,38 @@
   // }
 }
 
-.cs_pagination.cs_style_1 {
-  margin: 0 auto;
+.cs_slider_arrows_style_2 {
+  // position: absolute;
+  // // left: 0;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  height: 100%;
+  // gap: 100px;
+}
 
+.cs_pagination_arrow {
+  position: absolute;
+  left: 5%;
+  bottom: 30%;
+  transform: translateY(-30%);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 5;
+
+  .cs_left_arrow {
+    position: absolute;
+    top: 0;
+    width: 30px;
+  }
+
+  .cs_right_arrow {
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+  }
+}
+.cs_pagination.cs_style_1 {
   ul {
     display: flex;
     align-items: center;
@@ -144,6 +173,41 @@
   }
 }
 
+.cs_pagination.cs_style_2 {
+  margin-left: 10px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    button {
+      height: 4px;
+      width: 4px;
+      background-color: #c7c7c7;
+      border-radius: 50%;
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      padding: 0;
+      font-size: 0;
+      position: relative;
+    }
+
+    &.slick-active {
+      button {
+        background-color: #3c5e39;
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}
 /*=======================================================
  Horizontal Slider
 =========================================================*/
@@ -167,7 +231,8 @@
     }
   }
 
-  .cs_brand_slider_wrapper_style_1 {
+  .cs_brand_slider_wrapper_style_1,
+  .cs_brand_slider_wrapper_style_2 {
     width: min(920px, 100%);
     overflow: hidden;
 
@@ -178,7 +243,8 @@
       flex-wrap: nowrap;
       white-space: nowrap;
     }
-    .cs_brands_list {
+    .cs_brands_list,
+    .cs_brands_list_style_2 {
       min-width: 100%;
       display: flex;
       align-items: center;
@@ -188,8 +254,20 @@
       flex: none;
       animation: slider-left 30s linear infinite;
     }
-  }
 
+    .cs_brands_list_style_2 {
+      animation-direction: reverse;
+    }
+  }
+  .cs_brand_slider_wrapper_style_2 {
+    width: 100%;
+
+    .cs_brands_list,
+    .cs_brands_list_style_2 {
+      gap: 0px 30px;
+      margin: 0 15px;
+    }
+  }
   @media (max-width: 991px) {
     flex-direction: column;
     align-items: start;
@@ -200,8 +278,10 @@
         display: none;
       }
     }
-    .cs_brand_slider_wrapper_style_1 {
-      .cs_brands_list {
+    .cs_brand_slider_wrapper_style_1,
+    .cs_brand_slider_wrapper_style_2 {
+      .cs_brands_list,
+      .cs_brands_list_style_2 {
         gap: 0 40px;
         margin: 0 20px;
       }
@@ -230,6 +310,15 @@
   }
 }
 
+@keyframes slider-right {
+  0% {
+    transform: translateX(-0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @media (max-width: 1399px) {
   .cs_slider_arrows_style_1 {
     .cs_left_arrow {
@@ -243,6 +332,25 @@
   }
 }
 
+@media (max-width: 991px) {
+  .cs_pagination_arrow {
+    bottom: 2%;
+    left: 4%;
+
+    .cs_pagination.cs_style_2 {
+      display: none;
+    }
+    .cs_slider_arrows_style_2 {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .cs_left_arrow,
+    .cs_right_arrow {
+      position: initial;
+    }
+  }
+}
 @media (max-width: 767px) {
   .cs_slider_arrows_style_1 {
     display: none !important;
