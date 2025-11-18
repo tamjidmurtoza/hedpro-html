@@ -133,6 +133,24 @@
     }
   }
 }
+
+.cs_about_feature_list {
+  li {
+    position: relative;
+    padding-left: 33px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  .cs_feature_list_icon {
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
 /*==============================================================
   10. About
 ================================================================*/
@@ -140,21 +158,6 @@
   .cs_about_text_wrapper {
     max-width: min(100%, 520px);
     padding-left: 10px;
-
-    li {
-      position: relative;
-      padding-left: 33px;
-
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-    .cs_feature_list_icon {
-      color: var(--accent-color);
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
   }
 
   @media (max-width: 1199px) {
@@ -427,4 +430,18 @@
       }
     }
   }
+}
+
+.cs_about_style_11 {
+  .cs_about_right {
+    .cs_section_heading_style_1 {
+      margin-bottom: 70px;
+      padding-bottom: 70px;
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+}
+
+.cs_company_growth {
+  background-color: #f8f9fa;
 }

@@ -515,6 +515,42 @@
   }
 }
 
+.cs_card_style_14 {
+  border: 1px solid var(--border-color);
+  padding: 25px 15px 52px;
+  border-radius: 150px;
+  position: relative;
+  background-color: var(--white-color);
+
+  .cs_social_icons {
+    .cs_icon {
+      width: 45px;
+      height: 45px;
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      color: var(--accent-color);
+
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--accent-color);
+    border-radius: inherit;
+  }
+}
+
 .cs_card_wrapper_1 {
   .cs_glowing_card_1,
   .cs_glowing_card_2 {
@@ -560,6 +596,63 @@
           margin-top: 0px;
         }
       }
+    }
+  }
+}
+
+.cs_card_wrapper_3 {
+  padding-left: 40px;
+  padding-top: 20px;
+  border-left: 2px dashed var(--accent-color);
+  .cs_card_style_15 {
+    padding: 26px 35px;
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+    .cs_year {
+      display: inline-block;
+      padding: 5px 41px;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: -24px;
+      z-index: 5;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      .cs_year {
+        background-color: var(--accent-color);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border: 1px solid var(--border-color);
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      background: white;
+      border-right: 0;
+      border-top: 0;
+    }
+    &::before {
+      content: "\f192";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 400;
+      font-size: 16px;
+      position: absolute;
+      left: -49px;
+      z-index: 1;
+      color: var(--primary-color);
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
