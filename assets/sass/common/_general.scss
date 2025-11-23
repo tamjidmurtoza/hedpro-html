@@ -96,7 +96,7 @@
   font-size: 45px;
   line-height: 1.33em;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     font-size: 40px;
   }
 }
@@ -333,6 +333,9 @@
 }
 .cs_gray_bg4 {
   background-color: var(--gray-color4);
+}
+.cs_gray_bg6 {
+  background-color: var(--gray-color6);
 }
 
 .cs_white_bg {

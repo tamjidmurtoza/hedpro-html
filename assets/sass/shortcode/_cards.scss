@@ -548,6 +548,13 @@
     z-index: -1;
     background-color: var(--accent-color);
     border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--primary-color);
+    }
   }
 }
 
@@ -655,4 +662,9 @@
       transform: translateY(-50%);
     }
   }
+}
+
+.cs_card_style_16 {
+  background-color: var(--gray-color3);
+  padding: 60px 55px 60px 72px;
 }
