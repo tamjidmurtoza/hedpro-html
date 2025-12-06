@@ -11,10 +11,11 @@
     .cs_btn_style_1 {
       position: absolute;
       left: 50%;
-      bottom: 30px;
+      bottom: 0px;
       transform: translateX(-50%);
       font-size: 18px;
       padding: 13px 30px;
+      margin-bottom: 30px;
     }
 
     &:hover {
@@ -22,6 +23,9 @@
         transform: scale(1.1);
       }
     }
+  }
+  .cs_product_info {
+    padding: 0 20px;
   }
 }
 
@@ -63,6 +67,12 @@
 
   .cs_product_info {
     margin-top: auto;
+  }
+
+  .cs_product_thumbnail {
+    img {
+      width: 100%;
+    }
   }
 }
 

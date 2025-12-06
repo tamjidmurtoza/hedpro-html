@@ -2,16 +2,13 @@
 13. Before After Slider
 ----------------------------------------------------------------*/
 .cs_before_after_style_1 {
-  background: rgba(254, 104, 6, 0.04);
-
   .cs_before_after {
     width: 100%;
     position: relative;
     height: 580px;
-    border: 7px solid var(--white);
-    margin: auto;
-    border-radius: 7px;
-    backdrop-filter: blur(40px);
+    // margin: auto;
+    border-radius: 5px;
+    // backdrop-filter: blur(40px);
   }
 
   .cs_before,
@@ -19,7 +16,7 @@
     position: relative;
 
     span {
-      border: 1px solid #d3d3d3;
+      border: 1px solid var(--white-color);
       border-radius: 5px;
       padding: 6px 20px;
       position: absolute;
@@ -48,23 +45,6 @@
       right: 52px;
       border-color: var(--white-color);
     }
-  }
-  .cs_before_after:before,
-  .cs_before_after:after {
-    content: "";
-    position: absolute;
-    height: calc(50% - 15px);
-    width: 100%;
-    z-index: 2;
-    left: 0;
-  }
-
-  .cs_before_after:before {
-    top: 0;
-  }
-
-  .cs_before_after:after {
-    bottom: 0;
   }
 
   .cs_before_after .cs_single_slide {
@@ -96,7 +76,6 @@
     height: 45px;
     width: 45px;
     border-radius: 45px;
-    border: 2px solid var(--white-color);
     background: var(--white-color);
     box-shadow: 0px 10px 50px 0px rgba(0, 55, 106, 0.2);
     backdrop-filter: blur(40px);
@@ -109,7 +88,6 @@
 
   .cs_before_after .cs_handle_before_after:before {
     content: "";
-    display: block;
     position: absolute;
     top: 0;
     width: 2px;
@@ -147,8 +125,12 @@
     flex-direction: column;
     justify-content: center;
 
-    .cs_section_heading {
+    .cs_section_heading_style_1 {
       width: min(355px, 100%);
+    }
+
+    .cs_btn_style_4 {
+      padding-right: 33px;
     }
 
     .cs_shape_2 {
@@ -189,7 +171,7 @@
       font-family: "Font Awesome 6 Free";
       position: absolute;
       top: 0;
-      animation: dropDown 2s infinite;
+      animation: dropDown 3s infinite;
     }
   }
 
@@ -201,7 +183,7 @@
 
   @media (max-width: 1400px) {
     .cs_before_after_right {
-      .cs_section_heading {
+      .cs_section_heading_style_1 {
         width: min(271px, 100%);
       }
     }

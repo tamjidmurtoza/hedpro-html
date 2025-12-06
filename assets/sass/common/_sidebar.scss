@@ -1,5 +1,5 @@
-.cs_right_sidebar {
-  padding-left: 100px;
+.cs_left_sidebar {
+  padding-right: 100px;
 }
 
 .cs_sidebar_item {
@@ -61,6 +61,13 @@
     height: 100px;
     border-radius: 10px;
     flex: none;
+  }
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis (...) at the end of truncated text */
+    display: -webkit-box; /* Required for -webkit-line-clamp */
+    -webkit-line-clamp: 2; /* Specifies the maximum number of lines */
+    -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
   }
 }
 
@@ -233,33 +240,35 @@
   }
 }
 
-blockquote {
-  background-color: var(--gray-color6);
-  padding: 15px 23px 15px 145px;
-  font-size: 27px;
-  font-weight: 600;
-  color: var(--primary-color);
-  font-style: normal;
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border-radius: 15px;
-
-  small {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
+.cs_left_sidebar {
+  blockquote {
+    background-color: var(--gray-color6);
+    padding: 15px 23px 15px 145px;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-style: normal;
     position: relative;
-    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 40px;
-      height: 2px;
-      background-color: var(--primary-color);
+    small {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      position: relative;
+      padding-left: 70px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary-color);
+      }
     }
   }
 
