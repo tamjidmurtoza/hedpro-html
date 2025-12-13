@@ -21,6 +21,7 @@
 
 .cs_iconbox_style_2 {
   display: flex;
+  align-items: center;
   gap: 20px;
 
   .cs_iconbox_icon {
@@ -131,6 +132,7 @@
   gap: 15px;
   padding: 14px;
   border: 1px solid #d0d0d0;
+  flex-wrap: wrap;
 }
 
 .cs_iconbox_style_6,
@@ -156,6 +158,12 @@
       -webkit-text-fill-color: transparent;
     }
   }
+
+  @media (max-width: 991px) {
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+  }
 }
 
 .cs_iconbox_style_7 {
@@ -164,11 +172,12 @@
   padding-bottom: 25px;
   position: relative;
   border-bottom: 1px solid #d9d9d9;
-  margin-bottom: 17px;
+  // margin-bottom: 17px;
 
   .cs_iconbox_icon {
     position: absolute;
     left: 0;
+    top: 0px;
   }
   .cs_iconbox_info {
     color: #e2e2e2;
@@ -176,17 +185,29 @@
 
   @media (max-width: 1199px) {
     width: min(450px, 100%);
+
+    .cs_iconbox_icon {
+      top: -8px;
+    }
   }
 }
 
 .cs_iconbox_style_8 {
   .cs_card_title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    padding-left: 40px;
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      font-size: 25px;
+      color: var(--accent-color);
+    }
   }
-  i {
-    color: var(--accent-color);
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
   }
 }
 
@@ -256,8 +277,9 @@
 }
 
 .cs_iconbox_style_13 {
-  max-width: 590px;
+  width: min(590px, 100%);
   gap: 24px;
+  margin-left: 0 !important;
 
   @media (max-width: 1199px) {
     align-items: start;
@@ -285,6 +307,7 @@
   gap: 30px;
   width: min(510px, 100%);
   align-items: center;
+  margin-left: 0 !important;
 
   .cs_iconbox_icon {
     width: 75px;
@@ -304,6 +327,10 @@
 .cs_iconbox_wrapper_2 {
   display: flex;
   gap: 30px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .cs_iconbox_wrapper_4 {
@@ -328,18 +355,17 @@
       border-bottom: 1px solid var(--accent-color);
     }
   }
-  .cs_left_iconbox {
-    padding-top: 18px;
-    padding-left: 30px;
-    .cs_iconbox_style_7:not(:last-child) {
-      margin-bottom: 17px;
-    }
-  }
+  .cs_left_iconbox,
   .cs_right_iconbox {
     .cs_iconbox_style_7:not(:last-child) {
       margin-bottom: 17px;
     }
   }
+  .cs_left_iconbox {
+    padding-top: 18px;
+    padding-left: 30px;
+  }
+
   .cs_iconbox_middle_img {
     border-radius: 0;
     transform: translateY(-70px);
@@ -375,12 +401,6 @@
 }
 .cs_iconbox_wrapper_6 {
   padding-left: 170px;
-
-  .cs_iconbox_style_8 {
-    &:not(:last-child) {
-      margin-bottom: 45px;
-    }
-  }
 
   @media (max-width: 1399px) {
     padding-left: 50px;
@@ -477,6 +497,12 @@
   &::before {
     right: 0;
     background: #f2faff;
+  }
+
+  @media (max-width: 1199px) {
+    br {
+      display: none;
+    }
   }
 }
 

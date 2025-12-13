@@ -67,6 +67,7 @@
     beforeAfterSlider();
     dateTimePicker()
     customSlider()
+    displayOff()
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
@@ -92,27 +93,57 @@
     $(".cs_preloader").delay(150).fadeOut("slow");
   }
 
-  /*=============================================================
-    02. Mobile Menu
-  ===============================================================*/
-  function mainNav() {
-    $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
-    $(".menu-item-has-children").append(
-      '<span class="cs_menu_dropdown_toggle"><span></span></span>'
+function mainNav() {
+    $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
+    $('.menu-item-has-children').append(
+      '<span class="cs_munu_dropdown_toggle"><span></span></span>',
     );
-    $(".cs_menu_toggle").on("click", function () {
+    $('.cs_menu_toggle').on('click', function () {
       $(this)
-        .toggleClass("active")
-        .siblings(".cs_nav_list_wrap")
-        .toggleClass("active");
-      $(".cs_site_header").toggleClass("active");
+        .toggleClass('active')
+        .siblings('.cs_nav_list_wrap')
+        .toggleClass('active');
+        $(".cs_site_header").toggleClass("active");
     });
-    $(".cs_menu_dropdown_toggle").on("click", function () {
-      $(this).toggleClass("active").siblings("ul").slideToggle();
-      $(this).parent().toggleClass("active");
+    $('.cs_menu_toggle')
+      .parents('body')
+      .find('.cs_side_header')
+      .addClass('cs_has_main_nav');
+    $('.cs_menu_toggle')
+      .parents('body')
+      .find('.cs_toolbox')
+      .addClass('cs_has_main_nav');
+    $('.cs_munu_dropdown_toggle').on('click', function () {
+      $(this).toggleClass('active').siblings('ul').slideToggle();
+      $(this).parent().toggleClass('active');
+    });
+
+    /* Side Nav */
+    $('.cs_hamburger_btn').on('click', function () {
+      $('.cs_side_header').addClass('active');
+      $('html').addClass('cs_hamburger_active');
+    });
+    $('.cs_close, .cs_side_header_overlay').on('click', function () {
+      $('.cs_side_header').removeClass('active');
+      $('html').removeClass('cs_hamburger_active');
+    });
+
+    /* Hamburger Menu */
+    $('.cs_hamburger_menu .menu-item-has-children>a').on('click', function (e) {
+      e.preventDefault();
+      $(this).siblings('ul').slideToggle();
+      $(this).siblings('.cs_munu_dropdown_toggle').toggleClass('active');
+    });
+
+    $('.cs_hamburger_menu_btn').on('click', function (e) {
+      $('.cs_hamburger_header, .cs_hamburger_overlay').addClass('active');
+      $('html').addClass('cs_hamburger_active');
+    });
+    $('.cs_close_hamburger, .cs_hamburger_overlay').on('click', function (e) {
+      $('.cs_hamburger_header, .cs_hamburger_overlay').removeClass('active');
+      $('html').removeClass('cs_hamburger_active');
     });
   }
-
   /*=============================================================
     03. Sticky Header
   ===============================================================*/
@@ -367,93 +398,7 @@
       requestAnimationFrame(raf);
     }
   }
-  /*===========================================================
-    12. Steps Animation
-  =============================================================*/
-  let tabInterval;
-  let currentIndex = 0;
-
-  const $tabs = $(".cs_iconbox_wrapper_style_2 .cs_iconbox_style_2");
-  const $tabContents = $(".cs_step_thumbnail");
-  const intervalTime = 5000;
-
-  if ($tabs.length > 0 && $tabContents.length > 0) {
-    function activateTab(index) {
-      $tabs.eq(index).addClass("active").siblings().removeClass("active");
-      $tabContents.eq(index).fadeIn(800).siblings().hide();
-    }
-
-    function startAutoplay() {
-      stopAutoplay();
-      tabInterval = setInterval(function () {
-        currentIndex = (currentIndex + 1) % $tabs.length;
-        activateTab(currentIndex);
-      }, intervalTime);
-    }
-
-    function stopAutoplay() {
-      if (tabInterval) clearInterval(tabInterval);
-    }
-
-    $tabs.on("click", function (e) {
-      e.preventDefault();
-      stopAutoplay();
-      currentIndex = $(this).index();
-      activateTab(currentIndex);
-      startAutoplay();
-    });
-
-    // Init
-    $tabContents.hide();
-    activateTab(currentIndex);
-    startAutoplay();
-  }
-  /*==============================================================
-    13. Dynamic contact form
-    ===============================================================*/
-  if ($.exists("#cs_form")) {
-    const form = document.getElementById("cs_form");
-    const result = document.getElementById("cs_result");
-
-    form.addEventListener("submit", function (e) {
-      const formData = new FormData(form);
-      e.preventDefault();
-      var object = {};
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
-      var json = JSON.stringify(object);
-      result.innerHTML = "Please wait...";
-
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      })
-        .then(async (response) => {
-          let json = await response.json();
-          if (response.status == 200) {
-            result.innerHTML = json.message;
-          } else {
-            console.log(response);
-            result.innerHTML = json.message;
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          result.innerHTML = "Something went wrong!";
-        })
-        .then(function () {
-          form.reset();
-          setTimeout(() => {
-            result.style.display = "none";
-          }, 5000);
-        });
-    });
-  }
+  
   /*=============================================================
     14. AOS Animation
   ===============================================================*/
@@ -596,7 +541,6 @@
 
   /*--------------------------------------------------------------
     15. Date And Time Picker
-
   --------------------------------------------------------------*/
   function dateTimePicker() {
     flatpickr("#timePicker", {
@@ -687,6 +631,14 @@
       });
     }
 
+     /*--------------------------------------------------------------
+    16. display none
+  --------------------------------------------------------------*/
+    function displayOff () {
+      $(document).on("click", ".cs_cross_btn", function () {
+        $(this).closest(".cs_accordian_btn").hide()
+      })
+    }
 
 
 })(jQuery); // End of use strict

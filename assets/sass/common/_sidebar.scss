@@ -1,3 +1,6 @@
+/*==============================================================
+  18. Sidebar
+================================================================*/
 .cs_left_sidebar {
   padding-right: 100px;
 }
@@ -173,6 +176,10 @@
 .cs_form_style_1 {
   padding: 50px;
 
+  form {
+    width: min(1030px, 100%);
+  }
+
   .cs_form_field_1,
   .cs_form_field_2 {
     padding: 17px;
@@ -189,6 +196,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px 10px;
+  flex-wrap: wrap;
   margin-bottom: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid var(--gray-color6);

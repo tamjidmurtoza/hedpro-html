@@ -13,7 +13,20 @@
     transition: all 0.3s ease;
   }
 }
+.cs_contact_widget {
+  li {
+    position: relative;
 
+    span {
+      position: absolute;
+      top: 2px;
+      color: var(--accent-color);
+    }
+    div {
+      padding-left: 36px;
+    }
+  }
+}
 .cs_footer_row {
   display: flex;
   gap: 40px 85px;
@@ -121,20 +134,6 @@
     li {
       &:not(:last-child) {
         margin-bottom: 15px;
-      }
-    }
-  }
-  .cs_contact_widget {
-    li {
-      position: relative;
-
-      span {
-        position: absolute;
-        top: 2px;
-        color: var(--accent-color);
-      }
-      div {
-        padding-left: 36px;
       }
     }
   }
@@ -449,9 +448,9 @@
     width: min(1290px, 100%);
     border-radius: 15px;
     z-index: 5;
-    top: -140px;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: -315px;
 
     .cs_newlatter_tittle {
       letter-spacing: -1.44px;
@@ -472,16 +471,17 @@
       gap: 10px;
 
       input {
-        padding: 22px 25px;
+        padding: 15px 25px;
         width: min(495px, 100%);
         border-radius: 8px;
         outline: none;
         border: none;
       }
       .cs_btn_style_2 {
-        padding: 20px 45px;
+        padding: 15px 45px;
         border: 1px solid var(--white-color);
         background: transparent;
+        font-size: 18px;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
@@ -542,6 +542,11 @@
 
     .cs_name {
       color: #007aff;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--accent-color);
+      }
     }
 
     .cs_footer_widget_menu {
@@ -558,12 +563,15 @@
   .cs_3d_1 {
     left: 66px;
     bottom: 105px;
-    z-index: 1;
+    z-index: 2;
+    animation: animo-y2 22s linear infinite;
   }
 
   .cs_3d_2 {
     top: 150px;
     right: 106px;
+    z-index: 2;
+    animation: animo-y2 22s linear infinite;
   }
 
   @media (max-width: 1400px) {
@@ -633,9 +641,14 @@
     gap: 30px 50px;
     flex-wrap: wrap;
 
+    form {
+      width: min(100%, 508px);
+      flex: 1 1 300px;
+    }
     input {
-      width: 508px;
       padding: 20px 34px;
+      outline: none;
+      width: 100%;
     }
     .cs_submit_button {
       padding: 9px 10px;
@@ -748,6 +761,14 @@
       flex: none;
       width: calc(100% - 40px);
     }
+
+    .cs_contact_widget {
+      li {
+        &:not(:last-child) {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 }
 
@@ -837,12 +858,16 @@
         &:not(:last-child) {
           padding-bottom: 12px;
         }
-      }
-      a {
         opacity: 0.45;
 
         &:hover {
           opacity: 1;
+        }
+      }
+
+      a {
+        &:hover {
+          color: var(--white-color);
         }
       }
     }
@@ -876,15 +901,16 @@
   .cs_footer_bottom {
     background-color: #00131f;
 
-    .cs_name {
-      color: #007aff;
+    .cs_copyright {
+      opacity: 0.45;
     }
 
     .cs_footer_widget_menu {
-      a {
-        opacity: 0.55;
+      li > a {
+        opacity: 0.45;
 
         &:hover {
+          color: var(--white-color);
           opacity: 1;
         }
       }
@@ -1048,7 +1074,6 @@
 
   @media (max-width: 575px) {
     .cs_footer_left {
-      gap: 30px 50px;
       flex-wrap: wrap;
     }
     .cs_footer_widget_btn {
@@ -1062,7 +1087,6 @@
   position: relative;
   background-color: #151f39;
   padding-top: 1px;
-  margin-top: 100px;
 
   .cs_shape_1 {
     bottom: 30px;
@@ -1121,15 +1145,6 @@
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
-
-      // span {
-      //   display: flex;
-      //   align-items: center;
-      //   gap: 7px;
-      //   i {
-      //     transform: rotate(-45deg);
-      //   }
-      // }
 
       &:hover {
         background: var(--accent-color);
@@ -1230,6 +1245,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
+
+      a {
+        transition: all 0.3s ease;
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
     }
     .cs_icon {
       width: 40px;
@@ -1319,13 +1341,17 @@
   }
 
   .cs_footer_newsletter {
-    padding: 100px 60px 40px;
+    padding: 70px 60px 40px;
     background-color: var(--black-color);
 
     .cs_newsletter_bottom {
-      padding-top: 35px;
-      margin-top: 133px;
+      padding-top: 30px;
+      margin-top: 120px;
       border-top: 1px solid var(--border-color);
+    }
+
+    form {
+      width: 100%;
     }
   }
 
@@ -1334,6 +1360,12 @@
     height: 67px;
     padding-left: 50px;
     margin-bottom: 70px;
+  }
+
+  .cs_contact_widget {
+    div {
+      padding-left: 0;
+    }
   }
 
   .cs_arrow_btn {
@@ -1351,6 +1383,13 @@
     width: min(680px, 100%);
   }
 
+  .cs_footer_widget_menu {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
   @media (max-width: 1499px) {
     .cs_footer_row {
       gap: 40px 50px;

@@ -1,5 +1,11 @@
+/*==============================================================
+  17. Layer Img
+================================================================*/
 .cs_layer_img_box,
-.cs_layer_imgbox_2 {
+.cs_layer_imgbox_2,
+.cs_layer_imgbox_3,
+.cs_layer_imgbox_4,
+.cs_layer_imgbox_5 {
   padding-right: 19%;
 
   .cs_layer_img_1 {
@@ -123,29 +129,22 @@
 
 .cs_layer_imgbox_3 {
   padding-left: 30%;
-
-  .cs_layer_img_1 {
-    img {
-      width: 100%;
-    }
-  }
+  padding-right: 0;
 
   .cs_layer_img_2 {
-    position: absolute;
     left: 0;
     bottom: 60px;
     border-radius: 50%;
     padding-right: 40%;
+    padding-left: 0;
 
     img {
       box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-      border: 10px solid var(--white-color);
-      width: 100%;
     }
   }
 }
 
-.cs_layer_imgbox_wrapper_1 {
+.cs_layer_imgbox_4 {
   .cs_layer_img_box {
     padding-right: 15%;
   }
@@ -156,7 +155,6 @@
     height: 100%;
 
     img {
-      width: 100%;
       height: 100%;
     }
   }
@@ -178,11 +176,10 @@
     }
   }
 }
-.cs_layer_imgbox_wrapper_2 {
-  .cs_layer_img_box {
-    padding-left: 28%;
-    padding-right: 0;
-  }
+.cs_layer_imgbox_5 {
+  padding-left: 28%;
+  padding-right: 0;
+
   .cs_layer_img_1 {
     width: 50vw;
   }

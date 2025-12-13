@@ -110,8 +110,8 @@
             </div>
           </div>
           <div class="cs_main_header_right">
-            <div class="cs_header_cart_btns d-flex">
-              <a href="login.html" class="cs_cart_style_1 cs_accent_color cs_center">
+            <div class="cs_header_cart_btns">
+              <button type="button" class="cs_cart_style_1 cs_accent_color cs_center">
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23" fill="none">
                     <path
@@ -125,8 +125,9 @@
                       fill="currentColor" />
                   </svg>
                 </span>
-              </a>
-              <a href="#" class="cs_bar cs_accent_color cs_center">
+                <span class="cs_cart_label cs_center cs_accent_bg cs_white_color">1</span>
+              </button>
+              <button class="cs_hamburger_btn cs_accent_color cs_center">
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <rect x="3" y="9" width="25" height="2" fill="currentColor" />
@@ -136,13 +137,66 @@
                 </span>
                 <span class="top-border"></span>
                 <span class="bottom-border"></span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <div class="cs_side_header cs_has_main_nav">
+    <button class="cs_close"></button>
+    <div class="cs_side_header_overlay"></div>
+    <div class="cs_side_header_in">
+      <div class="cs_side_header_shape"></div>
+      <a href="index.html" class="cs_site_branding">
+        <img src="assets/img/icons/logo_black.svg" alt="logo">
+      </a>
+      <div class="cs_side_header_box">
+        <h2 class="cs_side_header_heading">Do you have a project in your
+          mind? Keep connect us.</h2>
+      </div>
+      <div class="cs_side_header_box">
+        <h3 class="cs_side_header_title">Contact Us</h3>
+        <ul class="cs_footer_widget_menu cs_contact_widget cs_mp_0">
+          <li class="cs_mb_20">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <div> 455 West Orchard Street Kings Mountain, NC 280867</div>
+          </li>
+          <li class="cs_mb_10">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <a href="tel:+088(246)642-27-10">+088 (246) 642-27-10</a>
+            </div>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <a href="mailto:example@mail.com">example@mail.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cs_side_header_box">
+        <div class="cs_social_icons">
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-facebook-f"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-twitter"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-linkedin-in"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-instagram"></i></span></a>
+        </div>
+      </div>
+      <div class="cs_side_header_box">
+        <div class="cs_header_newsletter">
+          <form action="#">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="cs_btn_style_1 cs_center">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- End Header -->
   <!-- Start Hero -->
   <section class="cs_hero_style_7 cs_bg_filed" data-src="assets/img/burger_hero_bg.jpg">
@@ -272,14 +326,12 @@
                   <path
                     d="M9.02392 28.6457L7.97935 17.6722C9.169 17.5219 10.2426 17.1711 11.1421 16.6701C12.3607 15.9518 13.0281 15.0165 12.9991 14.0144L12.9701 11.2919L12.4768 0.418535C12.4478 0.201403 12.1286 0.000973324 11.7224 0.000973324C11.2872 -0.0157292 10.939 0.184701 10.91 0.435238L10.5908 10.5903L7.66018 10.6071L7.25396 0.435238C7.22494 0.201404 6.87675 0.000973324 6.47053 0.000973324C6.00628 -0.0157292 5.62907 0.184701 5.62907 0.451941L5.3099 10.6071L2.3793 10.6238L1.94406 0.451941C1.91504 0.234808 1.59587 0.0343784 1.18965 0.0343784C0.754411 0.0176759 0.40622 0.218106 0.377205 0.468643L0 11.3253L0.0290154 14.0645C0.0290154 15.8349 2.23422 17.3215 5.1358 17.6889L4.43942 28.6624C4.43942 28.6847 4.43942 28.707 4.43942 28.7292C4.49745 29.4475 5.54202 30.032 6.81872 29.9986C8.0664 29.9819 9.08195 29.3639 9.02392 28.6457Z"
                     fill="white" />
-                </svg></span>
-              Fastest Delivery
+                </svg></span>Fastest Delivery
             </p>
             <h2 class="cs_section_title cs_fs_55 cs_white_color cs_bold cs_mb_43">Your Favorite Burger On The Way Of The
               World</h2>
             <p class="mb-0">From signature delights such as beef tartare and the <br> best mashed potato in Paris, all
-              the
-              way to unique</p>
+              the way to unique</p>
           </div>
           <div class="cs_iconbox_wrapper_7">
             <div class="cs_iconbox_style_10">
@@ -412,15 +464,15 @@
         </div>
         <div class="col-lg-6">
           <div class="cs_card_style_7">
+            <a href="#" class="cs_card_img">
+              <img src="assets/img/burger_card_2.jpg" alt="burger">
+            </a>
             <div class="cs_card_info">
               <h2 class="cs_fs_30">$55</h2>
               <h3 class="cs_fs_24"><a href="#">Chicken Breast Burger</a></h3>
               <p>Lorem ipsum dolor sit amet,love consectetuer adipiscing elit. Aenean commodo </p>
               <a href="#" aria-label="More Details button" class="cs_btn_style_1"><span>More Details</span></a>
             </div>
-            <a href="#" class="cs_card_img">
-              <img src="assets/img/burger_card_2.jpg" alt="burger">
-            </a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -438,15 +490,15 @@
         </div>
         <div class="col-lg-6">
           <div class="cs_card_style_7">
-            <a href="#" class="cs_card_img">
-              <img src="assets/img/burger_card_4.jpg" alt="burger">
-            </a>
             <div class="cs_card_info">
               <h2 class="cs_fs_30">$60</h2>
               <h3 class="cs_fs_24"><a href="#">Chicken Breast Burger</a></h3>
               <p>Lorem ipsum dolor sit amet,love consectetuer adipiscing elit. Aenean commodo </p>
               <a href="#" aria-label="More Details button" class="cs_btn_style_1"><span>More Details</span></a>
             </div>
+            <a href="#" class="cs_card_img">
+              <img src="assets/img/burger_card_4.jpg" alt="burger">
+            </a>
           </div>
         </div>
       </div>
@@ -486,8 +538,7 @@
                     <h3 class="cs_fs_24 cs_bold cs_mb_15">Courtney Henry</h3>
                     <p class="cs_mb_30">Tourist</p>
                     <p class="mb-0">Duis aute irure dolor in reprehenderit into volupjl tate velit esse cillum dolore eu
-                      fugiat
-                      nulla partr iatur sunt in culp qui officia deserunt mollit</p>
+                      fugiat nulla partr iatur sunt in culp qui officia deserunt mollit</p>
                   </div>
                 </div>
               </div>

@@ -36,7 +36,8 @@
 
 .cs_fs_22 {
   font-size: 22px;
-  line-height: 0.909em;
+  // line-height: 0.909em;
+  line-height: 1.1818em;
 
   @media (max-width: 575px) {
     font-size: 18px;
@@ -163,6 +164,12 @@
 .cs_fs_72 {
   font-size: 70px;
   line-height: 1.194em;
+  @media (max-width: 1199px) {
+    font-size: 60px;
+  }
+  @media (max-width: 991px) {
+    font-size: 55px;
+  }
 }
 .cs_fs_77 {
   font-size: 77px;
@@ -175,6 +182,13 @@
 .cs_fs_80 {
   font-size: 80px;
   line-height: 1.125em;
+
+  @media (max-width: 1199px) {
+    font-size: 70px;
+  }
+  @media (max-width: 767px) {
+    font-size: 60px;
+  }
 }
 
 .cs_fs_100 {
@@ -186,6 +200,9 @@
   }
   @media (max-width: 1199px) {
     font-size: 70px;
+  }
+  @media (max-width: 767px) {
+    font-size: 55px;
   }
 }
 .cs_fs_120 {
@@ -599,11 +616,14 @@
     background: var(--white-color);
   }
 
-  &:hover::after {
+  &:hover {
+    &:after {
+      color: var(--accent-color);
+      width: 94%;
+      border-radius: 44px;
+      z-index: -1;
+    }
     color: var(--accent-color);
-    width: 94%;
-    border-radius: 44px;
-    z-index: -1;
   }
 
   &.cs_white_bg {
@@ -926,8 +946,8 @@
 
   .bubble2 {
     background: var(--white-color);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     border-radius: 50%;
   }
@@ -947,7 +967,7 @@
   }
   .x3 {
     left: 57%;
-    bottom: -58%;
+    bottom: -48%;
     height: 480px;
     width: 480px;
   }
@@ -958,8 +978,8 @@
     animation-delay: 2s;
   }
   .x5 {
-    right: 32%;
-    bottom: 0;
+    right: 38%;
+    bottom: 29px;
     animation: bubbleZoomOut 10s infinite;
   }
 }
@@ -1043,7 +1063,7 @@
   padding-bottom: 20px;
 
   &:not(:last-child) {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
   }
 
   &:not(:first-child) {
@@ -1052,14 +1072,14 @@
 }
 
 .cs_feature_img {
-  background-color: #f2f5fa;
+  background-color: var(--gray-color4);
   height: 100%;
 
   img {
     width: 100%;
     height: 100%;
-    position: relative;
-    z-index: 2;
+    // position: relative;
+    // z-index: 2;
   }
 }
 
@@ -1142,6 +1162,15 @@
   50% {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: rotate(360deg);
+  }
+}
+@keyframes animo-y2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotateY(360deg);
   }
 }
 

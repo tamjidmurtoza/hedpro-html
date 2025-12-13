@@ -2,6 +2,10 @@
   14. CTA Component
 ==============================================================*/
 .cs_cta_style_1 {
+  .cs_cta_text_wrapper {
+    width: 50vw;
+  }
+
   .cs_cta_text {
     height: 100%;
     padding: 124px 0;
@@ -22,12 +26,14 @@
       width: 50vw;
       margin-left: -16px;
     }
+
+    .cs_cta_text_wrapper {
+      margin-left: calc(-50vw + 100%);
+    }
   }
 
   .cs_cta_in_style_2 {
     .cs_cta_text {
-      margin-left: auto;
-
       .cs_btn_style_1 {
         border: 1px solid var(--accent-color);
         &:hover {
@@ -66,6 +72,13 @@
         width: 100%;
         margin-left: 0;
       }
+      .cs_cta_text_wrapper {
+        margin-left: initial;
+      }
+    }
+
+    .cs_cta_text_wrapper {
+      width: initial;
     }
   }
 
@@ -83,7 +96,7 @@
 .cs_cta_style_2 {
   .cs_cta_rotate_icon {
     display: inline-block;
-    animation: animo-x2 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    // animation: animo-x2 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 
     img {
       transform-origin: center center;

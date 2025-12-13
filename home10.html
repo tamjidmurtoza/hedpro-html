@@ -71,16 +71,16 @@
           </div>
           <div class="cs_main_header_right">
             <div class="cs_header_cart_btns">
-              <div class="cs_fs_18 cs_primary_color">
-                <a href="login.html">Login</a>
+              <div class="cs_login_regi cs_fs_18 cs_primary_color">
+                <a href="#">Login</a>
                 /
-                <a href="register.html">Register</a>
+                <a href="#">Register</a>
               </div>
-              <a href="#" class="cs_border cs_serch cs_center"><i class="fa-solid fa-magnifying-glass"></i>
+              <button type="button" class="cs_border cs_serch cs_center"><i class="fa-solid fa-magnifying-glass"></i>
                 <span class="top-border"></span>
                 <span class="bottom-border"></span>
-              </a>
-              <a href="#" class="cs_border cs_cart cs_center">
+              </button>
+              <button type="button" class="cs_border cs_cart_style_1 cs_center">
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23" fill="none">
                     <path
@@ -96,8 +96,9 @@
                 </span>
                 <span class="top-border"></span>
                 <span class="bottom-border"></span>
-              </a>
-              <a href="#" class="cs_border cs_bar cs_center">
+                <span class="cs_cart_label cs_center cs_accent_bg cs_white_color">2</span>
+              </button>
+              <button type="button" class="cs_hamburger_btn cs_border cs_bar cs_center">
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <rect x="3" y="9" width="25" height="2" fill="currentColor" />
@@ -107,13 +108,66 @@
                 </span>
                 <span class="top-border"></span>
                 <span class="bottom-border"></span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <div class="cs_side_header cs_has_main_nav">
+    <button class="cs_close"></button>
+    <div class="cs_side_header_overlay"></div>
+    <div class="cs_side_header_in">
+      <div class="cs_side_header_shape"></div>
+      <a href="index.html" class="cs_site_branding">
+        <img src="assets/img/icons/logo_10.svg" alt="logo">
+      </a>
+      <div class="cs_side_header_box">
+        <h2 class="cs_side_header_heading">Do you have a project in your
+          mind? Keep connect us.</h2>
+      </div>
+      <div class="cs_side_header_box">
+        <h3 class="cs_side_header_title">Contact Us</h3>
+        <ul class="cs_footer_widget_menu cs_contact_widget cs_mp_0">
+          <li class="cs_mb_20">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <div> 455 West Orchard Street Kings Mountain, NC 280867</div>
+          </li>
+          <li class="cs_mb_10">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <a href="tel:+088(246)642-27-10">+088 (246) 642-27-10</a>
+            </div>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <a href="mailto:example@mail.com">example@mail.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cs_side_header_box">
+        <div class="cs_social_icons">
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-facebook-f"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-twitter"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-linkedin-in"></i></span></a>
+          <a href="#"><span class="cs_icon cs_center cs_white_color"><i class="fa-brands fa-instagram"></i></span></a>
+        </div>
+      </div>
+      <div class="cs_side_header_box">
+        <div class="cs_header_newsletter">
+          <form action="#">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="cs_btn_style_1 cs_center">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- End Header -->
   <!-- Start Hero Section-->
   <section class="cs_hero_style_10">
@@ -308,15 +362,13 @@
     <div class="container-fluids">
       <div class="row cs_gap_y_30">
         <div class="col-lg-6">
-          <div class="cs_layer_imgbox_wrapper_1 h-100">
-            <div class="cs_layer_img_box position-relative h-100">
-              <div class="cs_layer_img_1">
-                <img src="assets/img/women_flower.jpg" alt="Beauty">
-              </div>
-              <div class="cs_layer_img_2">
-                <div class="cs_layer_img_2_in cs_center">
-                  <img src="assets/img/beauty_product_8.png" alt="product">
-                </div>
+          <div class="cs_layer_imgbox_4 position-relative h-100">
+            <div class="cs_layer_img_1">
+              <img src="assets/img/women_flower.jpg" alt="Beauty">
+            </div>
+            <div class="cs_layer_img_2">
+              <div class="cs_layer_img_2_in cs_center">
+                <img src="assets/img/beauty_product_8.png" alt="product">
               </div>
             </div>
           </div>
@@ -376,7 +428,7 @@
   </section>
   <!-- End Iconbox -->
   <!-- Start Iconbox -->
-  <section class="cs_card_wrapper_3">
+  <section>
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
       <div class="row cs_gap_y_30 align-items-center">
@@ -412,15 +464,13 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="cs_layer_imgbox_wrapper_2">
-            <div class="cs_layer_img_box position-relative">
-              <div class="cs_layer_img_1">
-                <img src="assets/img/women_mekeup.jpg" alt="Beauty">
-              </div>
-              <div class="cs_layer_img_2">
-                <div class="cs_layer_img_2_in cs_center">
-                  <img src="assets/img/beauty_product_2.png" alt="product">
-                </div>
+          <div class="cs_layer_imgbox_5 position-relative">
+            <div class="cs_layer_img_1">
+              <img src="assets/img/women_mekeup.jpg" alt="Beauty">
+            </div>
+            <div class="cs_layer_img_2">
+              <div class="cs_layer_img_2_in cs_center">
+                <img src="assets/img/beauty_product_2.png" alt="product">
               </div>
             </div>
           </div>
@@ -549,7 +599,9 @@
       <div class="cs_section_heading_style_1 cs_mb_60 text-center">
         <h2 class="cs_section_title cs_fs_65 cs_bold cs_mb_20">Browse our products</h2>
         <p class="mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum. Sed ut perspiciatis unde omnis iste natus</p>
+          <br>
+          id est laborum. Sed ut perspiciatis unde omnis iste natus
+        </p>
       </div>
       <div class="row cs_gap_y_30">
         <div class="col-lg-3 col-sm-6">
@@ -561,8 +613,8 @@
               <div class="cs_rating cs_mb_10" data-rating="3">
                 <div class="cs_rating_percentage"></div>
               </div>
-              <h3 class="cs_fs_20 cs_medium cs_mb_10">Skincare Products Vitamin Face</h3>
-              <div class="cs_price cs_mb_10">
+              <h3 class="cs_fs_20 cs_medium cs_mb_10 text-center">Skincare Products Vitamin Face</h3>
+              <div class="cs_price cs_mb_20">
                 <p class="cs_fs_24 mb-0">$56.00</p>
                 <p class="cs_prev_price mb-0">$59.00</p>
               </div>
@@ -583,8 +635,8 @@
               <div class="cs_rating cs_mb_10" data-rating="3">
                 <div class="cs_rating_percentage"></div>
               </div>
-              <h3 class="cs_fs_20 cs_medium cs_mb_10">Skincare Products Vitamin Face</h3>
-              <div class="cs_price cs_mb_10">
+              <h3 class="cs_fs_20 cs_medium cs_mb_10 text-center">Skincare Products Vitamin Face</h3>
+              <div class="cs_price cs_mb_20">
                 <p class="cs_fs_24 mb-0">$56.00</p>
                 <p class="cs_prev_price mb-0">$59.00</p>
               </div>
@@ -605,8 +657,8 @@
               <div class="cs_rating cs_mb_10" data-rating="3">
                 <div class="cs_rating_percentage"></div>
               </div>
-              <h3 class="cs_fs_20 cs_medium cs_mb_10">Skincare Products Vitamin Face</h3>
-              <div class="cs_price cs_mb_10">
+              <h3 class="cs_fs_20 cs_medium cs_mb_10 text-center">Skincare Products Vitamin Face</h3>
+              <div class="cs_price cs_mb_20">
                 <p class="cs_fs_24 mb-0">$56.00</p>
                 <p class="cs_prev_price mb-0">$59.00</p>
               </div>
@@ -627,8 +679,8 @@
               <div class="cs_rating cs_mb_10" data-rating="3">
                 <div class="cs_rating_percentage"></div>
               </div>
-              <h3 class="cs_fs_20 cs_medium cs_mb_10">Skincare Products Vitamin Face</h3>
-              <div class="cs_price cs_mb_10">
+              <h3 class="cs_fs_20 cs_medium cs_mb_10 text-center">Skincare Products Vitamin Face</h3>
+              <div class="cs_price cs_mb_20">
                 <p class="cs_fs_24 mb-0">$56.00</p>
                 <p class="cs_prev_price mb-0">$59.00</p>
               </div>
@@ -659,12 +711,11 @@
             </h3>
             <form action="#">
               <input type="email" placeholder="ENTER YOUR EMAIL">
+              <button type="submit" class="cs_arrow_btn cs_center cs_mb_16">
+                <span><i class="fa-solid fa-arrow-trend-up"></i></span>
+              </button>
             </form>
-            <a href="#" class="cs_arrow_btn cs_center cs_mb_16">
-              <span><i class="fa-solid fa-arrow-trend-up"></i></span>
-            </a>
             <p class="mb-0">subscribe</p>
-
             <div class="cs_newsletter_bottom">
               <p class="mb-0">No Spam, only quality articles to help you be more <br>
                 radient. You can opt out anytime.</p>
@@ -681,8 +732,9 @@
                 44 Canal Center Plaza #200, <br>
                 Alexandria, VA 22314, USA</p>
               <p class="cs_copyright cs_primary_color mb-0">Copyright &copy; <span class="cs_getting_year"></span>
-                laralink. All Rights
-                Reserved.</p>
+                <a href="#">laralink</a>. All Rights
+                Reserved.
+              </p>
             </div>
           </div>
         </div>

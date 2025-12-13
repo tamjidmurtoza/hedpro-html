@@ -1,3 +1,6 @@
+/*==============================================================
+  22. Video_block
+================================================================*/
 .cs_video_block_style_1 {
   padding-top: 290px;
   padding-bottom: 178px;
@@ -25,8 +28,12 @@
     }
     &::before {
       animation: rotateCircle2 3s infinite;
-      // // animation-delay: 1.5s;
-      // border-color: red;
+    }
+  }
+  @media (max-width: 991px) {
+    .cs_video_thumbnail {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }

@@ -15,13 +15,20 @@
 12. Hero
 13. Cards
 14. CTA Component
-15. Contact
+15. Custom Slider
 16. Iconbox
-17. Posts and Post Details
-18. Pricing
-19. Team and Team Details
-20. Testimonials
-21. layer Image
+17. layer Image
+18. sidebar
+19. products
+20. testimonial
+21. instagram
+22. video_block
+23. before_after
+24. counter
+25. gallery
+26. gym
+27. burger
+28. beauty product
 --------------------------------------------------------------*/
 
 @import "default/variable";
@@ -33,19 +40,17 @@
 @import "common/preloader";
 @import "common/video-modal";
 @import "common/slider";
-@import "common/hero";
-@import "common/sidebar";
 @import "shortcode/about";
 @import "shortcode/accordian";
-@import "shortcode/hero";
+@import "common/hero";
 @import "shortcode/cards";
 @import "shortcode/cta";
-@import "shortcode/contact";
+@import "shortcode/custom_slider";
 @import "shortcode/iconbox";
-@import "shortcode/post";
+@import "shortcode/layer-img";
+@import "common/sidebar";
 @import "shortcode/products";
 @import "shortcode/testimonial";
-@import "shortcode/layer-img";
 @import "shortcode/instagram";
 @import "shortcode/video_block";
 @import "shortcode/before_after";
@@ -53,5 +58,4 @@
 @import "shortcode/gallery";
 @import "shortcode/gym";
 @import "shortcode/burger";
-@import "shortcode/custom_slider";
 @import "shortcode/beauty_product";

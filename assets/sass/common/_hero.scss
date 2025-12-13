@@ -1,3 +1,7 @@
+/*==============================================================
+  12. Hero
+================================================================*/
+
 .cs_hero_bottom {
   display: flex;
   gap: 20px 30px;
@@ -203,7 +207,7 @@
 }
 
 .cs_hero_style_4 {
-  padding: 320px 276px;
+  padding: 320px 0 276px;
 
   .cs_hero_title {
     padding-bottom: 63px;
@@ -219,6 +223,10 @@
       font-size: 22px;
       font-weight: 600;
     }
+  }
+
+  @media (max-width: 1199px) {
+    padding: 190px 0 180px;
   }
 }
 
@@ -294,6 +302,11 @@
   @media (max-width: 1199px) {
     .cs_rating_section {
       left: 115px;
+    }
+  }
+  @media (max-width: 767px) {
+    .cs_hero_img {
+      top: 100px;
     }
   }
 }
@@ -419,6 +432,7 @@
 
   .cs_border {
     width: 220px;
+    height: 50px;
     padding: 13px 27px 15px;
     color: var(--white-color);
     background-color: var(--accent-color);
@@ -542,6 +556,9 @@
       .cs_right_hero_img {
         right: 140px;
       }
+    }
+    .cs_shape {
+      display: none;
     }
   }
 }

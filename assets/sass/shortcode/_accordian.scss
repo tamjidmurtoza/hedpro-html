@@ -1,6 +1,100 @@
 /*==============================================================
   11. Accordians
 ================================================================*/
+.cs_accordian {
+  margin-bottom: 15px;
+
+  .cs_accordian_head {
+    position: relative;
+    padding: 20px 70px 20px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+    letter-spacing: -0.4px;
+
+    &:hover {
+      color: var(--accent-color);
+      .cs_accordian_toggle {
+        border-color: var(--accent-color);
+        &::after,
+        &::before {
+          background-color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  .cs_accordian_body {
+    padding: 10px 56px 30px 30px;
+  }
+
+  &.active {
+    .cs_accordian_head {
+      color: var(--accent-color);
+      pointer-events: none;
+
+      .cs_accordian_toggle {
+        border-color: var(--accent-color);
+        &::before,
+        &::after {
+          background-color: var(--accent-color);
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &.cs_style_2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 27px;
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+
+    .cs_accordian_head {
+      padding: 0;
+      padding-right: 70px;
+
+      .cs_accordian_toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+      }
+    }
+
+    .cs_accordian_body {
+      margin-bottom: 7px;
+      width: min(580px, 100%);
+      font-size: 15px;
+      padding: 0;
+    }
+
+    &.active {
+      .cs_accordian_head {
+        margin-bottom: 18px;
+        color: var(--accent-color);
+      }
+      .cs_accordian_toggle {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.cs_style_3 {
+    border-radius: 8px;
+    border: 1px solid rgba(224, 38, 178, 0.15);
+    background: var(--white-color);
+  }
+
+  @media (max-width: 575px) {
+    .cs_accordian_head {
+      padding-right: 40px;
+    }
+    .cs_accordian_body {
+      padding: 10px 0;
+    }
+  }
+}
 .cs_accordian_wrapper_1 {
   max-width: 740px;
   margin: 0 auto;
@@ -12,90 +106,35 @@
   }
 
   .cs_accordian {
-    margin-bottom: 15px;
+    .cs_accordian_toggle {
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+      position: absolute;
+      right: 30px;
+      top: 26px;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
 
-    .cs_accordian_head {
-      position: relative;
-      padding: 20px 70px 20px 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      color: var(--primary-color);
-      letter-spacing: -0.4px;
-
-      .cs_accordian_toggle {
-        border: 2px solid var(--primary-color);
-        border-radius: 50%;
+      &::before,
+      &::after {
+        content: "";
+        height: 2px;
+        width: 10px;
+        background-color: var(--primary-color);
         position: absolute;
-        right: 30px;
-        top: 26px;
-        width: 20px;
-        height: 20px;
-        pointer-events: none;
-
-        &::before,
-        &::after {
-          content: "";
-          height: 2px;
-          width: 10px;
-          background-color: var(--primary-color);
-          position: absolute;
-          top: 7px;
-          left: 2.5px;
-          transition: all 0.3s ease;
-        }
-        &::after {
-          transform: rotate(90deg);
-        }
+        top: 7px;
+        left: 3.5px;
+        transition: all 0.3s ease;
       }
-
-      &:hover {
-        color: var(--accent-color);
-        .cs_accordian_toggle {
-          border-color: var(--accent-color);
-          &::after,
-          &::before {
-            background-color: var(--accent-color);
-          }
-        }
+      &::after {
+        transform: rotate(90deg);
       }
-    }
-
-    .cs_accordian_body {
-      padding: 10px 56px 30px 30px;
     }
 
     &.active {
-      .cs_accordian_head {
-        color: var(--accent-color);
-        pointer-events: none;
-
-        span {
-          border-bottom: 1px solid var(--accent-color);
-        }
-        .cs_accordian_toggle {
-          border-color: var(--accent-color);
-          &::before,
-          &::after {
-            background-color: var(--accent-color);
-            transform: rotate(0deg);
-          }
-        }
-      }
-    }
-  }
-
-  &.cs_type_1 {
-    .cs_accordian {
-      border-radius: 8px;
-      border: 1px solid rgba(224, 38, 178, 0.15);
-      background: #fff;
-    }
-  }
-
-  @media (max-width: 575px) {
-    .cs_accordian {
-      .cs_accordian_body {
-        padding: 10px 30px 30px;
+      span {
+        border-bottom: 1px solid var(--accent-color);
       }
     }
   }
@@ -219,7 +258,6 @@
   }
 }
 
-//
 .cs_accordian_wrapper_2 {
   .cs_accordian {
     border-radius: 30px;
@@ -280,6 +318,18 @@
 
     .cs_accordian {
       margin-bottom: 40px;
+      transition: all 03s eases;
+
+      &.active {
+        .cs_accordian_head {
+          color: var(--accent-color);
+          pointer-events: none;
+        }
+
+        .cs_accordian_toggle {
+          transform: rotate(90deg);
+        }
+      }
     }
 
     .cs_accordian_body {
@@ -288,13 +338,20 @@
 
     .cs_accordian_head {
       padding-bottom: 25px;
+      padding-top: 0;
+      padding-left: 0;
       border-bottom: 1px solid rgba(2, 6, 38, 0.07);
       cursor: pointer;
+
+      &:hover {
+        color: var(--accent-color);
+      }
     }
 
     .cs_accordian_toggle {
       right: 0;
       top: -4px;
+      transition: all 0.3s ease;
       pointer-events: none;
     }
 
@@ -310,71 +367,30 @@
 .cs_accordian_wrapper_4 {
   position: relative;
 
-  .cs_accordian {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 17px;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
-
-    .cs_accordian_head {
-      position: relative;
-      cursor: pointer;
-
-      .cs_accordian_toggle {
-        position: absolute;
-        right: 0;
-        pointer-events: none;
-      }
-    }
-
-    .cs_accordian_body {
-      margin-bottom: 17px;
-      width: min(580px, 100%);
-      font-size: 15px;
-    }
-
-    &.active {
-      .cs_accordian_head {
-        margin-bottom: 8px;
-        color: var(--accent-color);
-      }
-      .cs_accordian_toggle {
-        transform: rotate(180deg);
-      }
-    }
+  .cs_left_side {
+    padding-right: 45px;
   }
-
   .cs_accordian_btn {
     background: #36adf0;
-    padding: 27px 45px 22px 40px;
+    padding: 27px 50px 22px 40px;
     color: var(--white-color);
+    position: relative;
 
-    .cs_accordian_btn_head {
-      position: relative;
-
-      &::after,
-      &::before {
-        content: "";
-        width: 2px;
-        height: 24px;
-        background-color: var(--white-color);
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      &::after {
-        transform: rotate(45deg);
-      }
-      &::before {
-        transform: rotate(-45deg);
+    .cs_cross_btn {
+      position: absolute;
+      right: 20px;
+      top: 29px;
+      &:hover {
+        opacity: 0.75;
       }
     }
 
     a {
       display: inline-block;
       padding: 10px 0;
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 
@@ -387,17 +403,23 @@
     position: absolute;
     right: 442px;
     top: -43px;
-    z-index: 4;
+    z-index: 1;
   }
 
   @media (max-width: 1199px) {
     .cs_section_title {
       br {
-        display: none;
+        display: none !important;
       }
     }
     .cs_accordian_btn {
-      padding: 27px 20px 22px 20px;
+      padding: 27px 45px 22px 20px;
+
+      .cs_accordian_head {
+        br {
+          display: none;
+        }
+      }
     }
   }
 }
