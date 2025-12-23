@@ -65,17 +65,19 @@
     aosInit();
     hobbleEffect();
     beforeAfterSlider();
-    dateTimePicker()
-    customSlider()
-    displayOff()
+    dateTimePicker();
+    customSlider();
+    displayOff();
+    quantityInit();
+    loginRegisterModalInit();
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
         onDropdownOpen: function (dropdown) {
-          dropdown.classList.add("active");
+          dropdown.addClass("active");
         },
         onDropdownClose: function (dropdown) {
-          dropdown.classList.remove("active");
+          dropdown.removeClass("active");
         },
       });
     });
@@ -93,55 +95,58 @@
     $(".cs_preloader").delay(150).fadeOut("slow");
   }
 
-function mainNav() {
-    $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
-    $('.menu-item-has-children').append(
-      '<span class="cs_munu_dropdown_toggle"><span></span></span>',
+  /*=============================================================
+    02. Header Nav
+  ===============================================================*/
+  function mainNav() {
+    $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
+    $(".menu-item-has-children").append(
+      '<span class="cs_munu_dropdown_toggle"><span></span></span>'
     );
-    $('.cs_menu_toggle').on('click', function () {
+    $(".cs_menu_toggle").on("click", function () {
       $(this)
-        .toggleClass('active')
-        .siblings('.cs_nav_list_wrap')
-        .toggleClass('active');
-        $(".cs_site_header").toggleClass("active");
+        .toggleClass("active")
+        .siblings(".cs_nav_list_wrap")
+        .toggleClass("active");
+      $(".cs_site_header").toggleClass("active");
     });
-    $('.cs_menu_toggle')
-      .parents('body')
-      .find('.cs_side_header')
-      .addClass('cs_has_main_nav');
-    $('.cs_menu_toggle')
-      .parents('body')
-      .find('.cs_toolbox')
-      .addClass('cs_has_main_nav');
-    $('.cs_munu_dropdown_toggle').on('click', function () {
-      $(this).toggleClass('active').siblings('ul').slideToggle();
-      $(this).parent().toggleClass('active');
+    $(".cs_menu_toggle")
+      .parents("body")
+      .find(".cs_side_header")
+      .addClass("cs_has_main_nav");
+    $(".cs_menu_toggle")
+      .parents("body")
+      .find(".cs_toolbox")
+      .addClass("cs_has_main_nav");
+    $(".cs_munu_dropdown_toggle").on("click", function () {
+      $(this).toggleClass("active").siblings("ul").slideToggle();
+      $(this).parent().toggleClass("active");
     });
 
     /* Side Nav */
-    $('.cs_hamburger_btn').on('click', function () {
-      $('.cs_side_header').addClass('active');
-      $('html').addClass('cs_hamburger_active');
+    $(".cs_hamburger_btn").on("click", function () {
+      $(".cs_side_header").addClass("active");
+      $("html").addClass("cs_hamburger_active");
     });
-    $('.cs_close, .cs_side_header_overlay').on('click', function () {
-      $('.cs_side_header').removeClass('active');
-      $('html').removeClass('cs_hamburger_active');
+    $(".cs_close, .cs_side_header_overlay").on("click", function () {
+      $(".cs_side_header").removeClass("active");
+      $("html").removeClass("cs_hamburger_active");
     });
 
     /* Hamburger Menu */
-    $('.cs_hamburger_menu .menu-item-has-children>a').on('click', function (e) {
+    $(".cs_hamburger_menu .menu-item-has-children>a").on("click", function (e) {
       e.preventDefault();
-      $(this).siblings('ul').slideToggle();
-      $(this).siblings('.cs_munu_dropdown_toggle').toggleClass('active');
+      $(this).siblings("ul").slideToggle();
+      $(this).siblings(".cs_munu_dropdown_toggle").toggleClass("active");
     });
 
-    $('.cs_hamburger_menu_btn').on('click', function (e) {
-      $('.cs_hamburger_header, .cs_hamburger_overlay').addClass('active');
-      $('html').addClass('cs_hamburger_active');
+    $(".cs_hamburger_menu_btn").on("click", function (e) {
+      $(".cs_hamburger_header, .cs_hamburger_overlay").addClass("active");
+      $("html").addClass("cs_hamburger_active");
     });
-    $('.cs_close_hamburger, .cs_hamburger_overlay').on('click', function (e) {
-      $('.cs_hamburger_header, .cs_hamburger_overlay').removeClass('active');
-      $('html').removeClass('cs_hamburger_active');
+    $(".cs_close_hamburger, .cs_hamburger_overlay").on("click", function (e) {
+      $(".cs_hamburger_header, .cs_hamburger_overlay").removeClass("active");
+      $("html").removeClass("cs_hamburger_active");
     });
   }
   /*=============================================================
@@ -359,9 +364,9 @@ function mainNav() {
   /*===========================================================
     10. Counter Animation
   =============================================================*/
-    function counterInit() {
-    if ($.exists('.odometer')) {
-      $(window).on('scroll', function () {
+  function counterInit() {
+    if ($.exists(".odometer")) {
+      $(window).on("scroll", function () {
         function winScrollPosition() {
           var scrollPos = $(window).scrollTop(),
             winHeight = $(window).height();
@@ -369,10 +374,10 @@ function mainNav() {
           return scrollPosition;
         }
 
-        $('.odometer').each(function () {
+        $(".odometer").each(function () {
           var elemOffset = $(this).offset().top;
           if (elemOffset < winScrollPosition()) {
-            $(this).html($(this).data('count-to'));
+            $(this).html($(this).data("count-to"));
           }
         });
       });
@@ -398,7 +403,7 @@ function mainNav() {
       requestAnimationFrame(raf);
     }
   }
-  
+
   /*=============================================================
     14. AOS Animation
   ===============================================================*/
@@ -412,7 +417,7 @@ function mainNav() {
     });
   }
 
-   /*--------------------------------------------------------------
+  /*--------------------------------------------------------------
     15. Hobble Effect
   --------------------------------------------------------------*/
   function hobbleEffect() {
@@ -441,7 +446,7 @@ function mainNav() {
         $(this)
           .find(".cs_hover_layer_2")
           .css("transform", function () {
-            console.log('hello');
+            console.log("hello");
             return (
               "perspective( 800px ) translateX(" +
               degX3 +
@@ -461,14 +466,14 @@ function mainNav() {
    14. Before After Slider
  --------------------------------------------------------------*/
   function beforeAfterSlider() {
-    if ($.exists('.cs_before_after')) {
+    if ($.exists(".cs_before_after")) {
       var supportsTouch =
-        'ontouchstart' in window || navigator.msMaxTouchPoints;
-      $('.cs_before_after').each(function () {
+        "ontouchstart" in window || navigator.msMaxTouchPoints;
+      $(".cs_before_after").each(function () {
         var $container = $(this),
-          $before = $container.find('.cs_before'),
-          $after = $container.find('.cs_after'),
-          $handle = $container.find('.cs_handle_before_after');
+          $before = $container.find(".cs_before"),
+          $after = $container.find(".cs_after"),
+          $handle = $container.find(".cs_handle_before_after");
 
         var maxX = $container.outerWidth(),
           offsetX = $container.offset().left,
@@ -486,28 +491,28 @@ function mainNav() {
           if (curPos < 0) {
             curPos = 0;
           }
-          $before.css({ right: 100 - curPos + '%' });
-          $handle.css({ left: curPos + '%' });
+          $before.css({ right: 100 - curPos + "%" });
+          $handle.css({ left: curPos + "%" });
         };
         var mouseup = function (e) {
           e.preventDefault();
           if (supportsTouch) {
-            $(document).off('touchmove', touchmove);
-            $(document).off('touchend', touchend);
+            $(document).off("touchmove", touchmove);
+            $(document).off("touchend", touchend);
           } else {
-            $(document).off('mousemove', mousemove);
-            $(document).off('mouseup', mouseup);
+            $(document).off("mousemove", mousemove);
+            $(document).off("mouseup", mouseup);
           }
         };
         var mousedown = function (e) {
           e.preventDefault();
           startX = e.clientX - offsetX;
           if (supportsTouch) {
-            $(document).on('touchmove', touchmove);
-            $(document).on('touchend', touchend);
+            $(document).on("touchmove", touchmove);
+            $(document).on("touchend", touchend);
           } else {
-            $(document).on('mousemove', mousemove);
-            $(document).on('mouseup', mouseup);
+            $(document).on("mousemove", mousemove);
+            $(document).on("mouseup", mouseup);
           }
         };
 
@@ -531,9 +536,9 @@ function mainNav() {
           });
         };
         if (supportsTouch) {
-          $handle.on('touchstart', touchstart);
+          $handle.on("touchstart", touchstart);
         } else {
-          $handle.on('mousedown', mousedown);
+          $handle.on("mousedown", mousedown);
         }
       });
     }
@@ -560,25 +565,25 @@ function mainNav() {
   function customSlider() {
     var Slider = (function () {
       var initSlider = function () {
-        $('.cs_custom_slide_arrow_right , .cs_custom_slide_arrow_left').click(
+        $(".cs_custom_slide_arrow_right , .cs_custom_slide_arrow_left").click(
           function (event) {
-            const direction = $(this).hasClass('cs_custom_slide_arrow_left')
-              ? 'prev'
-              : 'next';
+            const direction = $(this).hasClass("cs_custom_slide_arrow_left")
+              ? "prev"
+              : "next";
             updateSlides(direction);
-          },
+          }
         );
-        updateSlides('next');
+        updateSlides("next");
       };
 
       const updateSlides = function (direction) {
-        const activeSlide = $('.cs_custom_slide.active');
-        const slides = $('.cs_custom_slide');
+        const activeSlide = $(".cs_custom_slide.active");
+        const slides = $(".cs_custom_slide");
         const totalSlides = slides.length;
         const activeIndex = activeSlide.index();
         let nextIndex;
 
-        if (direction === 'next') {
+        if (direction === "next") {
           nextIndex = activeIndex === totalSlides - 1 ? 0 : activeIndex + 1;
         } else {
           nextIndex = activeIndex === 0 ? totalSlides - 1 : activeIndex - 1;
@@ -587,10 +592,10 @@ function mainNav() {
         const nextSlide = slides.eq(nextIndex);
 
         // Remove active class from all slides
-        slides.removeClass('prev-1 next-1 prev-2 next-2 active');
+        slides.removeClass("prev-1 next-1 prev-2 next-2 active");
 
         // Set the new active slide
-        nextSlide.addClass('active');
+        nextSlide.addClass("active");
 
         // Calculate the indices of previous and next slides considering the loop
         const prev1Index = nextIndex === 0 ? totalSlides - 1 : nextIndex - 1;
@@ -599,10 +604,10 @@ function mainNav() {
         const next2Index = next1Index === totalSlides - 1 ? 0 : next1Index + 1;
 
         // Add appropriate classes to slides
-        slides.eq(prev1Index).addClass('prev-1');
-        slides.eq(prev2Index).addClass('prev-2');
-        slides.eq(next1Index).addClass('next-1');
-        slides.eq(next2Index).addClass('next-2');
+        slides.eq(prev1Index).addClass("prev-1");
+        slides.eq(prev2Index).addClass("prev-2");
+        slides.eq(next1Index).addClass("next-1");
+        slides.eq(next2Index).addClass("next-2");
       };
 
       return {
@@ -615,30 +620,140 @@ function mainNav() {
     Slider.init();
   }
 
-    // Language Update Functionality
-    $(".cs_language_switcher").on("click", function () {
-      $(this).siblings(".cs_language_dropdown").slideToggle();
-      updateLanguage();
+  // Language Update Functionality
+  $(".cs_language_switcher").on("click", function () {
+    $(this).siblings(".cs_language_dropdown").slideToggle();
+    updateLanguage();
+  });
+  function updateLanguage() {
+    $(".cs_language_dropdown input").on("click", function () {
+      var selectedValue = $(this).val();
+      $(this)
+        .closest(".cs_language_select")
+        .find(".cs_language_switcher input")
+        .val(selectedValue);
+      $(".cs_language_dropdown").slideUp();
     });
-    function updateLanguage() {
-      $(".cs_language_dropdown input").on("click", function () {
-        var selectedValue = $(this).val();
-        $(this)
-          .closest(".cs_language_select")
-          .find(".cs_language_switcher input")
-          .val(selectedValue);
-        $(".cs_language_dropdown").slideUp();
+  }
+
+  /*--------------------------------------------------------------
+    16. display none
+  --------------------------------------------------------------*/
+  function displayOff() {
+    $(document).on("click", ".cs_cross_btn", function () {
+      $(this).closest(".cs_accordian_btn").hide();
+    });
+  }
+  /*=============================================================
+    11. Quantity
+  ===============================================================*/
+  function quantityInit() {
+    $(".cs_quantity_btns").each(function () {
+      const countElement = $(this).find(".cs_quantity_input");
+      let count = parseInt(countElement.text()) || 1;
+      countElement.text(count);
+
+      $(this)
+        .find(".cs_increment")
+        .on("click", function () {
+          count++;
+          countElement.text(count);
+        });
+
+      $(this)
+        .find(".cs_decrement")
+        .on("click", function () {
+          if (count > 1) {
+            count--;
+            countElement.text(count);
+          }
+        });
+    });
+  }
+  /*===============================================================
+ 12. Login Register Form Toggle
+=================================================================*/
+  function loginRegisterModalInit() {
+    const loginRegisterModal = $("#loginRegisterModal");
+    const modalOverlay = $("#modalOverlay");
+    const closeModalBtn = $("#closeModalBtn");
+    const openLoginBtn = $("#openLoginBtn");
+    const openRegisterBtn = $("#openRegisterBtn");
+    const switchToLogin = $("#switchToLogin");
+    const switchToRegister = $("#switchToRegister");
+    const switchToPassword = $("#switchToPasswordReset");
+    const loginForm = $("#loginForm");
+    const registerForm = $("#registerForm");
+    const passwordForm = $("#passwordForm");
+
+    // Open Modal with Login Form
+    openLoginBtn.on("click", () => {
+      openModal();
+      showLoginForm();
+    });
+
+    // Open Modal with Register Form
+    openRegisterBtn.on("click", () => {
+      openModal();
+      showRegisterForm();
+    });
+
+    // Close Modal
+    closeModalBtn.on("click", closeModal);
+    modalOverlay.on("click", function (e) {
+      if ($(e.target).is(modalOverlay)) {
+        closeModal();
+      }
+    });
+
+    // Switch to Login Form
+    switchToLogin.on("click", showLoginForm);
+
+    // Switch to Register Form
+    switchToRegister.on("click", showRegisterForm);
+    // Switch to Password Form
+    switchToPassword.on("click", showPasswordForm);
+
+    // Functions
+    function openModal() {
+      loginRegisterModal.addClass("active");
+      $("body").css({
+        overflow: "hidden",
+        height: "100vh",
       });
     }
 
-     /*--------------------------------------------------------------
-    16. display none
-  --------------------------------------------------------------*/
-    function displayOff () {
-      $(document).on("click", ".cs_cross_btn", function () {
-        $(this).closest(".cs_accordian_btn").hide()
-      })
+    function closeModal() {
+      loginRegisterModal.removeClass("active");
+      $("body").css({
+        overflow: "auto",
+        height: "100%",
+      });
     }
 
+    function showLoginForm() {
+      loginForm.addClass("active");
+      registerForm.removeClass("active");
+      passwordForm.removeClass("active");
+    }
 
+    function showRegisterForm() {
+      registerForm.addClass("active");
+      loginForm.removeClass("active");
+      passwordForm.removeClass("active");
+    }
+
+    function showPasswordForm() {
+      passwordForm.addClass("active");
+      registerForm.removeClass("active");
+      loginForm.removeClass("active");
+    }
+
+    // Close modal with Escape key
+    $(document).on("keydown", (e) => {
+      if (e.key === "Escape" && loginRegisterModal.hasClass("active")) {
+        closeModal();
+      }
+    });
+  }
 })(jQuery); // End of use strict

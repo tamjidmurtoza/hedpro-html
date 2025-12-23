@@ -123,6 +123,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -2492,6 +2498,252 @@ label {
 }
 
 /*===========================================================  
+  Input & Select
+=============================================================*/
+.cs_form_field {
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  outline: 0;
+  resize: none;
+  border: 1px solid var(--border-color);
+}
+.cs_form_field:focus {
+  border-color: var(--accent-color);
+}
+
+.cs_custom_checkbox {
+  width: fit-content;
+}
+.cs_custom_checkbox input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+}
+.cs_custom_checkbox label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.cs_custom_checkbox input:checked + label::before {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+.cs_custom_checkbox input:checked + label::after {
+  opacity: 1;
+}
+.cs_custom_checkbox label {
+  padding-left: 24px;
+  position: relative;
+}
+.cs_custom_checkbox label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+}
+.cs_custom_checkbox label::after {
+  content: "";
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  border: 2px solid var(--white-color);
+  border-top: 0;
+  border-right: 0;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.ts-control {
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+.ts-control::after {
+  content: "\f078";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.ts-control,
+.ts-control input,
+.ts-dropdown {
+  color: var(--primary-color);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.ts-control .option,
+.ts-control input .option,
+.ts-dropdown .option {
+  padding: 10px 20px;
+}
+.ts-control .option:hover, .ts-control .option.active,
+.ts-control input .option:hover,
+.ts-control input .option.active,
+.ts-dropdown .option:hover,
+.ts-dropdown .option.active {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*===========================================================  
+  Login Register Modal
+=============================================================*/
+.cs_modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.cs_modal.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+.cs_modal.active .cs_form_container {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+.cs_modal .cs_close_modal_btn {
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+}
+.cs_modal .cs_close_modal_btn:hover {
+  color: #FE5A86;
+}
+.cs_modal .cs_modal_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+.cs_modal .cs_form_container {
+  width: min(100%, 650px);
+  padding: 50px 0 30px;
+  margin: 40px auto 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+.cs_modal .cs_form_wrapper {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  padding: 0 40px;
+  overflow-y: auto;
+  display: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  animation: fadeIn 0.6s ease;
+}
+.cs_modal .cs_form_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.cs_modal .cs_form_wrapper.active {
+  display: block;
+}
+.cs_modal label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.cs_modal .cs_custom_checkbox label {
+  margin-bottom: 0;
+}
+.cs_modal .cs_input_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+}
+.cs_modal #switchToRegister,
+.cs_modal #switchToLogin,
+.cs_modal #switchToPasswordReset {
+  position: relative;
+}
+.cs_modal #switchToRegister::before,
+.cs_modal #switchToLogin::before,
+.cs_modal #switchToPasswordReset::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  transform: scale(0, 1);
+  transform-origin: top right;
+  background-color: currentColor;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.4s ease;
+}
+.cs_modal #switchToRegister:hover::before,
+.cs_modal #switchToLogin:hover::before,
+.cs_modal #switchToPasswordReset:hover::before {
+  transform: scale(1, 1);
+  transform-origin: top left;
+}
+.cs_modal .cs_btn_style_1 {
+  font-size: 16px;
+  padding: 9px 30px;
+}
+
+/*========================================================  
+  Responsive For Common Component & Hide Elements
+==========================================================*/
+@media (max-width: 991px) {
+  br {
+    display: none;
+  }
+}
+/*===========================================================  
   All Common Animations
 =============================================================*/
 @keyframes pulseBorder {
@@ -2541,12 +2793,14 @@ label {
     transform: translateY(10px);
   }
 }
-/*===========================================================  
-  Responsive For Common Component & Hide Elements
-=============================================================*/
-@media (max-width: 991px) {
-  br {
-    display: none;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 /*--------------------------------------------------------------
@@ -2756,13 +3010,15 @@ label {
     transform: translateY(-50%);
   }
   .cs_site_header .cs_nav_list > li:hover .cs_dropdown_list {
+    top: 100%;
     opacity: 1;
     visibility: visible;
+    transition: all 0.4s ease;
   }
   .cs_site_header .cs_nav_list .cs_dropdown_list {
     list-style: none;
-    top: calc(100% + 15px);
-    border-top: 1px solid var(--accent-color);
+    top: calc(100% + 20px);
+    border-top: 2px solid var(--accent-color);
     width: 275px;
     background-color: var(--white-color);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
@@ -2778,10 +3034,10 @@ label {
     padding: 10px 20px;
     line-height: inherit;
     display: block;
-    color: var(--accent-color);
+    color: var(--primary-color);
   }
-  .cs_site_header .cs_nav_list .cs_dropdown_list:hover a {
-    opacity: 0.75;
+  .cs_site_header .cs_nav_list .cs_dropdown_list a:hover {
+    color: var(--accent-color);
   }
   .cs_site_header.cs_style_7 .cs_logo_wrap {
     height: calc(100% + 40px);
@@ -6496,6 +6752,43 @@ label {
   left: 0;
   top: 0;
 }
+.cs_about_hero .breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: var(--white-color);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.cs_about_hero .breadcrumb {
+  display: inline-flex;
+  font-weight: 300;
+  justify-content: center;
+}
+.cs_about_hero .breadcrumb-item {
+  color: var(--white-color);
+}
+.cs_about_hero .breadcrumb-item.active {
+  opacity: 1;
+  color: var(--accent-color);
+}
+.cs_about_hero .breadcrumb-item a {
+  position: relative;
+}
+.cs_about_hero .breadcrumb-item a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--white-color);
+  transform: scale(0, 1);
+  transform-origin: top right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.cs_about_hero .breadcrumb-item a:hover::before {
+  transform: scale(1, 1);
+  transform-origin: bottom left;
+}
 
 /*==============================================================
   13. Cards
@@ -9993,6 +10286,352 @@ label {
 @media (max-width: 1199px) {
   .cs_italian_burger .cs_italian_burger_left {
     padding: 0;
+  }
+}
+
+/*============================================================
+  22. Shop and Shop Details
+==============================================================*/
+.cs_custom_radio {
+  display: block;
+  padding-left: 24px;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+.cs_custom_radio input[type=radio] {
+  display: none;
+}
+.cs_custom_radio input[type=radio]:checked + .cs_radio_marker {
+  border-color: currentColor;
+  background-color: transparent;
+}
+.cs_custom_radio input[type=radio]:checked + .cs_radio_marker::after {
+  opacity: 1;
+}
+.cs_custom_radio .cs_radio_marker {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+}
+.cs_custom_radio .cs_radio_marker::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+  border-radius: inherit;
+}
+
+.cs_quantity_btns {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 1px solid var(--border-color);
+}
+
+/*==========================================================
+  Cart Page
+============================================================*/
+.cs_table_wrapper {
+  overflow-x: auto;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cs_cart_table {
+  width: 100%;
+  min-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cs_cart_table .cs_cart_table_row {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+}
+.cs_cart_table .cs_table_head {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  padding: 12px 30px;
+}
+.cs_cart_table .cs_table_data {
+  padding: 30px;
+}
+.cs_cart_table .cs_table_data .cs_btn.cs_style_1 {
+  padding: 12px 30px;
+}
+.cs_cart_table .cs_table_data .cs_instock {
+  color: #35bb39;
+}
+.cs_cart_table .cs_table_col:nth-child(1) {
+  width: 5%;
+}
+.cs_cart_table .cs_table_col:nth-child(2) {
+  width: 40%;
+}
+.cs_cart_table .cs_table_col:nth-child(3) {
+  width: 18%;
+}
+.cs_cart_table .cs_table_col:nth-child(4) {
+  width: 15%;
+}
+.cs_cart_table .cs_table_col:nth-child(5) {
+  width: 22%;
+}
+.cs_cart_table .cs_cart_table_media {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.cs_cart_table .cs_cart_table_media .cs_media_thumbnail {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  flex: none;
+  border-radius: 10px;
+}
+.cs_cart_table .cs_cart_table_media .cs_media_thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.cs_cart_table .cs_cart_table_media h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.cs_cart_table .cs_cart_table_close:hover {
+  color: #FE5A86;
+}
+.cs_cart_table .cs_cart_offer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.cs_cart_table .cs_cart_offer .cs_coupon_form {
+  width: min(100%, 500px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cs_cart_table .cs_cart_offer .cs_coupon_form .cs_form_field {
+  display: block;
+  width: min(100%, 250px);
+  padding: 11px 20px 12px;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid var(--border-color);
+}
+.cs_cart_table .cs_cart_offer .cs_coupon_form .cs_form_field:focus {
+  border-color: var(--accent-color);
+}
+.cs_cart_table .cs_cart_offer .cs_btn_style_1 {
+  text-wrap: nowrap;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+.cs_cart_table .cs_cart_offer .cs_btn_style_1::before, .cs_cart_table .cs_cart_offer .cs_btn_style_1::after {
+  display: none;
+}
+.cs_cart_table .cs_cart_offer .cs_btn_style_1:hover {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+.cs_cart_table .cs_cart_offer .cs_update_btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.cs_cart_table .cs_text_btn:hover {
+  color: var(--accent-color);
+}
+@media (max-width: 1199px) {
+  .cs_cart_table .cs_cart_table_media {
+    gap: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .cs_cart_table .cs_table_data {
+    padding: 20px;
+  }
+  .cs_cart_table .cs_table_col:nth-child(1) {
+    width: 5%;
+  }
+  .cs_cart_table .cs_table_col:nth-child(2) {
+    width: 47%;
+  }
+  .cs_cart_table .cs_table_col:nth-child(3) {
+    width: 15%;
+  }
+  .cs_cart_table .cs_table_col:nth-child(4) {
+    width: 18%;
+  }
+  .cs_cart_table .cs_table_col:nth-child(5) {
+    width: 15%;
+  }
+}
+
+.cs_cart_summery {
+  width: min(100%, 330px);
+}
+.cs_cart_summery .cs_cart_summery_item {
+  padding: 25px 30px 30px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 30px;
+}
+.cs_cart_summery .cs_cart_summery_item:last-child {
+  margin-bottom: 0;
+}
+.cs_cart_summery .cs_btn_style_1 {
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+.cs_cart_summery .cs_btn_style_1::before, .cs_cart_summery .cs_btn_style_1::after {
+  display: none;
+}
+.cs_cart_summery .cs_btn_style_1:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+.cs_cart_summery table tr {
+  padding: 13px 0;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+.cs_cart_summery table tr:first-child {
+  border-top: 1px solid var(--border-color);
+}
+.cs_cart_summery table td {
+  padding: 0;
+  border-top: 0;
+}
+.cs_cart_summery table td:last-child {
+  text-align: end;
+}
+@media (max-width: 991px) {
+  .cs_cart_summery {
+    width: 100%;
+  }
+  .cs_cart_summery .cs_cart_summery_item {
+    padding: 20px 15px 24px;
+  }
+}
+
+/*=======================================================
+ Checkout Page
+=========================================================*/
+.cs_checkout_alert {
+  padding: 11px 30px;
+  border: 1px solid var(--border-color);
+}
+.cs_checkout_alert b {
+  color: var(--primary-color);
+  margin: 0 6px;
+}
+.cs_checkout_alert a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+@media (max-width: 1199px) {
+  .cs_checkout_alert {
+    padding: 11px 20px;
+  }
+}
+
+.cs_checkout_form_wrapper {
+  padding: 30px;
+  border: 1px solid var(--border-color);
+}
+.cs_checkout_form_wrapper label {
+  display: block;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  margin-bottom: 7px;
+}
+@media (max-width: 1199px) {
+  .cs_checkout_form_wrapper {
+    padding: 20px 20px 24px;
+  }
+}
+
+.cs_shop_side_spacing {
+  width: min(100%, 440px);
+  padding: 30px;
+  border: 1px solid var(--border-color);
+}
+.cs_shop_side_spacing table {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cs_shop_side_spacing table tr {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.cs_shop_side_spacing table tr:last-child {
+  border-bottom: 0;
+}
+.cs_shop_side_spacing table th {
+  padding: 0;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  border-top: 0;
+}
+.cs_shop_side_spacing table td {
+  padding: 0;
+  border-top: 0;
+}
+.cs_shop_side_spacing .cs_bank_payment_text {
+  padding: 15px 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
+}
+@media (max-width: 1199px) {
+  .cs_shop_side_spacing {
+    padding: 20px 20px 24px;
+  }
+}
+@media (max-width: 991px) {
+  .cs_shop_side_spacing {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .cs_shop_side_spacing {
+    padding: 20px 15px 24px;
+  }
+  .cs_shop_side_spacing table tr {
+    padding: 12px 15px;
   }
 }
 

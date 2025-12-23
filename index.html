@@ -72,9 +72,8 @@
           <div class="cs_main_header_right">
             <div class="cs_header_cart_btns">
               <div class="cs_fs_18">
-                <a href="#">Login</a>
-                /
-                <a href="#">Register</a>
+                <button type="button" id="openLoginBtn">Login</button>/
+                <button type="button" id="openRegisterBtn">Register</button>
               </div>
               <button type="button" class="cs_cart_style_1 cs_center">
                 <span>
@@ -99,6 +98,132 @@
     </div>
   </header>
   <!-- End Header -->
+  <!-- Start Login Register Modal -->
+    
+    <!-- Modal Structure -->
+        <div class="cs_modal" id="loginRegisterModal">
+            <div class="cs_modal_overlay" id="modalOverlay"></div>
+            <div class="container">
+               <div class="cs_form_container cs_white_bg position-relative">
+                <button class="cs_close_modal_btn position-absolute" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+                <!-- Login Form -->
+               <div class="cs_form_wrapper" data-lenis-prevent id="loginForm">
+                <h2 class="cs_form_title cs_fs_40 cs_semibold cs_mb_24">Sign In to Your Account</h2>  
+                 <form action="#" class="cs_form row cs_gap_y_24">                  
+                    <div class="col-12">
+                      <div class="cs_input_group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" name="email" id="loginEmail" class="cs_form_field cs_radius_5" placeholder="Enter email" autocomplete="off" required>
+                    </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="cs_input_group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" id="loginPassword" class="cs_form_field cs_radius_5" placeholder="Enter password" autocomplete="off">
+                    </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="cs_input_wrapper">
+              <div class="cs_custom_checkbox position-relative">
+                <input type="checkbox" id="remember" autocomplete="off">
+                <label for="remember">Remember me</label>
+              </div>
+              <button type="button" class="cs_text_btn cs_accent_color cs_medium" id="switchToPasswordReset">Forgot password?</button>
+            </div>
+                    </div>
+                    <div class="col-12">
+                       <button type="submit" class="cs_btn_style_1 cs_white_color"><span>Sign In</span></button>
+                    </div>
+                    <div class="col-12">
+                       <div class="cs_form_footer">
+                        <p class="mb-0">Don't have an account? <button class="cs_accent_color" id="switchToRegister">Register here</button>
+                    </div>
+                    </div>
+                </form>
+               </div>
+                <!-- Password Form -->
+                <div class="cs_form_wrapper" data-lenis-prevent id="passwordForm">
+                    <h2 class="cs_form_title cs_fs_40 cs_semibold cs_mb_24">Reset Password</h2>
+                    <form action="#" class="cs_auth_form row cs_gap_y_24" id="passwordForm">
+                    <div class="col-12">
+                      <div class="cs_input_group">
+                        <label for="passwordEmail">Email Address</label>
+                        <input type="email" name="email" id="passwordEmail" class="cs_form_field cs_radius_5" placeholder="Enter email" autocomplete="off" required>
+                    </div>
+                    </div>
+                   <div class="col-12">
+                     <button type="submit" class="cs_btn_style_1"><span>Send Request</span></button>
+                   </div>
+                </form>
+                </div>
+                <!-- Register Form -->
+                 <div class="cs_form_wrapper" data-lenis-prevent id="registerForm">
+                    <h2 class="cs_form_title cs_fs_40 cs_semibold cs_mb_24">Create New Account</h2>
+                    <form action="#" class="cs_auth_form row cs_gap_y_24" id="registerForm">
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" class="cs_form_field cs_radius_5" placeholder="Enter First Name" autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" class="cs_form_field cs_radius_5" placeholder="Enter Last Name"autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" class="cs_form_field cs_radius_5" placeholder="Enter Email Address" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="phone">Phone</label>
+                        <input type="number" name="phone" id="phone" class="cs_form_field cs_radius_5" placeholder="Phone Number"autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="cs_form_field cs_radius_5" placeholder="Password"autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cs_input_group">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" name="cpassword" id="cpassword" class="cs_form_field cs_radius_5" placeholder="Confirm Password"autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="cs_input_group">
+                        <label for="address">Full Address</label>
+                        <input type="text" name="address" id="address" class="cs_form_field cs_radius_5" placeholder="Full Address"autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="cs_custom_checkbox position-relative">
+                <input type="checkbox" id="termsCondition" autocomplete="off">
+                <label for="termsCondition">Accept terms & condition</label>
+              </div>
+                  </div>
+                  <div class="col-md-12">
+                     <button type="submit" class="cs_btn_style_1"><span>Register Now</span></button>
+                  </div>
+                 <div class="col-12">
+                       <div class="cs_form_footer">
+                        <p class="mb-0">Already have an account? <button class="cs_accent_color" id="switchToLogin">Sign In here</button>
+                    </div>
+                    </div>
+                </form>
+                 </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- End Login Register Modal -->
   <!-- Start Hero Section-->
   <section class="cs_hero_style_1 cs_bg_filed" data-src="assets/img/hero-1.jpg">
     <div class="container">
