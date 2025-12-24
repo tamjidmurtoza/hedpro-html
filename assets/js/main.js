@@ -70,6 +70,7 @@
     displayOff();
     quantityInit();
     loginRegisterModalInit();
+    productModalInit();
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
@@ -101,7 +102,7 @@
   function mainNav() {
     $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
     $(".menu-item-has-children").append(
-      '<span class="cs_munu_dropdown_toggle"><span></span></span>'
+      '<span class="cs_menu_dropdown_toggle"><span></span></span>'
     );
     $(".cs_menu_toggle").on("click", function () {
       $(this)
@@ -118,7 +119,7 @@
       .parents("body")
       .find(".cs_toolbox")
       .addClass("cs_has_main_nav");
-    $(".cs_munu_dropdown_toggle").on("click", function () {
+    $(".cs_menu_dropdown_toggle").on("click", function () {
       $(this).toggleClass("active").siblings("ul").slideToggle();
       $(this).parent().toggleClass("active");
     });
@@ -137,7 +138,7 @@
     $(".cs_hamburger_menu .menu-item-has-children>a").on("click", function (e) {
       e.preventDefault();
       $(this).siblings("ul").slideToggle();
-      $(this).siblings(".cs_munu_dropdown_toggle").toggleClass("active");
+      $(this).siblings(".cs_menu_dropdown_toggle").toggleClass("active");
     });
 
     $(".cs_hamburger_menu_btn").on("click", function (e) {
@@ -672,7 +673,7 @@
   }
   /*===============================================================
  12. Login Register Form Toggle
-=================================================================*/
+ =================================================================*/
   function loginRegisterModalInit() {
     const loginRegisterModal = $("#loginRegisterModal");
     const modalOverlay = $("#modalOverlay");
@@ -754,6 +755,59 @@
       if (e.key === "Escape" && loginRegisterModal.hasClass("active")) {
         closeModal();
       }
+    });
+  }
+  /*===============================================================
+   12. Product Details Modal Toggle
+  =================================================================*/
+  function productModalInit() {
+    const productModal = $("#productModal");
+    const closeBtn = $("#closeProductModalBtn");
+    const productModalOverlay = $("#productModalOverlay");
+    const openProductModalBtn = $('[data-product="details"]');
+
+    openProductModalBtn.on("click", function () {
+      productModal.addClass("active");
+      $("body").css({
+        overflow: "hidden",
+        height: "100vh",
+      });
+    });
+    openProductModalBtn.css({
+      cursor: "pointer",
+    });
+    closeBtn.on("click", function () {
+      productModal.removeClass("active");
+      $("body").css({
+        overflow: "auto",
+        height: "100%",
+      });
+    });
+
+    productModalOverlay.on("click", function (e) {
+      if ($(e.target).is(productModalOverlay)) {
+        productModal.removeClass("active");
+        $("body").css({
+          overflow: "auto",
+          height: "100%",
+        });
+      }
+    });
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape") {
+        productModal.removeClass("active");
+        $("body").css({
+          overflow: "auto",
+          height: "100%",
+        });
+      }
+    });
+    $(".cs_color_list li").each(function () {
+      const color = $(this).data("color");
+      $(this).css("--cs-color", color);
+      $(this).on("click", function () {
+        $(this).addClass("active").siblings("li").removeClass("active");
+      });
     });
   }
 })(jQuery); // End of use strict

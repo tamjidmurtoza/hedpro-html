@@ -24,6 +24,7 @@
       }
     }
   }
+
   .cs_product_info {
     padding: 0 20px;
   }
@@ -85,6 +86,7 @@
   .cs_shape {
     bottom: 0;
     left: 0;
+
     img {
       width: 100%;
     }
@@ -95,11 +97,13 @@
   .cs_product_thumbnail {
     overflow: hidden;
     display: block;
+
     img {
       width: 100%;
       transition: all 0.5s ease;
     }
   }
+
   &:hover {
     .cs_product_thumbnail {
       img {
@@ -136,6 +140,7 @@
       margin: 0 auto;
       padding: 88px 30px;
     }
+
     img {
       height: 100%;
       width: 100%;
@@ -149,9 +154,11 @@
       }
     }
   }
+
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
   @media (max-width: 575px) {
     grid-template-columns: repeat(1, 1fr);
 
@@ -169,6 +176,7 @@
 .cs_product_style_6 {
   .cs_product_thumbnail {
     overflow: hidden;
+
     img {
       width: 100%;
       transition: all 0.3s ease;
@@ -178,6 +186,7 @@
       }
     }
   }
+
   .cs_product_info {
     .cs_rating {
       width: 120px;
@@ -216,6 +225,189 @@
         background-color: var(--accent-color);
         color: var(--white-color);
       }
+    }
+  }
+}
+
+/*=====================================================
+ Product Details
+=======================================================*/
+.cs_productd_details_modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s ease;
+
+    .cs_modal_overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .cs_product_details_wrapper {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .cs_modal_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: zoom-out;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .cs_product_details_wrapper {
+    width: min(100%, 960px);
+    margin: 50px auto 0;
+    padding: 55px 0 40px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+  }
+
+  .cs_close_modal_btn {
+    font-size: 20px;
+    line-height: 1em;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: #FE5A86;
+    }
+  }
+
+  .cs_product_thumbnail_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .cs_product_thumbnail {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cs_product_details {
+    padding: 15px;
+    height: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .cs_product_reviews {
+    display: flex;
+    align-items: center;
+  }
+
+  .cs_rating {
+    width: 100px;
+    height: 26px;
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .cs_color_list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    li {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background: var(--cs-color);
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 16px;
+        height: 8px;
+        position: absolute;
+        left: 7px;
+        top: 8px;
+        opacity: 0;
+        transform: rotate(-45deg);
+        border-left: 2px solid var(--accent-color);
+        border-bottom: 2px solid var(--accent-color);
+        transition: opacity 0.3s ease;
+      }
+
+      &.active {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .cs_action_btns_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .cs_quantity_btns {
+    padding: 9px 30px;
+  }
+
+  .cs_btn_style_1 {
+    flex: 1;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+
+  .cs_product_specifications {
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    strong {
+      color: var(--primary-color);
+    }
+  }
+
+  @media (max-width:400px) {
+    .cs_action_btns_wrapper {
+      flex-direction: column;
+    }
+
+    .cs_quantity_btns {
+      width: 100%;
     }
   }
 }
