@@ -41,6 +41,7 @@
   .cs_iconbox_info {
     width: min(366px, 100%);
   }
+
   .cs_iconbox_icon {
     position: relative;
 
@@ -93,6 +94,7 @@
       top: 0;
       left: 0;
     }
+
     &::after {
       content: "";
       background-color: var(--white-color);
@@ -106,12 +108,13 @@
       transition: all 0.4s ease;
     }
   }
+
   &:hover {
     .cs_iconbox_icon {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(4%)
-          saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
       }
+
       &::after {
         background-color: var(--accent-color);
       }
@@ -120,6 +123,7 @@
 
   @media (max-width: 575px) {
     padding-left: 90px;
+
     .cs_iconbox_icon {
       width: 70px;
       height: 70px;
@@ -145,11 +149,13 @@
   &:nth-child(even) {
     margin-left: auto;
   }
+
   .cs_iconbox_icon {
     width: 65px;
     height: 65px;
     flex: none;
   }
+
   &:hover {
     .cs_iconbox_title {
       background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
@@ -179,6 +185,7 @@
     left: 0;
     top: 0px;
   }
+
   .cs_iconbox_info {
     color: #e2e2e2;
   }
@@ -236,6 +243,7 @@
 
 .cs_iconbox_middle_img {
   border-radius: 4px;
+
   img {
     width: 100%;
   }
@@ -298,6 +306,7 @@
   @media (max-width: 1599px) {
     flex: 0 0 calc(48% - 35px);
   }
+
   @media (max-width: 1599px) {
     flex: 0 0 calc(48% - 35px);
   }
@@ -315,13 +324,12 @@
   }
 }
 
-//
 .cs_iconbox_wrapper_1,
 .cs_iconbox_wrapper_9 {
   padding: 70px 0 60px;
   display: flex;
   justify-content: center;
-  align-items: center; // not nessery for iconbox wrapper 1
+  align-items: center;
 }
 
 .cs_iconbox_wrapper_2 {
@@ -348,6 +356,7 @@
     }
   }
 }
+
 .cs_iconbox_wrapper_5 {
   .cs_section_title {
     span {
@@ -355,12 +364,14 @@
       border-bottom: 1px solid var(--accent-color);
     }
   }
+
   .cs_left_iconbox,
   .cs_right_iconbox {
     .cs_iconbox_style_7:not(:last-child) {
       margin-bottom: 17px;
     }
   }
+
   .cs_left_iconbox {
     padding-top: 18px;
     padding-left: 30px;
@@ -370,9 +381,11 @@
     border-radius: 0;
     transform: translateY(-70px);
   }
+
   .cs_img {
     right: 0;
     bottom: 0;
+
     img {
       width: 100%;
       position: relative;
@@ -394,20 +407,24 @@
     .cs_left_iconbox {
       padding-left: 0;
     }
+
     .cs_iconbox_middle_img {
       transform: none;
     }
   }
 }
+
 .cs_iconbox_wrapper_6 {
   padding-left: 170px;
 
   @media (max-width: 1399px) {
     padding-left: 50px;
   }
+
   @media (max-width: 1199px) {
     padding-left: 20px;
   }
+
   @media (max-width: 991px) {
     padding-left: 0px;
 
@@ -442,6 +459,7 @@
     left: 0;
     bottom: 187px;
   }
+
   .cs_top_iconbox {
     display: flex;
     justify-content: space-between;
@@ -450,6 +468,7 @@
     margin-left: auto;
     padding-bottom: 40px;
   }
+
   .cs_bottom_iconbox {
     display: flex;
     justify-content: space-between;
@@ -463,6 +482,7 @@
     .cs_top_iconbox {
       margin-left: 0;
     }
+
     .cs_bottom_iconbox {
       margin: 0;
     }
@@ -494,6 +514,7 @@
     left: 0;
     background: var(--gray-content-background-text-icon-0, #f2f6ef);
   }
+
   &::before {
     right: 0;
     background: #f2faff;

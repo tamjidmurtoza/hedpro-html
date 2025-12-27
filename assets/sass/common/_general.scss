@@ -598,56 +598,47 @@
 
 .cs_btn_style_4 {
   display: inline-flex;
-  padding: 12px 22px 12px 62px;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 44px;
+  border-radius: 50px;
   text-wrap: nowrap;
   border: 0;
   outline: 0;
-  font-family: var(--primary-font);
+  padding: 12px 22px 12px 62px;
   color: var(--white-color);
+  font-family: var(--primary-font);
   background-color: var(--accent-color);
   position: relative;
   overflow: hidden;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 
-  &::before {
-    content: "\f105";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 21px;
-    z-index: 5;
-    font-size: 20px;
-    color: var(--accent-color);
-  }
-
-  &::after {
+  .cs_icon_left {
+    height: 40px;
+    width: 44px;
     position: absolute;
     top: 50%;
+    left: 6px;
+    z-index: 0;
     transform: translateY(-50%);
-    content: "";
-    height: 44px;
-    width: 44px;
-    display: inline-block;
-    left: 5px;
-    z-index: 1;
+    color: var(--accent-color);
     border-radius: 50%;
-    transition: all 0.3s ease;
-    background: var(--white-color);
+    background-color: var(--white-color);
+    transition: all 0.4s ease;
+  }
+
+  span:last-child {
+    position: relative;
+    z-index: 1;
   }
 
   &:hover {
-    &:after {
-      color: var(--accent-color);
-      width: 94%;
-      border-radius: 44px;
-      z-index: -1;
-    }
+    color: var(--white-color);
+    padding: 12px 62px 12px 22px;
 
-    color: var(--accent-color);
+    .cs_icon_left {
+      left: calc(100% - 50px);
+    }
   }
 
   &.cs_white_bg {
@@ -1521,5 +1512,19 @@ input[type="number"] {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes spinAnimation {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+
+  75% {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+
+  100% {
+    transform: rotateX(-20deg) rotateY(360deg);
   }
 }

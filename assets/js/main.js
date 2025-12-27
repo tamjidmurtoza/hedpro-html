@@ -54,6 +54,7 @@
   $(function () {
     mainNav();
     stickyHeader();
+    languageInit();
     dynamicBackground();
     slickInit();
     modalVideo();
@@ -160,6 +161,30 @@
     } else {
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
+  }
+  /*======================================================================
+    06. Language Select
+  ========================================================================*/
+  function languageInit() {
+    // Toggle language dropdown
+    $(".cs_language_switcher").on("click", function () {
+      $(".cs_language_dropdown").slideToggle(250);
+    });
+
+    // Handle language selection
+    $(".cs_language_dropdown button").on("click", function () {
+      const selectedLang = $(this).data("lang");
+      const selectedFlagClass = $(this).find(".flag-btn").attr("class");
+      console.log(selectedFlagClass);
+      // Update switcher content
+      $(".cs_language_switcher").html(`
+      <span class="${selectedFlagClass}"></span>
+      <span data-lang="${selectedLang}">${selectedLang}</span>
+    `);
+
+      // Hide dropdown
+      $(".cs_language_dropdown").slideUp(200);
+    });
   }
   /*=============================================================
     04. Dynamic Background
@@ -621,22 +646,6 @@
     Slider.init();
   }
 
-  // Language Update Functionality
-  $(".cs_language_switcher").on("click", function () {
-    $(this).siblings(".cs_language_dropdown").slideToggle();
-    updateLanguage();
-  });
-  function updateLanguage() {
-    $(".cs_language_dropdown input").on("click", function () {
-      var selectedValue = $(this).val();
-      $(this)
-        .closest(".cs_language_select")
-        .find(".cs_language_switcher input")
-        .val(selectedValue);
-      $(".cs_language_dropdown").slideUp();
-    });
-  }
-
   /*--------------------------------------------------------------
     16. display none
   --------------------------------------------------------------*/
@@ -679,7 +688,7 @@
     const modalOverlay = $("#modalOverlay");
     const closeModalBtn = $("#closeModalBtn");
     const openLoginBtn = $("#openLoginBtn");
-    const openRegisterBtn = $("#openRegisterBtn");
+    const openRegisterBtn = $("#openRegisterBtn, [data-register='open']");
     const switchToLogin = $("#switchToLogin");
     const switchToRegister = $("#switchToRegister");
     const switchToPassword = $("#switchToPasswordReset");
