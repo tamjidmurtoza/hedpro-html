@@ -87,6 +87,18 @@
       const date = new Date();
       $(".cs_getting_year").text(date.getFullYear());
     }
+    /*===========================================================
+     Gradient Icon Styling Function
+    =============================================================*/
+    $(".cs_iconbox_icon").each(function () {
+      const src = $(this).data("icon");
+      if (src) {
+        $(this).css({
+          "-webkit-mask-image": `url(${src})`,
+          "mask-image": `url(${src})`,
+        });
+      }
+    });
   });
 
   /*=============================================================
@@ -134,7 +146,12 @@
       $(".cs_side_header").removeClass("active");
       $("html").removeClass("cs_hamburger_active");
     });
-
+    $(".cs_search_toggler").on("click", function () {
+      $(".cs_header_search").addClass("active");
+    });
+    $(".cs_search_close, .cs_sidenav_overlay").on("click", function () {
+      $(".cs_sidenav, .cs_header_search").removeClass("active");
+    });
     /* Hamburger Menu */
     $(".cs_hamburger_menu .menu-item-has-children>a").on("click", function (e) {
       e.preventDefault();
@@ -574,16 +591,16 @@
     15. Date And Time Picker
   --------------------------------------------------------------*/
   function dateTimePicker() {
-    flatpickr("#timePicker", {
-      enableTime: true,
-      allowInput: true,
-      noCalendar: true,
-      dateFormat: "G:i: K", // Only time in 24-hour format
-    });
-    flatpickr("#datePicker", {
-      enableTime: false,
-      allowInput: true,
-    });
+    // flatpickr("#timePicker", {
+    //   enableTime: true,
+    //   allowInput: true,
+    //   noCalendar: true,
+    //   dateFormat: "G:i: K",
+    // });
+    // flatpickr("#datePicker", {
+    //   enableTime: false,
+    //   allowInput: true,
+    // });
   }
   /*--------------------------------------------------------------
     16. Custom Slider

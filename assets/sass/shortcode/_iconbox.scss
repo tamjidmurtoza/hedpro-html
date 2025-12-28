@@ -139,6 +139,26 @@
   flex-wrap: wrap;
 }
 
+.cs_iconbox_style_6 {
+  .cs_iconbox_icon {
+    background-color: var(--white-color);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+
+    .cs_iconbox_icon {
+      background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
+    }
+  }
+}
+
 .cs_iconbox_style_6,
 .cs_iconbox_style_13,
 .cs_iconbox_style_15 {
@@ -157,6 +177,7 @@
   }
 
   &:hover {
+
     .cs_iconbox_title {
       background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
       background-clip: text;

@@ -125,6 +125,13 @@
   border-color: var(--border-color);
   overflow: hidden;
 
+  .cs_card_title:hover {
+    background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .cs_card_thumbnail {
     transition: all 0.3s ease;
   }
@@ -137,8 +144,9 @@
   }
 
   &:hover {
+
     .cs_card_thumbnail {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
   }
 }

@@ -125,7 +125,7 @@
     .cs_about_list {
       li {
         position: relative;
-        left: 28px;
+        padding-left: 28px;
 
         &::before {
           content: "";
@@ -134,9 +134,12 @@
           height: 14px;
           border-radius: 50%;
           background-color: var(--accent-color);
-          top: 50%;
-          transform: translateY(-50%);
-          left: -28px;
+          top: 6px;
+          left: 0;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 17px;
         }
       }
     }
