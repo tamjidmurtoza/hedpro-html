@@ -17,10 +17,11 @@
 }
 
 .cs_glow_performance {
-  .cs_section_title {
+  .cs_section_heading_style_1 {
     padding-left: 100px;
     width: min(900px, 100%);
   }
+
   .cs_bg_img {
     img {
       width: 100%;
@@ -32,15 +33,19 @@
       padding: 150px 0;
     }
   }
+
   @media (max-width: 991px) {
-    .cs_section_title {
+    .cs_section_heading_style_1 {
+      width: 100%;
       padding-left: 0px;
     }
+
     .cs_bg_img {
       padding: 0;
     }
   }
 }
+
 .cs_card_wrapper_2 {
   border-top: 1px solid var(--border-color);
 
@@ -50,6 +55,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   .cs_section_heading_style_1 {
     width: min(655px, 100%);
   }
@@ -75,6 +81,7 @@
 
   .cs_star {
     padding: 0 25px;
+
     img {
       width: 50px;
       height: 50px;
@@ -97,6 +104,7 @@
       height: 40%;
       background-color: var(--border-color);
     }
+
     img {
       position: relative;
       z-index: 1;

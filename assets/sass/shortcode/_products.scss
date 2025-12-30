@@ -203,10 +203,10 @@
 
     img {
       width: 100%;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
     }
   }
@@ -229,14 +229,14 @@
       }
     }
 
+    .cs_product_title:hover {
+      color: var(--accent-color);
+    }
+
     .cs_price {
       display: flex;
       align-items: center;
       gap: 6px;
-
-      .cs_prev_price {
-        text-decoration: line-through;
-      }
     }
 
     .cs_btn_style_7 {

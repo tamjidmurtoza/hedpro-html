@@ -317,6 +317,10 @@
   @media (max-width: 1199px) {
     align-items: start;
   }
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
 }
 
 .cs_iconbox_style_14 {
@@ -545,7 +549,19 @@
     background: #f2faff;
   }
 
+  .cs_iconbox_img {
+    width: 77%;
+
+    img {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 1199px) {
+    .cs_iconbox_img {
+      width: 100%;
+    }
+
     br {
       display: none;
     }

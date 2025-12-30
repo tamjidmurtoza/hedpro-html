@@ -5,19 +5,23 @@
   height: 270px;
   position: relative;
   margin-top: 125px;
-  margin-bottom: 125px;
+  //margin-bottom: 125px;
+
   @media (max-width: 1199px) {
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
   @media (max-width: 991px) {
     margin-top: 40px;
     margin-bottom: 84px;
   }
+
   @media (max-width: 767px) {
     margin-top: 30px;
     margin-bottom: 59px;
   }
+
   .container {
     height: inherit;
   }
@@ -49,9 +53,11 @@
         background-color: var(--accent-color);
         opacity: 0;
       }
+
       @media (max-width: 1199px) {
         height: 470px;
       }
+
       @media (max-width: 991px) {
         height: 350px;
       }
@@ -67,22 +73,27 @@
         z-index: 1;
         opacity: 0;
       }
+
       &.prev-1 {
         transform: translate3d(-50%, -50%, 0) scale3d(0.6, 0.6, 1);
         z-index: 2;
         opacity: 0;
       }
+
       &.next-1 {
         z-index: 2;
         transform: translate(-50%, -44%) scale(0.9);
       }
+
       &.next-2 {
         z-index: 1;
         transform: translate(-50%, -38%) scale(0.8);
       }
+
       .cs_mouse_point.cs_style_1 {
         opacity: 0;
       }
+
       &.active {
         z-index: 3;
         transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
@@ -123,6 +134,7 @@
       right: 103px;
       top: 42px;
     }
+
     &::before {
       content: "";
       width: 10px;
@@ -149,9 +161,11 @@
     .cs_custom_slide_wrapper {
       .cs_custom_slide {
         width: 80%;
+
         &.next-1 {
           transform: translate(-50%, -41%) scale(0.9);
         }
+
         &.next-2 {
           transform: translate(-50%, -32%) scale(0.8);
         }
@@ -167,21 +181,26 @@
   display: block;
   position: relative;
   overflow: hidden;
+
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     height: 470px;
   }
+
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     height: 350px;
   }
+
   @media (max-width: 767px) {
     height: 300px;
   }
 }
+
 .cs_custom_slide_arrow_left,
 .cs_custom_slide_arrow_right {
   cursor: pointer;
   transition: all 0.3s ease;
   color: var(--black-color);
+
   &:hover {
     i {
       color: var(--accent-color);
@@ -200,13 +219,13 @@
   justify-content: center;
   position: absolute;
   right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   z-index: 1;
 
   @media (max-width: 1199px) {
     right: -9px;
   }
+
   @media (max-width: 991px) {
     right: 0px;
   }

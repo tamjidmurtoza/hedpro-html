@@ -533,7 +533,8 @@
   /*-------------------------------------------------------------------------
 -------------------------style-1 -----------------------------------------*/
 
-  &.cs_style_1 {
+  &.cs_style_1,
+  &.cs_style_9 {
     &.cs_sticky_active {
       .cs_site_brand img {
         filter: brightness(0) saturate(100%) invert(13%) sepia(55%) saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
@@ -1215,6 +1216,33 @@
       }
     }
   }
+
+  /*-------------------------------------------------------------------------
+-------------------------style-09 -----------------------------------------*/
+  &.cs_style_9 {
+    .cs_nav_list a {
+      &:hover {
+        color: var(--white-color);
+        opacity: 0.75;
+      }
+    }
+
+    .cs_dropdown_list a {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    &.cs_sticky_active {
+      .cs_nav_list a {
+        &:hover {
+          color: var(--accent-color);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
 
   /*-------------------------------------------------------------------------
 -------------------------style-10 -----------------------------------------*/
