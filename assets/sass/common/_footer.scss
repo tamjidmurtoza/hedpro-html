@@ -406,11 +406,20 @@
   }
 
   .cs_social_icons {
-    .cs_icon {
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+      color: var(--white-color);
+      background-color: var(--accent-color);
+
       &:hover {
         background-color: var(--white-color);
         color: var(--accent-color);
-        border: 1px solid var(--accent-color);
       }
     }
   }
@@ -725,6 +734,12 @@
       right: 11px;
       top: 50%;
       transform: translateY(-50%);
+      border: 1px solid currentColor;
+
+      &:hover {
+        color: var(--primary-color);
+        background-color: transparent;
+      }
     }
   }
 
@@ -826,6 +841,14 @@
       &:first-child {
         flex: none;
         width: calc(100% - 40px);
+      }
+    }
+
+    .cs_newsletter {
+      input {
+        padding: 20px 10px;
+        outline: none;
+        width: 100%;
       }
     }
   }
@@ -1228,7 +1251,7 @@
       position: absolute;
       right: 0px;
       top: 0px;
-      padding: 11px 10px;
+      padding: 10px 10px 11px;
       border: 1px solid var(--primary-color);
       background: #151f39;
       border-radius: 0px;
@@ -1239,8 +1262,9 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background: var(--accent-color);
         color: var(--white-color);
+        background: var(--accent-color);
+        border-color: var(--white-color);
       }
 
       &::after,
@@ -1334,7 +1358,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px 20px;
       flex-wrap: wrap;
     }
 
@@ -1367,9 +1391,15 @@
   }
 
   .cs_social_icons {
-    .cs_icon {
+    gap: 20px;
+
+    a {
       height: 25px;
       width: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
       background-color: var(--accent-color);
       color: var(--white-color);
 
@@ -1393,6 +1423,15 @@
   }
 
   @media (max-width: 991px) {
+    &::after {
+      height: 180px;
+      top: -40px;
+    }
+
+    .cs_newslatter {
+      margin-top: -80px;
+    }
+
     .cs_newslatter {
       flex-wrap: wrap;
     }
@@ -1413,6 +1452,10 @@
     .cs_footer_col {
       flex: none;
       width: calc(100% - 40px);
+    }
+
+    .cs_newslatter {
+      padding: 35px 20px 40px;
     }
   }
 

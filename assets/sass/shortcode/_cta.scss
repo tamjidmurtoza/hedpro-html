@@ -415,6 +415,7 @@
 
     &:hover {
       color: var(--accent-color);
+      background-color: var(--primary-color);
     }
   }
 
@@ -441,6 +442,10 @@
     .cs_cta_left {
       text-align: center;
     }
+  }
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
   }
 }
 

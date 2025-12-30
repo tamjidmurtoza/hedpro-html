@@ -60,6 +60,7 @@
     modalVideo();
     scrollUp();
     accordian();
+    tabs();
     review();
     counterInit();
     smoothScroll();
@@ -76,10 +77,10 @@
       new TomSelect(this, {
         create: false,
         onDropdownOpen: function (dropdown) {
-          dropdown.addClass("active");
+          dropdown.classList.add("active");
         },
         onDropdownClose: function (dropdown) {
-          dropdown.removeClass("active");
+          dropdown.classList.remove("active");
         },
       });
     });
@@ -392,7 +393,20 @@
       $(this).parent(".cs_accordian").siblings().removeClass("active");
     });
   }
-
+  /*===============================================================
+    12. Tabs
+  ===============================================================*/
+  function tabs() {
+    $(".cs_tabs .cs_tab_links a").on("click", function (e) {
+      var currentAttrValue = $(this).attr("href");
+      $(".cs_tabs " + currentAttrValue)
+        .fadeIn(400)
+        .siblings()
+        .hide();
+      $(this).parents("li").addClass("active").siblings().removeClass("active");
+      e.preventDefault();
+    });
+  }
   /*=============================================================
     09. Review
   ===============================================================*/
@@ -401,6 +415,11 @@
       var review = $(this).data("rating");
       var reviewVal = review * 20 + "%";
       $(this).find(".cs_rating_percentage").css("width", reviewVal);
+    });
+    // Feedback Star Rating
+    $(".cs_input_rating i").on("click", function () {
+      $(this).siblings().removeClass("fa-solid");
+      $(this).addClass("fa-solid").prevAll().addClass("fa-solid");
     });
   }
 
@@ -591,16 +610,16 @@
     15. Date And Time Picker
   --------------------------------------------------------------*/
   function dateTimePicker() {
-    // flatpickr("#timePicker", {
-    //   enableTime: true,
-    //   allowInput: true,
-    //   noCalendar: true,
-    //   dateFormat: "G:i: K",
-    // });
-    // flatpickr("#datePicker", {
-    //   enableTime: false,
-    //   allowInput: true,
-    // });
+    flatpickr("#timePicker", {
+      enableTime: true,
+      allowInput: true,
+      noCalendar: true,
+      dateFormat: "G:i: K",
+    });
+    flatpickr("#datePicker", {
+      enableTime: false,
+      allowInput: true,
+    });
   }
   /*--------------------------------------------------------------
     16. Custom Slider

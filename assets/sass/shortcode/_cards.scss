@@ -45,6 +45,10 @@
     }
   }
 
+  .cs_card_title:hover {
+    color: var(--accent-color);
+  }
+
   @media (max-width: 1399px) {
     .cs_card_info {
       padding: 20px 20px 56px;
@@ -132,8 +136,12 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .cs_card_thumbnail {
-    transition: all 0.3s ease;
+  .cs_card_thumbnail img {
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   .cs_price {
@@ -141,13 +149,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  &:hover {
-
-    .cs_card_thumbnail {
-      transform: scale(1.05);
-    }
   }
 }
 
@@ -181,6 +182,10 @@
     width: 100%;
     height: 100%;
     padding: 52px 30px;
+  }
+
+  .cs_card_title:hover {
+    opacity: 0.8;
   }
 }
 
@@ -513,8 +518,6 @@
   }
 }
 
-// card 9
-
 .cs_card_style_9 {
   padding: 170px 0 204px;
   position: relative;
@@ -523,6 +526,8 @@
     width: min(566px, 100%);
     position: relative;
     z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
 
     .cs_section_subtitle {
       background-color: transparent;

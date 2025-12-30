@@ -96,6 +96,44 @@
     background: var(--white-color);
   }
 
+  &.cs_style_4 {
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .cs_accordian_head {
+      padding: 10px 0;
+      padding-right: 40px;
+      margin-bottom: 17px;
+
+      .cs_accordian_toggle {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        pointer-events: none;
+        transition: all 0.4s ease;
+      }
+    }
+
+    .cs_accordian_body {
+      padding: 0 0 33px 0;
+      margin-top: -10px;
+    }
+
+    &.active {
+      .cs_accordian_head {
+        margin-bottom: 18px;
+        color: var(--accent-color);
+      }
+
+      .cs_accordian_toggle {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   @media (max-width: 575px) {
     .cs_accordian_head {
       padding-right: 40px;
@@ -338,56 +376,51 @@
   .cs_section_title {
     letter-spacing: -1.44px;
   }
+}
 
-  .cs_accordian_wrapper_3 {
-    padding-left: 185px;
+.cs_accordian_wrapper_3 {
+  padding-left: 185px;
 
-    .cs_accordian {
-      margin-bottom: 40px;
-      transition: all 03s eases;
-
-      &.active {
-        .cs_accordian_head {
-          color: var(--accent-color);
-          pointer-events: none;
-        }
-
-        .cs_accordian_toggle {
-          transform: rotate(90deg);
-        }
-      }
-    }
+  .cs_accordian {
+    border: 0;
+    padding: 0;
+    margin-bottom: 40px;
 
     .cs_accordian_body {
-      padding-top: 30px;
+      padding: 30px 0 0 0;
     }
 
     .cs_accordian_head {
-      padding-bottom: 25px;
-      padding-top: 0;
-      padding-left: 0;
+      padding: 0 0 25px 0;
+      color: var(--primary-color);
       border-bottom: 1px solid rgba(2, 6, 38, 0.07);
       cursor: pointer;
-
-      &:hover {
-        color: var(--accent-color);
-      }
     }
 
     .cs_accordian_toggle {
       right: 0;
-      top: -4px;
+      top: 0;
       transition: all 0.3s ease;
       pointer-events: none;
     }
 
-    @media (max-width: 1200px) {
-      padding-left: 100px;
-    }
+    &.active {
+      .cs_accordian_head {
+        pointer-events: none;
+      }
 
-    @media (max-width: 992px) {
-      padding-left: 0;
+      .cs_accordian_toggle {
+        transform: rotate(90deg);
+      }
     }
+  }
+
+  @media (max-width: 1200px) {
+    padding-left: 100px;
+  }
+
+  @media (max-width: 992px) {
+    padding-left: 0;
   }
 }
 
@@ -435,6 +468,19 @@
     top: -43px;
     z-index: 1;
   }
+
+  // .cs_accordian.cs_style_2 {
+  //   margin-bottom: 15px;
+
+  //   .cs_accordian_body {
+  //     padding: 0;
+  //   }
+
+  //   .cs_accordian_head {
+  //     padding: 10px 0;
+  //   }
+
+  // }
 
   @media (max-width: 1199px) {
     .cs_section_title {

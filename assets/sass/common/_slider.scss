@@ -20,6 +20,16 @@
   }
 }
 
+.slick-active {
+  .cs_card_style_9 {
+    .cs_section_heading_style_4 {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+  }
+}
+
 .slick-arrow {
   cursor: pointer;
 }
@@ -28,7 +38,7 @@
   cursor: url(../img/drag.png) 16 9, ew-resize !important;
 }
 
-.slick-slide > div {
+.slick-slide>div {
   display: flex;
   flex-direction: column;
 }
@@ -80,6 +90,7 @@
   .cs_left_arrow {
     left: 30px;
   }
+
   .cs_right_arrow {
     right: 30px;
   }
@@ -123,6 +134,7 @@
     width: 30px;
   }
 }
+
 .cs_pagination.cs_style_1 {
   ul {
     display: flex;
@@ -165,6 +177,7 @@
     &.slick-active {
       button {
         background-color: var(--accent-color);
+
         &::after {
           display: block;
         }
@@ -201,6 +214,7 @@
     &.slick-active {
       button {
         background-color: #3c5e39;
+
         &::after {
           display: block;
         }
@@ -208,6 +222,7 @@
     }
   }
 }
+
 /*=======================================================
  Horizontal Slider
 =========================================================*/
@@ -243,6 +258,7 @@
       flex-wrap: nowrap;
       white-space: nowrap;
     }
+
     .cs_brands_list,
     .cs_brands_list_style_2 {
       min-width: 100%;
@@ -259,6 +275,7 @@
       animation-direction: reverse;
     }
   }
+
   .cs_brand_slider_wrapper_style_2 {
     width: 100%;
 
@@ -268,6 +285,7 @@
       margin: 0 15px;
     }
   }
+
   @media (max-width: 991px) {
     flex-direction: column;
     align-items: start;
@@ -278,8 +296,10 @@
         display: none;
       }
     }
+
     .cs_brand_slider_wrapper_style_1,
     .cs_brand_slider_wrapper_style_2 {
+
       .cs_brands_list,
       .cs_brands_list_style_2 {
         gap: 0 40px;
@@ -305,6 +325,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -314,6 +335,7 @@
   0% {
     transform: translateX(-0%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -325,6 +347,7 @@
       left: 0;
     }
   }
+
   .cs_slider_arrows_style_1 {
     .cs_right_arrow {
       right: 0;
@@ -340,17 +363,20 @@
     .cs_pagination.cs_style_2 {
       display: none;
     }
+
     .cs_slider_arrows_style_2 {
       display: flex;
       align-items: center;
       gap: 20px;
     }
+
     .cs_left_arrow,
     .cs_right_arrow {
       position: initial;
     }
   }
 }
+
 @media (max-width: 767px) {
   .cs_slider_arrows_style_1 {
     display: none !important;

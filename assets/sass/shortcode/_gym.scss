@@ -2,6 +2,8 @@
   26. Gym
 ================================================================*/
 .cs_nutritions_in {
+  padding-bottom: 190px;
+
   .cs_nutritions {
     width: min(340px, 100%);
 
@@ -9,28 +11,40 @@
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 16px;
     }
-    .cs_nutritionals_table {
+
+    .cs_nutritionals_table li {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0 30px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   .cs_nutritions_img_1 {
     position: absolute;
-    top: 50%;
+    bottom: 150px;
     left: 50%;
     flex-direction: column;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: min(100%, 755px);
-    padding: 0 60px;
+    padding-left: 60px;
+
     .cs_img {
       width: 100%;
     }
+
     img {
       position: relative;
       z-index: 2;
     }
+
+    .cs_bottles {
+      padding: 0 60px 0 0;
+    }
+
     .cs_bg_icon {
       position: absolute;
       top: 50%;
@@ -39,6 +53,7 @@
       width: 100%;
     }
   }
+
   .cs_guarantee {
     position: absolute;
     right: -28%;
@@ -48,13 +63,16 @@
   }
 
   @media (max-width: 1199px) {
+    padding-bottom: 80px;
+
     .cs_nutritions {
       width: 100%;
       margin-bottom: 50px;
     }
+
     .cs_nutritions_img_1 {
       position: relative;
-      top: initial;
+      bottom: initial;
       left: initial;
       transform: translate(0);
     }
@@ -66,6 +84,19 @@
   }
 
   @media (max-width: 767px) {
+    .cs_nutritions_img_1 {
+      padding-left: 0;
+
+      .cs_bottles {
+        padding: 0 30px;
+      }
+
+      .cs_bg_icon {
+        top: 30%;
+        transform: translate(-50%, -30%);
+      }
+    }
+
     .cs_guarantee {
       zoom: 0.7;
     }
@@ -81,7 +112,7 @@
     width: min(1033px, 100%);
   }
 
-  > .cs_review_img {
+  >.cs_review_img {
     right: 0;
     bottom: 0;
     width: calc(100% - 50%);
@@ -114,12 +145,15 @@
   .cs_section_heading_style_1 {
     z-index: 5;
   }
+
   @media (max-width: 1400px) {
     clip-path: polygon(50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   }
+
   @media (max-width: 1199px) {
     clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   }
+
   @media (max-width: 776px) {
     clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   }
@@ -129,6 +163,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

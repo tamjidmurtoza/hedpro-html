@@ -16,20 +16,10 @@
     }
   }
 
-  &::before {
-    content: "45+";
-    position: absolute;
-    color: var(--white-color);
-    margin: 0 auto;
-    font-weight: 700;
+  .cs_client_number {
     width: 53px;
     height: 53px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
     left: calc(100% - 20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -64,6 +54,7 @@
 
       .cs_raiting_percentage_in_text {
         letter-spacing: -0.54px;
+
         span {
           color: #08c16a;
         }
@@ -75,11 +66,12 @@
     position: relative;
     border-radius: 6px;
 
-    > img {
+    >img {
       width: 100%;
       position: relative;
       z-index: 2;
     }
+
     &::before {
       content: "";
       background-color: var(--accent-color);
@@ -91,6 +83,7 @@
       bottom: 0;
       border-radius: inherit;
     }
+
     .cs_rating {
       &::before {
         position: initial;
@@ -137,6 +130,7 @@
       z-index: 2;
       padding-right: 55px;
     }
+
     .cs_testimonial_icon {
       position: absolute;
       right: 0;
@@ -156,6 +150,7 @@
 
   .cs_testimonial_left {
     flex: none;
+
     .cs_testimonial_avatar {
       img {
         width: 100%;
@@ -202,6 +197,7 @@
     font-size: 20px;
     font-style: normal;
   }
+
   .cs_testimial_review {
     display: flex;
     align-items: center;
@@ -211,6 +207,7 @@
       overflow: visible;
       width: 120px;
       color: #2e3a2a;
+
       &::before {
         font-weight: 900;
       }
@@ -222,6 +219,7 @@
       }
     }
   }
+
   .cs_testimonial_avatar {
     &::before {
       color: var(--black-color);
@@ -230,15 +228,27 @@
 }
 
 .cs_testimonial_style_4 {
-  padding-top: 35px;
+  padding-top: 40px;
+
   .cs_testimonial_in {
     background: var(--white-color);
-    padding: 55px 25px 50px 25px;
+    padding: 100px 25px 50px 25px;
+    height: 100%;
+    width: 100%;
+    mask-image: url('../img/masking.svg');
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.4s ease;
   }
 
   .cs_testimonial_avatar {
-    margin-top: -100px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
 
     img {
       border: 10px solid var(--gray-color3);
@@ -255,6 +265,22 @@
     top: 48px;
     width: 120px;
   }
+
+  .cs_rating {
+    color: #FFC107;
+  }
+
+  &:hover {
+    .cs_testimonial_in {
+      background: var(--accent-color);
+
+      h3,
+      p {
+        color: var(--white-color);
+      }
+    }
+
+  }
 }
 
 .cs_testimonial_style_5 {
@@ -266,6 +292,7 @@
     font-size: 21px;
     font-style: normal;
   }
+
   .cs_testimial_review {
     display: flex;
     align-items: center;
@@ -275,6 +302,7 @@
       overflow: visible;
       width: 120px;
       color: var(--accent-color);
+
       &::before {
         font-weight: 900;
       }
@@ -307,6 +335,11 @@
   .slick-list {
     padding-top: 120px;
   }
+
+  @media (max-width:991px) {
+    padding-left: 0;
+    border-left: 0;
+  }
 }
 
 .cs_refrigerato_testimonial {
@@ -320,6 +353,7 @@
     .cs_refrigerator_features_list {
       position: relative;
       z-index: 2;
+
       li {
         padding: 16px 30px 18px 20px;
         display: inline-flex;
@@ -334,6 +368,7 @@
           color: var(--accent-color);
           font-size: 16px;
         }
+
         &:not(:last-child) {
           margin-bottom: 22px;
         }

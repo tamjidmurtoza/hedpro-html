@@ -221,7 +221,7 @@
 }
 
 .cs_iconbox_style_8 {
-  .cs_card_title {
+  .cs_iconbox_title {
     padding-left: 40px;
     position: relative;
 
@@ -241,12 +241,16 @@
 
 .cs_iconbox_style_9 {
   padding: 65px 32px;
-  box-shadow: 0 10px 60px rgba(155, 155, 155, 0.1);
   border-radius: 10px;
   height: 100%;
+  border: 1px solid var(--white-color);
+  background-color: var(--white-color);
+  filter: drop-shadow(0 10px 20px rgba(155, 155, 155, 0.1));
+  transition: all 0.4s ease;
 
   &:hover {
-    border: 1px solid var(--accent-color);
+    border-color: var(--accent-color);
+    filter: drop-shadow(0 10px 20px rgba(155, 155, 155, 0.15));
   }
 
   @media (max-width: 767px) {
