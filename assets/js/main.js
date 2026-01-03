@@ -2,14 +2,14 @@
   "use strict";
 
   /*
-  |--------------------------------------------------------------------------
+  |=============================================================------------
   | Template Name: Hedpro
   | Author: Laralink
   | Version: 1.0.0
-  |--------------------------------------------------------------------------
-  |--------------------------------------------------------------------------
+  |=============================================================------------
+  |=============================================================------------
   | TABLE OF CONTENTS:
-  |--------------------------------------------------------------------------
+  |=============================================================------------
   |
   | 01. Preloader
   | 02. Header Nav
@@ -33,12 +33,13 @@
   | 20. Quantity
   | 21. Gradient Icon Function
   | 22. Color Picker Function
+  | 23. Dynamic contact form
   |
   */
 
-  /*--------------------------------------------------------------
+  /*=======================================================
     Scripts initialization
-  --------------------------------------------------------------*/
+  =========================================================*/
   $.exists = function (selector) {
     return $(selector).length > 0;
   };
@@ -105,9 +106,9 @@
     $(".cs_preloader").delay(150).fadeOut("slow");
   }
 
-  /*=============================================================
+  /*============================================================
     02. Header Nav
-  ===============================================================*/
+  ==============================================================*/
   function mainNav() {
     $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
     $(".menu-item-has-children").append(
@@ -164,9 +165,9 @@
       $("html").removeClass("cs_hamburger_active");
     });
   }
-  /*=============================================================
+  /*============================================================
     03. Sticky Header
-  ===============================================================*/
+  ==============================================================*/
   function stickyHeader() {
     var scroll = $(window).scrollTop();
     if (scroll >= 10) {
@@ -175,9 +176,9 @@
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
   }
-  /*======================================================================
+  /*============================================================
     04. Language Select
-  ========================================================================*/
+  ==============================================================*/
   function languageInit() {
     // Toggle language dropdown
     $(".cs_language_switcher").on("click", function () {
@@ -199,9 +200,9 @@
       $(".cs_language_dropdown").slideUp(200);
     });
   }
-  /*=============================================================
+  /*============================================================
     05. Dynamic Background
-  ===============================================================*/
+  ==============================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
       var src = $(this).attr("data-src");
@@ -469,9 +470,9 @@
       mirror: false,
     });
   }
-  /*--------------------------------------------------------------
+  /*=============================================================
     15. Hobble Effect
-  --------------------------------------------------------------*/
+  ===============================================================*/
   function hobbleEffect() {
     $(document)
       .on("mousemove", ".cs_hobble", function (event) {
@@ -513,9 +514,9 @@
         $(this).find(".cs_hover_layer_2").removeAttr("style");
       });
   }
-  /*--------------------------------------------------------------
+  /*=============================================================
    16. Before After Slider
- --------------------------------------------------------------*/
+ ===============================================================*/
   function beforeAfterSlider() {
     if ($.exists(".cs_before_after")) {
       var supportsTouch =
@@ -594,9 +595,9 @@
       });
     }
   }
-  /*--------------------------------------------------------------
+  /*=============================================================
     17. Date And Time Picker
-  --------------------------------------------------------------*/
+  ===============================================================*/
   function dateTimePicker() {
     flatpickr("#timePicker", {
       enableTime: true,
@@ -609,9 +610,9 @@
       allowInput: true,
     });
   }
-  /*--------------------------------------------------------------
+  /*=============================================================
     18. Custom Slider
-  --------------------------------------------------------------*/
+  ===============================================================*/
   function customSlider() {
     var Slider = (function () {
       var initSlider = function () {
@@ -669,9 +670,9 @@
 
     Slider.init();
   }
-  /*--------------------------------------------------------------
+  /*=============================================================
     19. display none
-  --------------------------------------------------------------*/
+  ===============================================================*/
   function displayOff() {
     $(document).on("click", ".cs_cross_btn", function () {
       $(this).closest(".cs_accordian_btn").hide();
@@ -727,6 +728,52 @@
       $(this).on("click", function () {
         $(this).addClass("active").siblings("li").removeClass("active");
       });
+    });
+  }
+  /*===========================================================
+   23. Dynamic contact form
+  =============================================================*/
+  if ($.exists("#cs_form")) {
+    const form = document.getElementById("cs_form");
+    const result = document.getElementById("cs_result");
+
+    form.addEventListener("submit", function (e) {
+      const formData = new FormData(form);
+      e.preventDefault();
+      var object = {};
+      formData.forEach((value, key) => {
+        object[key] = value;
+      });
+      var json = JSON.stringify(object);
+      result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = json.message;
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 5000);
+        });
     });
   }
 })(jQuery); // End of use strict

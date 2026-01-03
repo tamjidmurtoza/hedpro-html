@@ -206,7 +206,6 @@
   padding-bottom: 25px;
   position: relative;
   border-bottom: 1px solid #d9d9d9;
-  // margin-bottom: 17px;
 
   .cs_iconbox_icon {
     position: absolute;
@@ -329,25 +328,6 @@
     width: 100%;
   }
 }
-
-// .cs_iconbox_style_14 {
-//   gap: 30px;
-//   width: min(100%, 280px);
-//   // flex: 0 0 calc(39% - 35px);
-//   // min-width: 280px;
-
-//   .cs_iconbox_icon {
-//     flex: none;
-//   }
-
-//   @media (max-width: 1599px) {
-//     flex: 0 0 calc(48% - 35px);
-//   }
-
-//   @media (max-width: 1599px) {
-//     flex: 0 0 calc(48% - 35px);
-//   }
-// }
 
 .cs_iconbox_style_15 {
   gap: 30px;
@@ -600,8 +580,7 @@
 
   .cs_iconbox_style_14 {
     gap: 30px;
-    //width: calc(50% - 35px);
-    width: min(100%, 280px);
+    width: min(100%, 275px);
 
     .cs_iconbox_icon {
       flex: none;
