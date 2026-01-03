@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/tom-select.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
     <link rel="stylesheet" href="assets/css/odometer.min.css">
-    <link rel="stylesheet" href="assets/css/date-time.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Site Title -->
@@ -21,11 +22,18 @@
   </head>
   <body>
     <!-- Preloader Start -->
-    <!-- <div class="cs_preloader cs_center">
+    <div class="cs_preloader cs_center">
       <div class="cs_preloader_in">
-        <div class="cs_preloader_text cs_fs_72 cs_extrabold cs_primary_font" data-text="Hedpro">Hedpro</div>
+        <div class="cs_preloader_circle_wrapper position-relative">
+         <div class="cs_preloader_circle">
+           <span></span>
+          <span></span>
+          <span></span>
+         </div>
+        <img src="assets/img/loading-icon.svg" alt="Loading icon">
+        </div>
       </div>
-      </div> -->
+    </div>
     <!-- Preloader End -->
     <!-- Start Header -->
     <header class="cs_site_header cs_style_3 cs_sticky_header">
@@ -39,7 +47,7 @@
             </div>
             <div class="cs_main_header_center">
               <nav class="cs_nav">
-                <div class="cs_nav_list_wrap">
+                <div class="cs_nav_list_wrap" data-lenis-prevent>
                   <ul class="cs_nav_list cs_mp_0">
                     <li class="menu-item-has-children">
                       <a href="">Home</a>
@@ -47,7 +55,7 @@
                         <li><a href="index.html" aria-label="Nav link">Soft Pillow</a></li>
                         <li><a href="home2.html" aria-label="Nav link">Headphone</a></li>
                         <li><a href="home3.html" aria-label="Nav link">Smart Camera</a></li>
-                        <li><a href="home4.html" aria-label="Nav link">vr Headset</a></li>
+                        <li><a href="home4.html" aria-label="Nav link">VR Headset</a></li>
                         <li><a href="home5.html" aria-label="Nav link">Gym Supplements</a></li>
                         <li><a href="home6.html" aria-label="Nav link">Washing Machine</a></li>
                         <li><a href="home7.html" aria-label="Nav link">Burger</a></li>
@@ -243,13 +251,17 @@
       </div>
     </footer>
     <!-- End Footer -->
+     <!-- Start Scroll Top Button -->
+    <button type="button" class="cs_scrollup cs_center" id="scrollUpBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- End Scroll Top Button -->
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/lenis.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/date-time.min.js"></script>
+    <script src="assets/js/flatpickr.min.js"></script>
     <script src="assets/js/tom-select.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

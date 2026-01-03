@@ -136,7 +136,7 @@
 
   @media (max-width: 575px) {
     .cs_accordian_head {
-      padding-right: 40px;
+      padding: 20px 40px 20px 15px;
     }
 
     .cs_accordian_body {
@@ -175,7 +175,7 @@
         background-color: var(--primary-color);
         position: absolute;
         top: 7px;
-        left: 3.5px;
+        left: 3px;
         transition: all 0.3s ease;
       }
 
@@ -188,6 +188,22 @@
       span {
         border-bottom: 1px solid var(--accent-color);
       }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .cs_accordian_head {
+      padding: 20px 45px 20px 15px;
+    }
+
+    .cs_accordian {
+      .cs_accordian_toggle {
+        right: 15px;
+      }
+    }
+
+    .cs_accordian_body {
+      padding: 5px 15px 20px 15px;
     }
   }
 }
@@ -367,6 +383,27 @@
         }
       }
     }
+  }
+
+  @media (max-width: 575px) {
+
+    .cs_accordian {
+      .cs_accordian_head {
+        padding: 20px 45px 20px 15px;
+
+        .cs_accordian_toggle {
+          right: 15px;
+          top: 20px;
+        }
+      }
+
+
+
+      .cs_accordian_body {
+        padding: 5px 15px 20px 15px;
+      }
+    }
+
   }
 }
 

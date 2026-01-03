@@ -37,10 +37,7 @@
 .cs_iconbox_style_3 {
   display: flex;
   gap: 20px 60px;
-
-  .cs_iconbox_info {
-    width: min(366px, 100%);
-  }
+  width: min(366px, 100%);
 
   .cs_iconbox_icon {
     position: relative;
@@ -56,6 +53,10 @@
       border-radius: 50%;
       left: 23px;
     }
+  }
+
+  @media (max-width: 991px) {
+    width: 100%;
   }
 }
 
@@ -118,6 +119,12 @@
       &::after {
         background-color: var(--accent-color);
       }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 
@@ -323,33 +330,49 @@
   }
 }
 
-.cs_iconbox_style_14 {
-  gap: 30px;
-  flex: 0 0 calc(39% - 35px);
-  min-width: 280px;
+// .cs_iconbox_style_14 {
+//   gap: 30px;
+//   width: min(100%, 280px);
+//   // flex: 0 0 calc(39% - 35px);
+//   // min-width: 280px;
 
-  .cs_iconbox_icon {
-    flex: none;
-  }
+//   .cs_iconbox_icon {
+//     flex: none;
+//   }
 
-  @media (max-width: 1599px) {
-    flex: 0 0 calc(48% - 35px);
-  }
+//   @media (max-width: 1599px) {
+//     flex: 0 0 calc(48% - 35px);
+//   }
 
-  @media (max-width: 1599px) {
-    flex: 0 0 calc(48% - 35px);
-  }
-}
+//   @media (max-width: 1599px) {
+//     flex: 0 0 calc(48% - 35px);
+//   }
+// }
 
 .cs_iconbox_style_15 {
   gap: 30px;
   width: min(510px, 100%);
-  align-items: center;
+  flex-direction: column;
   margin-left: 0 !important;
+  position: relative;
+  padding-left: 104px;
 
   .cs_iconbox_icon {
-    width: 75px;
-    height: 75px;
+    width: 74px;
+    height: 74px;
+    flex: none;
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+
+  @media (max-width:575px) {
+    padding-left: 75px;
+
+    .cs_iconbox_icon {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -452,16 +475,17 @@
 
   @media (max-width: 1199px) {
     padding-left: 20px;
+
+    .cs_iconbox_style_8 {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   @media (max-width: 991px) {
     padding-left: 0px;
 
-    .cs_iconbox_style_8 {
-      &:not(:last-child) {
-        margin-bottom: 35px;
-      }
-    }
   }
 }
 
@@ -571,5 +595,46 @@
 .cs_iconbox_wrapper_10 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 35px 70px;
+
+  .cs_iconbox_style_14 {
+    gap: 30px;
+    //width: calc(50% - 35px);
+    width: min(100%, 280px);
+
+    .cs_iconbox_icon {
+      flex: none;
+    }
+  }
+
+  @media (max-width:1399px) {
+    gap: 30px 20px;
+
+    .cs_iconbox_style_14 {
+      gap: 20px;
+      width: min(100%, 260px);
+    }
+  }
+
+  @media (max-width:1199px) {
+
+    .cs_iconbox_style_14 {
+      width: fit-content;
+    }
+  }
+
+  @media (max-width:991px) {
+
+    .cs_iconbox_style_14 {
+      width: calc(50% - 35px);
+    }
+  }
+
+  @media (max-width:767px) {
+
+    .cs_iconbox_style_14 {
+      width: 100%;
+    }
+  }
 }

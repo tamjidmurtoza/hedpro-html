@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/tom-select.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Site Title -->
@@ -19,11 +22,18 @@
   </head>
   <body class="cs_version10">
     <!-- Preloader Start -->
-    <!-- <div class="cs_preloader cs_center">
+    <div class="cs_preloader cs_center">
       <div class="cs_preloader_in">
-        <div class="cs_preloader_text cs_fs_72 cs_extrabold cs_primary_font" data-text="Hedpro">Hedpro</div>
+        <div class="cs_preloader_circle_wrapper position-relative">
+         <div class="cs_preloader_circle">
+           <span></span>
+          <span></span>
+          <span></span>
+         </div>
+        <img src="assets/img/loading-icon.svg" alt="Loading icon">
+        </div>
       </div>
-      </div> -->
+    </div>
     <!-- Preloader End -->
     <!-- Start Header -->
     <header class="cs_site_header cs_style_10 cs_sticky_header">
@@ -37,7 +47,7 @@
             </div>
             <div class="cs_main_header_center">
               <nav class="cs_nav">
-                <div class="cs_nav_list_wrap">
+                <div class="cs_nav_list_wrap" data-lenis-prevent>
                   <ul class="cs_nav_list cs_mp_0">
                     <li class="menu-item-has-children">
                       <a href="">Home</a>
@@ -139,7 +149,7 @@
     <div class="cs_side_header cs_has_main_nav">
       <button class="cs_close"></button>
       <div class="cs_side_header_overlay"></div>
-      <div class="cs_side_header_in" data-lenis-prevent>
+      <div class="cs_side_header_in" data-lenis-prevent data-lenis-prevent>
         <a href="index.html" class="cs_site_branding d-block cs_mb_30">
         <img src="assets/img/icons/logo_10.svg" alt="logo">
         </a>
@@ -217,7 +227,7 @@
     <section class="cs_about_style_10">
       <div class="cs_height_120 cs_height_lg_80"></div>
       <div class="container">
-        <div class="row cs_gap_30">
+        <div class="row cs_gap_y_30">
           <div class="col-lg-5">
             <div class="cs_about_left h-100">
               <div class="cs_about_img_1">
@@ -318,7 +328,7 @@
     <section class="cs_glow_performance">
       <div class="cs_height_150 cs_height_lg_80"></div>
       <div class="container-fluid">
-        <div class="cs_section_heading_style_1 cs_mb_40">
+        <div class="cs_section_heading_style_1">
           <h2 class="cs_section_title cs_fs_68 mb-0">Clean. Conscious, Performance GlowTrends</h2>
         </div>
         <div class="cs_height_80 cs_height_lg_50"></div>
@@ -377,7 +387,7 @@
     <!-- End performance -->
     <!-- Start Iconbox -->
     <section class="cs_card_wrapper_2">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row cs_gap_y_30">
           <div class="col-lg-6">
             <div class="cs_layer_imgbox_4 position-relative h-100">
@@ -392,7 +402,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="h-100 cs_right_side">
+            <div class="h-100 cs_right_side cs_black_color">
               <div class="cs_section_heading_style_1">
                 <h2 class="cs_fs_65 cs_bold mb-0">Experience the power pure natural beauty</h2>
               </div>
@@ -406,6 +416,14 @@
                     <p class="cs_fs_20 mb-0">Free Ship on orders $50+</p>
                   </div>
                 </div>
+                 <div class="cs_iconbox_style_14">
+                  <div class="cs_iconbox_icon">
+                    <img src="assets/img/icons/shopping-bags.svg" alt="icon">
+                  </div>
+                  <div class="cs_iconbox_info">
+                    <p class="cs_fs_20 mb-0">Shopping Bagsla test products</p>
+                  </div>
+                </div>
                 <div class="cs_iconbox_style_14">
                   <div class="cs_iconbox_icon">
                     <img src="assets/img/icons/offer_tag.svg" alt="icon">
@@ -416,26 +434,18 @@
                 </div>
                 <div class="cs_iconbox_style_14">
                   <div class="cs_iconbox_icon">
-                    <img src="assets/img/icons/gift_box.svg" alt="icon">
-                  </div>
-                  <div class="cs_iconbox_info">
-                    <p class="cs_fs_20 mb-0">Access to samples & more</p>
-                  </div>
-                </div>
-                <div class="cs_iconbox_style_14">
-                  <div class="cs_iconbox_icon">
-                    <img src="assets/img/icons/shopping-bags.svg" alt="icon">
-                  </div>
-                  <div class="cs_iconbox_info">
-                    <p class="cs_fs_20 mb-0">Shopping Bagsla test products</p>
-                  </div>
-                </div>
-                <div class="cs_iconbox_style_14">
-                  <div class="cs_iconbox_icon">
                     <img src="assets/img/icons/message_icon.svg" alt="icon">
                   </div>
                   <div class="cs_iconbox_info">
                     <p class="cs_fs_20 mb-0">Customized service & advice</p>
+                  </div>
+                </div>
+                 <div class="cs_iconbox_style_14">
+                  <div class="cs_iconbox_icon">
+                    <img src="assets/img/icons/gift_box.svg" alt="icon">
+                  </div>
+                  <div class="cs_iconbox_info">
+                    <p class="cs_fs_20 mb-0">Access to samples & more</p>
                   </div>
                 </div>
               </div>
@@ -450,6 +460,18 @@
       <div class="cs_height_120 cs_height_lg_80"></div>
       <div class="container">
         <div class="row cs_gap_y_30 align-items-center">
+           <div class="col-lg-6 order-lg-2">
+            <div class="cs_layer_imgbox_5 position-relative">
+              <div class="cs_layer_img_1">
+                <img src="assets/img/women_mekeup.jpg" alt="Beauty">
+              </div>
+              <div class="cs_layer_img_2">
+                <div class="cs_layer_img_2_in cs_center">
+                  <img src="assets/img/beauty_product_2.png" alt="product">
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-6">
             <div class="h-100 cs_left_side">
               <div class="cs_sectiono_heading_style_1">
@@ -457,7 +479,7 @@
               </div>
               <div class="cs_height_70 cs_height_lg_50"></div>
               <div>
-                <div class="cs_iconbox_style_15 cs_mb_40">
+                <div class="cs_iconbox_style_15 cs_mb_40 cs_mb_lg_30">
                   <div class="cs_iconbox_icon">
                     <img src="assets/img/icons/benefits-box.svg" alt="icon">
                   </div>
@@ -474,18 +496,6 @@
                     <h3 class="cs_fs_20 cs_medium cs_mb_10">The Glow Within Velvet Bloom</h3>
                     <p class="mb-0">Experience beauty redefined with elegance and sophistication Our cosmetics blend luxury innovation </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="cs_layer_imgbox_5 position-relative">
-              <div class="cs_layer_img_1">
-                <img src="assets/img/women_mekeup.jpg" alt="Beauty">
-              </div>
-              <div class="cs_layer_img_2">
-                <div class="cs_layer_img_2_in cs_center">
-                  <img src="assets/img/beauty_product_2.png" alt="product">
                 </div>
               </div>
             </div>
@@ -692,7 +702,7 @@
         <div class="cs_footer_row">
           <div class="cs_footer_col cs_footer_newsletter_wrapper_1">
             <div class="cs_footer_widget cs_footer_newsletter text-center">
-              <h3 class="cs_newsletter_heading cs_fs_70 cs_white_color text-uppercase cs_mb_48">
+              <h3 class="cs_newsletter_heading cs_fs_70 cs_white_color text-uppercase cs_mb_48 cs_mb_lg_30">
                 Hear More <br> From Us
               </h3>
               <form action="#">
@@ -721,7 +731,8 @@
             </div>
           </div>
           <div class="cs_footer_col">
-            <div class="cs_footer_widget">
+            <div class="cs_footer_widget cs_primary_color">
+              <h3 class="cs_fs_18 cs_normal cs_secondary_font cs_mb_8">Explore</h3>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="about.html" aria-label="about page link">About Us</a></li>
                 <li><a href="#">Shop</a></li>
@@ -733,27 +744,29 @@
             </div>
           </div>
           <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <p class="cs_mb_10">Contact Us</p>
+            <div class="cs_footer_widget cs_primary_color">
+              <h3 class="cs_fs_18 cs_normal cs_secondary_font cs_mb_8">Contact Us</h3>
               <ul class="cs_footer_widget_menu cs_contact_widget cs_mp_0">
-                <li class="cs_mb_10"><a href="tel:+0882466422710">+088 (246) 642-27-10</a></li>
-                <li><a href="mailto:example@mail.com">example@mail.com</a></li>
+                <li><a href="mailto:tk@kollaxtghsdtgvs.com">tk@kollaxtghsdtgvs.com</a></li>
+                <li><a href="tel:111122223333">1111-2222-3333</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="cs_height_150 cs_height_lg_100"></div>
-      <div class="cs_height_20 cs_height_lg_0"></div>
     </footer>
     <!-- End Footer -->
+    <!-- Start Scroll Top Button -->
+    <button type="button" class="cs_scrollup cs_center" id="scrollUpBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- End Scroll Top Button -->
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/lenis.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/date-time.min.js"></script>
+    <script src="assets/js/flatpickr.min.js"></script>
     <script src="assets/js/tom-select.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

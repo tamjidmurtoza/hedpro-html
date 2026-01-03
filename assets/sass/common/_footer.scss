@@ -98,6 +98,12 @@
     border-radius: 999px;
     padding: 0;
   }
+
+  @media (max-width:1199px) {
+    form {
+      width: 100%;
+    }
+  }
 }
 
 .cs_footer_widget_menu,
@@ -267,12 +273,6 @@
         margin-bottom: 15px;
       }
     }
-
-    // a {
-    //   &:hover {
-    //     color: var(--accent-color);
-    //   }
-    // }
   }
 
   .cs_contact_widget {
@@ -355,6 +355,7 @@
   }
 
   @media (max-width: 991px) {
+
     .cs_footer_col {
       &:nth-child(3) {
         flex: 1.5;
@@ -481,6 +482,10 @@
     .cs_footer_logo {
       position: initial;
       transform: translateX(0);
+    }
+
+    .cs_footer_bottom {
+      padding: 24px 0;
     }
   }
 }
@@ -639,7 +644,7 @@
     animation: animo-y2 22s linear infinite;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1399px) {
     .cs_newslatter {
       .shape_1 {
         left: 12%;
@@ -651,7 +656,7 @@
     }
 
     .cs_footer_row {
-      flex-wrap: wrap;
+      gap: 40px;
     }
 
     .cs_3d_1 {
@@ -677,15 +682,27 @@
     .cs_footer_row {
       flex-wrap: wrap;
     }
+
+    .cs_footer_col:first-child {
+      flex: 1;
+      width: 100%;
+      flex: none;
+    }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .cs_newslatter {
 
       .shape_1,
       .shape_2 {
         display: none;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cs_footer_row {
+      flex-direction: column;
     }
   }
 
@@ -815,9 +832,15 @@
   }
 
   .cs_social_icons {
-    .cs_icon {
+    a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: #5c5c5c;
       color: var(--accent-color);
+      border-radius: 50%;
 
       &:hover {
         background-color: var(--accent-color);
@@ -990,15 +1013,24 @@
     }
   }
 
-  .cs_icon {
-    background-color: #273557;
-    color: #7e91c3;
+  .cs_social_icons {
+    a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #273557;
+      color: #7e91c3;
+      border-radius: 50%;
 
-    &:hover {
-      background-color: var(--accent-color);
-      color: var(--white-color);
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+      }
     }
   }
+
 
   .cs_footer_bottom {
     background-color: #00131f;
@@ -1019,7 +1051,7 @@
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1399px) {
     .cs_newslatter {
       .shape_1 {
         left: 12%;
@@ -1072,7 +1104,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .cs_newslatter {
 
       .shape_1,
@@ -1084,6 +1116,8 @@
 
   @media (max-width: 575px) {
     .cs_newslatter {
+      padding: 40px 15px;
+
       .cs_btn_style_2 {
         position: initial;
         width: 100%;
@@ -1093,7 +1127,7 @@
 
     .cs_footer_col {
       flex: none;
-      width: calc(100% - 40px);
+      width: 100% !important;
       margin: 0 auto;
     }
   }
@@ -1472,6 +1506,7 @@
 
 .cs_footer_style_9 {
   background-color: transparent;
+  padding-bottom: 170px;
 
   .container {
     max-width: 1600px;
@@ -1531,7 +1566,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: min(680px, 100%);
+    width: min(680px, 36%);
   }
 
   .cs_footer_widget_menu {
@@ -1542,35 +1577,20 @@
     }
   }
 
-  @media (max-width: 1499px) {
+  @media (max-width: 1399px) {
     .cs_footer_row {
-      gap: 40px 50px;
+      gap: 40px;
     }
 
-    .cs_footer_newsletter_wrapper_1 {
-      width: min(570px, 100%);
-    }
-  }
+    .cs_footer_newsletter_wrapper_1 br {
 
-  @media (max-width: 1299px) {
-    .cs_footer_newsletter_wrapper_1 {
-      width: min(465px, 100%);
-    }
-
-    .cs_footer_newsletter {
-      padding: 50px 30px 40px;
-
-      .cs_newsletter_heading {
-        font-size: 55px !important;
-      }
-
-      .cs_newsletter_bottom {
-        margin-top: 50px;
-      }
+      display: none;
     }
   }
 
   @media (max-width: 1199px) {
+    padding-bottom: 40px;
+
     .cs_footer_row {
       flex-wrap: wrap;
       padding-top: 0;
@@ -1592,6 +1612,21 @@
 
     .cs_footer_newsletter_wrapper_1 {
       position: initial;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_footer_newsletter {
+      padding: 40px 20px 45px;
+      background-color: var(--black-color);
+
+      .cs_newsletter_bottom {
+        margin-top: 50px;
+      }
+    }
+
+    input {
+      margin-bottom: 30px;
     }
   }
 

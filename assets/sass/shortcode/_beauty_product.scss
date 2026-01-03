@@ -59,6 +59,19 @@
   .cs_section_heading_style_1 {
     width: min(655px, 100%);
   }
+
+  @media (min-width:1400px) {
+    .container {
+      max-width: 1380px;
+    }
+  }
+
+  @media (max-width:1399px) {
+    .cs_right_side {
+      padding-left: 0;
+    }
+
+  }
 }
 
 .cs_card_wrapper_3 {
@@ -115,6 +128,24 @@
       &::after {
         background-color: var(--accent-color);
       }
+    }
+  }
+
+  @media (max-width:991px) {
+    font-size: 42px;
+
+    .cs_product_img {
+      width: 130px;
+
+    }
+  }
+
+  @media (max-width:575px) {
+    font-size: 36px;
+
+    .cs_product_img {
+      width: 80px;
+
     }
   }
 }

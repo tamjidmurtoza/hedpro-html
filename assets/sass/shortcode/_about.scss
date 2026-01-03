@@ -236,20 +236,6 @@
           background-color: var(--accent-color);
         }
       }
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   left: 4px;
-      //   bottom: 10px;
-      //   width: 13px;
-      //   height: 13px;
-      //   border-radius: 50%;
-      //   background-color: var(--accent-color);
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-      // }
     }
   }
 
@@ -297,6 +283,16 @@
       }
     }
   }
+
+  @media (max-width:575px) {
+    .cs_about_list {
+      grid-template-columns: repeat(1, 1fr);
+
+      li {
+        padding-left: 35px;
+      }
+    }
+  }
 }
 
 .cs_about_style_11 {
@@ -305,6 +301,15 @@
       margin-bottom: 70px;
       padding-bottom: 70px;
       border-bottom: 1px solid var(--border-color);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_about_right {
+      .cs_section_heading_style_1 {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
     }
   }
 }

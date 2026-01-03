@@ -12,21 +12,28 @@
   |--------------------------------------------------------------------------
   |
   | 01. Preloader
-  | 02. Mobile Menu
+  | 02. Header Nav
   | 03. Sticky Header
-  | 04. Dynamic Background
-  | 05. Slick Slider
-  | 06. Modal Video
-  | 07. Scroll Up
-  | 08. Accordian
-  | 09. Review
-  | 10. Counter Animation
-  | 11. Smooth Page Scroll
-  | 12. Steps Animation
-  | 13. Dynamic contact form
+  | 04. Language Select
+  | 05. Dynamic Background
+  | 06. Slick Slider
+  | 07. Modal Video
+  | 08. Scroll Up
+  | 09. Accordian
+  | 10. Tabs
+  | 11. Review
+  | 12. Counter Animation
+  | 13. Smooth Page Scroll
   | 14. AOS Animation
-  | 15. hobbleEffect
-  | 16. beforeAfterSlide
+  | 15. Hobble Effect
+  | 16. Before After Slider
+  | 17. Date And Time Picker
+  | 18. Custom Slider
+  | 19. display none
+  | 20. Quantity
+  | 21. Gradient Icon Function
+  | 22. Color Picker Function
+  |
   */
 
   /*--------------------------------------------------------------
@@ -71,8 +78,8 @@
     customSlider();
     displayOff();
     quantityInit();
-    loginRegisterModalInit();
-    productModalInit();
+    gradientIcon();
+    colorPicker();
     $(".tom_select").each(function () {
       new TomSelect(this, {
         create: false,
@@ -88,18 +95,6 @@
       const date = new Date();
       $(".cs_getting_year").text(date.getFullYear());
     }
-    /*===========================================================
-     Gradient Icon Styling Function
-    =============================================================*/
-    $(".cs_iconbox_icon").each(function () {
-      const src = $(this).data("icon");
-      if (src) {
-        $(this).css({
-          "-webkit-mask-image": `url(${src})`,
-          "mask-image": `url(${src})`,
-        });
-      }
-    });
   });
 
   /*=============================================================
@@ -181,7 +176,7 @@
     }
   }
   /*======================================================================
-    06. Language Select
+    04. Language Select
   ========================================================================*/
   function languageInit() {
     // Toggle language dropdown
@@ -205,7 +200,7 @@
     });
   }
   /*=============================================================
-    04. Dynamic Background
+    05. Dynamic Background
   ===============================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
@@ -216,7 +211,7 @@
     });
   }
   /*=============================================================
-   05. Slick Slider
+   06. Slick Slider
   ===============================================================*/
   function slickInit() {
     if ($.exists(".cs_slider")) {
@@ -310,7 +305,7 @@
     }
   }
   /*=============================================================
-    06. Modal Video
+    07. Modal Video
   ===============================================================*/
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
@@ -349,9 +344,8 @@
       );
     }
   }
-
   /*=============================================================
-    07. Scroll Up
+    08. Scroll Up
   ===============================================================*/
   function scrollUp() {
     $(".cs_scrollup").on("click", function (e) {
@@ -374,7 +368,7 @@
     }
   }
   /*=============================================================
-    08. Accordian
+    09. Accordian
   ===============================================================*/
   function accordian() {
     $(".cs_accordian").children(".cs_accordian_body").hide();
@@ -394,7 +388,7 @@
     });
   }
   /*===============================================================
-    12. Tabs
+    10. Tabs
   ===============================================================*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
@@ -408,7 +402,7 @@
     });
   }
   /*=============================================================
-    09. Review
+    11. Review
   ===============================================================*/
   function review() {
     $(".cs_rating").each(function () {
@@ -422,9 +416,8 @@
       $(this).addClass("fa-solid").prevAll().addClass("fa-solid");
     });
   }
-
   /*===========================================================
-    10. Counter Animation
+    12. Counter Animation
   =============================================================*/
   function counterInit() {
     if ($.exists(".odometer")) {
@@ -445,9 +438,8 @@
       });
     }
   }
-
   /*===========================================================
-    11. Smooth Page Scroll
+    13. Smooth Page Scroll
   =============================================================*/
   function smoothScroll() {
     if (typeof Lenis !== "undefined") {
@@ -465,7 +457,6 @@
       requestAnimationFrame(raf);
     }
   }
-
   /*=============================================================
     14. AOS Animation
   ===============================================================*/
@@ -478,7 +469,6 @@
       mirror: false,
     });
   }
-
   /*--------------------------------------------------------------
     15. Hobble Effect
   --------------------------------------------------------------*/
@@ -523,9 +513,8 @@
         $(this).find(".cs_hover_layer_2").removeAttr("style");
       });
   }
-
   /*--------------------------------------------------------------
-   14. Before After Slider
+   16. Before After Slider
  --------------------------------------------------------------*/
   function beforeAfterSlider() {
     if ($.exists(".cs_before_after")) {
@@ -605,9 +594,8 @@
       });
     }
   }
-
   /*--------------------------------------------------------------
-    15. Date And Time Picker
+    17. Date And Time Picker
   --------------------------------------------------------------*/
   function dateTimePicker() {
     flatpickr("#timePicker", {
@@ -622,7 +610,7 @@
     });
   }
   /*--------------------------------------------------------------
-    16. Custom Slider
+    18. Custom Slider
   --------------------------------------------------------------*/
   function customSlider() {
     var Slider = (function () {
@@ -681,9 +669,8 @@
 
     Slider.init();
   }
-
   /*--------------------------------------------------------------
-    16. display none
+    19. display none
   --------------------------------------------------------------*/
   function displayOff() {
     $(document).on("click", ".cs_cross_btn", function () {
@@ -691,7 +678,7 @@
     });
   }
   /*=============================================================
-    11. Quantity
+    20. Quantity
   ===============================================================*/
   function quantityInit() {
     $(".cs_quantity_btns").each(function () {
@@ -716,137 +703,24 @@
         });
     });
   }
-  /*===============================================================
- 12. Login Register Form Toggle
- =================================================================*/
-  function loginRegisterModalInit() {
-    const loginRegisterModal = $("#loginRegisterModal");
-    const modalOverlay = $("#modalOverlay");
-    const closeModalBtn = $("#closeModalBtn");
-    const openLoginBtn = $("#openLoginBtn");
-    const openRegisterBtn = $("#openRegisterBtn, [data-register='open']");
-    const switchToLogin = $("#switchToLogin");
-    const switchToRegister = $("#switchToRegister");
-    const switchToPassword = $("#switchToPasswordReset");
-    const loginForm = $("#loginForm");
-    const registerForm = $("#registerForm");
-    const passwordForm = $("#passwordForm");
-
-    // Open Modal with Login Form
-    openLoginBtn.on("click", () => {
-      openModal();
-      showLoginForm();
-    });
-
-    // Open Modal with Register Form
-    openRegisterBtn.on("click", () => {
-      openModal();
-      showRegisterForm();
-    });
-
-    // Close Modal
-    closeModalBtn.on("click", closeModal);
-    modalOverlay.on("click", function (e) {
-      if ($(e.target).is(modalOverlay)) {
-        closeModal();
-      }
-    });
-
-    // Switch to Login Form
-    switchToLogin.on("click", showLoginForm);
-
-    // Switch to Register Form
-    switchToRegister.on("click", showRegisterForm);
-    // Switch to Password Form
-    switchToPassword.on("click", showPasswordForm);
-
-    // Functions
-    function openModal() {
-      loginRegisterModal.addClass("active");
-      $("body").css({
-        overflow: "hidden",
-        height: "100vh",
-      });
-    }
-
-    function closeModal() {
-      loginRegisterModal.removeClass("active");
-      $("body").css({
-        overflow: "auto",
-        height: "100%",
-      });
-    }
-
-    function showLoginForm() {
-      loginForm.addClass("active");
-      registerForm.removeClass("active");
-      passwordForm.removeClass("active");
-    }
-
-    function showRegisterForm() {
-      registerForm.addClass("active");
-      loginForm.removeClass("active");
-      passwordForm.removeClass("active");
-    }
-
-    function showPasswordForm() {
-      passwordForm.addClass("active");
-      registerForm.removeClass("active");
-      loginForm.removeClass("active");
-    }
-
-    // Close modal with Escape key
-    $(document).on("keydown", (e) => {
-      if (e.key === "Escape" && loginRegisterModal.hasClass("active")) {
-        closeModal();
+  /*===========================================================
+   21.  Gradient Icon Function
+  =============================================================*/
+  function gradientIcon() {
+    $(".cs_iconbox_icon").each(function () {
+      const src = $(this).data("icon");
+      if (src) {
+        $(this).css({
+          "-webkit-mask-image": `url(${src})`,
+          "mask-image": `url(${src})`,
+        });
       }
     });
   }
-  /*===============================================================
-   12. Product Details Modal Toggle
-  =================================================================*/
-  function productModalInit() {
-    const productModal = $("#productModal");
-    const closeBtn = $("#closeProductModalBtn");
-    const productModalOverlay = $("#productModalOverlay");
-    const openProductModalBtn = $('[data-product="details"]');
-
-    openProductModalBtn.on("click", function () {
-      productModal.addClass("active");
-      $("body").css({
-        overflow: "hidden",
-        height: "100vh",
-      });
-    });
-    openProductModalBtn.css({
-      cursor: "pointer",
-    });
-    closeBtn.on("click", function () {
-      productModal.removeClass("active");
-      $("body").css({
-        overflow: "auto",
-        height: "100%",
-      });
-    });
-
-    productModalOverlay.on("click", function (e) {
-      if ($(e.target).is(productModalOverlay)) {
-        productModal.removeClass("active");
-        $("body").css({
-          overflow: "auto",
-          height: "100%",
-        });
-      }
-    });
-    $(document).on("keydown", function (e) {
-      if (e.key === "Escape") {
-        productModal.removeClass("active");
-        $("body").css({
-          overflow: "auto",
-          height: "100%",
-        });
-      }
-    });
+  /*===========================================================
+   22. Color Picker Function
+  =============================================================*/
+  function colorPicker() {
     $(".cs_color_list li").each(function () {
       const color = $(this).data("color");
       $(this).css("--cs-color", color);

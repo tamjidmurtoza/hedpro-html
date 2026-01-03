@@ -5,7 +5,6 @@
   height: 270px;
   position: relative;
   margin-top: 125px;
-  //margin-bottom: 125px;
 
   @media (max-width: 1199px) {
     margin-top: 100px;
@@ -107,6 +106,12 @@
           opacity: 1;
         }
       }
+
+      @media (max-width: 991px) {
+        &.active {
+          transform: translate3d(-43%, -50%, 0) scale3d(1, 1, 1);
+        }
+      }
     }
   }
 
@@ -160,14 +165,14 @@
   @media (max-width: 991px) {
     .cs_custom_slide_wrapper {
       .cs_custom_slide {
-        width: 80%;
+        width: 100%;
 
         &.next-1 {
-          transform: translate(-50%, -41%) scale(0.9);
+          transform: translate(-44%, -41%) scale(0.9);
         }
 
         &.next-2 {
-          transform: translate(-50%, -32%) scale(0.8);
+          transform: translate(-44%, -32%) scale(0.8);
         }
       }
     }
@@ -227,6 +232,9 @@
   }
 
   @media (max-width: 991px) {
-    right: 0px;
+    position: relative;
+    margin-top: 70px;
+    right: initial;
+    margin-left: auto;
   }
 }

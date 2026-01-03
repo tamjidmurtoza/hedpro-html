@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/tom-select.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Site Title -->
@@ -19,12 +22,18 @@
   </head>
   <body class="cs_version9">
     <!-- Preloader Start -->
-    <!-- <div class="cs_preloader cs_center">
+    <div class="cs_preloader cs_center">
       <div class="cs_preloader_in">
-        <div class="cs_preloader_text cs_fs_72 cs_extrabold cs_primary_font" data-text="Hedpro">Hedpro</div>
-      </div>    bottom: -312px;
-      left: -118px;
-      </div> -->
+        <div class="cs_preloader_circle_wrapper position-relative">
+         <div class="cs_preloader_circle">
+           <span></span>
+          <span></span>
+          <span></span>
+         </div>
+        <img src="assets/img/loading-icon.svg" alt="Loading icon">
+        </div>
+      </div>
+    </div>
     <!-- Preloader End -->
     <!-- Start Header -->
     <header class="cs_site_header cs_style_9 cs_sticky_header">
@@ -38,7 +47,7 @@
             </div>
             <div class="cs_main_header_center">
               <nav class="cs_nav">
-                <div class="cs_nav_list_wrap">
+                <div class="cs_nav_list_wrap" data-lenis-prevent>
                   <ul class="cs_nav_list cs_mp_0">
                     <li class="menu-item-has-children">
                       <a href="">Home</a>
@@ -109,11 +118,11 @@
             <img src="assets/img/refrigerator_1.png" alt="refrigerator">
           </div>
           <div>
-            <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-fade-slide="1" data-slides-per-view="1">
+            <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-slides-per-view="1">
               <div class="cs_slider_wrapper">
                 <div class="cs_slide">
                   <div class="cs_hero_info">
-                    <h1 class="cs_fs_100 cs_white_color cs_mb_60">Bring home best-in class coverage</h1>
+                    <h1 class="cs_fs_100 cs_white_color cs_mb_60 cs_mb_lg_40">Bring home best-in class coverage</h1>
                     <a href="#bestProducts" aria-label="Product view button" class="cs_btn_style_2">
                     <span>Discover Now</span>
                     </a>
@@ -121,7 +130,7 @@
                 </div>
                 <div class="cs_slide">
                   <div class="cs_hero_info">
-                    <h1 class="cs_fs_100 cs_white_color cs_mb_60">Bring home best-in class coverage</h1>
+                    <h1 class="cs_fs_100 cs_white_color cs_mb_60 cs_mb_lg_40">Bring home best-in class coverage</h1>
                     <a href="#bestProducts" aria-label="Product view button" class="cs_btn_style_2">
                     <span>Discover Now</span>
                     </a>
@@ -129,7 +138,7 @@
                 </div>
                 <div class="cs_slide">
                   <div class="cs_hero_info">
-                    <h1 class="cs_fs_100 cs_white_color cs_mb_60">Bring home best-in class coverage</h1>
+                    <h1 class="cs_fs_100 cs_white_color cs_mb_60 cs_mb_lg_40">Bring home best-in class coverage</h1>
                     <a href="#bestProducts" aria-label="Product view button" class="cs_btn_style_2">
                     <span>Discover Now</span>
                     </a>
@@ -371,10 +380,10 @@
                 </h3>
                 <p class="cs_fs_18 mb-0">A luxurious matte white finish with</p>
               </div>
-              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50">
+              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50 cs_mb_lg_35">
               <img src="assets/img/refrigerator_card_1.jpg" alt="vr pic">
               </a>
-              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto">$741,22</p>
+              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto mb-0">$741,22</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
@@ -385,10 +394,10 @@
                 </h3>
                 <p class="cs_fs_18 mb-0">A luxurious matte white finish with</p>
               </div>
-              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50">
+              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50 cs_mb_lg_35">
               <img src="assets/img/refrigerator_card_2.jpg" alt="vr pic">
               </a>
-              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto">$344,37</p>
+              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto mb-0">$344,37</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
@@ -399,10 +408,10 @@
                 </h3>
                 <p class="cs_fs_18 mb-0">A luxurious matte white finish with</p>
               </div>
-              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50">
+              <a href="product-details.html" aria-label="Product details" class="cs_card_thumbnail cs_mb_50 cs_mb_lg_35">
               <img src="assets/img/refrigerator_card_3.jpg" alt="vr pic">
               </a>
-              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto">$528,99</p>
+              <p class="cs_fs_45 cs_accent_color cs_semibold mt-auto mb-0">$528,99</p>
             </div>
           </div>
         </div>
@@ -433,15 +442,13 @@
           </div>
           <div class="col-lg-7">
             <div class="cs_custom_slide_container">
-              <div class="container">
                 <div class="cs_custom_slide_wrapper">
                   <div class="cs_custom_slide active">
                     <div class="cs_card_style_11">
                       <div class="cs_rating cs_mb_20" data-rating="5">
                         <div class="cs_rating_percentage"></div>
                       </div>
-                      <blockquote class="cs_fs_18 cs_mb_32">The experience with Ave has been nothing short of amazing.
-                        So much better than other themes I’ve used – wish I had seen this one first and saved my wasted time and money on other themes! I’d recommend this theme in a heartbeat!
+                      <blockquote class="cs_fs_18 cs_mb_32">The experience with Ave has been nothing short of amazing. So much better than other themes I’ve used – wish I had seen this one first and saved my wasted time and money on other themes! I’d recommend this theme in a heartbeat!
                       </blockquote>
                       <div class="cs_testimial_bottom">
                         <div class="cs_avatar cs_radius_100"><img src="assets/img/avatar_1.jpg" alt="img"></div>
@@ -521,7 +528,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
               <div class="cs_custom_slide_arrows">
                 <span class="cs_custom_slide_arrow_left">
                 <i class="fa-solid fa-angle-up"></i>
@@ -680,14 +686,18 @@
       </div>
     </footer>
     <!-- End Footer -->
+     <!-- Start Scroll Top Button -->
+    <button type="button" class="cs_scrollup cs_center" id="scrollUpBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <!-- End Scroll Top Button -->
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/lenis.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/flatpickr.min.js"></script>
     <script src="assets/js/tom-select.min.js"></script>
-    <script src="assets/js/date-time.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

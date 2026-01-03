@@ -1,14 +1,12 @@
-/*--------------------------------------------------------------
+/*===================================================
 23. Before After Slider
-----------------------------------------------------------------*/
+=====================================================*/
 .cs_before_after_style_1 {
   .cs_before_after {
     width: 100%;
     position: relative;
     height: 580px;
-    // margin: auto;
     border-radius: 5px;
-    // backdrop-filter: blur(40px);
   }
 
   .cs_before,
@@ -142,7 +140,6 @@
       img {
         position: relative;
         z-index: 2;
-        // width: 100%;
       }
 
       &::before {
@@ -180,6 +177,10 @@
   }
 
   @media (max-width: 1400px) {
+    .cs_before_after {
+      height: 420px;
+    }
+
     .cs_before_after_right {
       .cs_section_heading_style_1 {
         width: min(271px, 100%);
@@ -188,6 +189,16 @@
   }
 
   @media (max-width: 1199px) {
+    .cs_before_after {
+      height: 517px;
+    }
+
+    .cs_before_after_right {
+      .cs_section_heading_style_1 {
+        width: 100%;
+      }
+    }
+
     .cs_before_after_right {
       padding-left: 0;
     }
@@ -200,6 +211,13 @@
 
     .cs_arrow_down {
       left: 0px;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    .cs_before_after {
+      height: 350px;
     }
   }
 }
