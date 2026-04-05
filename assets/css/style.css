@@ -2654,6 +2654,7 @@ label {
 }
 
 .cs_custom_checkbox {
+  width: -moz-fit-content;
   width: fit-content;
 }
 .cs_custom_checkbox input {
@@ -2929,43 +2930,6 @@ input[type=number] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
   font-family: "Inter", sans-serif;
-  /*======================================================
-   Main Header
-  ========================================================*/
-  /* =============== Language Switcher Styling ================ */
-  /*====================================================
-    Mobile Menu Styling
-  ======================================================*/
-  /*=======================================================
-    Header Style 1 
-  =========================================================*/
-  /*=======================================================
-    Header Style 2 
-  =========================================================*/
-  /*=======================================================
-    Header Style 3
-  =========================================================*/
-  /*=======================================================
-    Header Style 4
-  =========================================================*/
-  /*=======================================================
-    Header Style 5 
-  =========================================================*/
-  /*=======================================================
-    Header Style 6 
-  ========================================================*/
-  /*=======================================================
-    Header Style 7 
-  ========================================================*/
-  /*=======================================================
-    Header Style 8 
-  ========================================================*/
-  /*=======================================================
-    Header Style 9 
-  =========================================================*/
-  /*=======================================================
-    Header Style 10 
-  =========================================================*/
 }
 .cs_site_header.active {
   color: var(--primary-color);
@@ -2986,12 +2950,20 @@ input[type=number] {
 .cs_site_header.cs_sticky_active .cs_btn_style_1 {
   border-color: currentColor;
 }
+.cs_site_header {
+  /*======================================================
+   Main Header
+  ========================================================*/
+}
 .cs_site_header .cs_main_header_in {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 120px;
   transition: all 0.3s ease;
+}
+.cs_site_header {
+  /* =============== Language Switcher Styling ================ */
 }
 .cs_site_header .cs_language_select {
   cursor: pointer;
@@ -3050,6 +3022,11 @@ input[type=number] {
 }
 .cs_site_header .cs_language_dropdown button:last-child {
   margin-bottom: 0;
+}
+.cs_site_header {
+  /*====================================================
+    Mobile Menu Styling
+  ======================================================*/
 }
 .cs_site_header .cs_menu_toggle {
   width: 30px;
@@ -3162,6 +3139,7 @@ input[type=number] {
     margin-right: 44px;
   }
   .cs_site_header .cs_nav_list > li:last-child {
+    height: -moz-fit-content;
     height: fit-content;
     margin-right: 0;
   }
@@ -3377,6 +3355,11 @@ input[type=number] {
     display: none !important;
   }
 }
+.cs_site_header {
+  /*=======================================================
+    Header Style 1 
+  =========================================================*/
+}
 .cs_site_header.cs_style_1.cs_sticky_active .cs_site_brand img, .cs_site_header.cs_style_9.cs_sticky_active .cs_site_brand img {
   filter: brightness(0) saturate(100%) invert(13%) sepia(55%) saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
 }
@@ -3413,6 +3396,11 @@ input[type=number] {
   .cs_site_header.cs_style_1 .cs_main_header_right .cs_header_cart_btns, .cs_site_header.cs_style_9 .cs_main_header_right .cs_header_cart_btns {
     display: none;
   }
+}
+.cs_site_header {
+  /*=======================================================
+    Header Style 2 
+  =========================================================*/
 }
 .cs_site_header.cs_style_2 {
   color: #0b0d26;
@@ -3463,6 +3451,11 @@ input[type=number] {
     display: none;
   }
 }
+.cs_site_header {
+  /*=======================================================
+    Header Style 3
+  =========================================================*/
+}
 .cs_site_header.cs_style_3 {
   color: #0b0d26;
   border-bottom: 1px solid #efeded;
@@ -3497,6 +3490,11 @@ input[type=number] {
   .cs_site_header.cs_style_3 .cs_main_header_right {
     display: none !important;
   }
+}
+.cs_site_header {
+  /*=======================================================
+    Header Style 4
+  =========================================================*/
 }
 .cs_site_header.cs_style_4 {
   color: var(--white-color);
@@ -3559,6 +3557,11 @@ input[type=number] {
     display: none !important;
   }
 }
+.cs_site_header {
+  /*=======================================================
+    Header Style 5 
+  =========================================================*/
+}
 .cs_site_header.cs_style_5 {
   background-color: var(--accent-color);
   color: var(--black-color);
@@ -3578,11 +3581,6 @@ input[type=number] {
     opacity: 0.75;
   }
 }
-.cs_site_header.cs_style_5 .cs_main_header_right {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
 .cs_site_header.cs_style_5 .cs_main_header_right .cs_number a {
   position: relative;
 }
@@ -3598,6 +3596,11 @@ input[type=number] {
 }
 .cs_site_header.cs_style_5 .cs_main_header_right .cs_number a:hover::before {
   width: 85%;
+}
+.cs_site_header.cs_style_5 .cs_main_header_right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
 .cs_site_header.cs_style_5 .cs_header_cart_btns {
   display: flex;
@@ -3640,6 +3643,11 @@ input[type=number] {
   .cs_site_header.cs_style_5 .cs_main_header_right {
     display: none;
   }
+}
+.cs_site_header {
+  /*=======================================================
+    Header Style 6 
+  ========================================================*/
 }
 .cs_site_header.cs_style_6 {
   border-bottom: 0;
@@ -3703,6 +3711,11 @@ input[type=number] {
   .cs_site_header.cs_style_6 .cs_header_shape {
     display: none;
   }
+}
+.cs_site_header {
+  /*=======================================================
+    Header Style 7 
+  ========================================================*/
 }
 .cs_site_header.cs_style_7 {
   color: var(--primary-color);
@@ -3787,6 +3800,11 @@ input[type=number] {
     gap: 15px;
   }
 }
+.cs_site_header {
+  /*=======================================================
+    Header Style 8 
+  ========================================================*/
+}
 .cs_site_header.cs_style_8 {
   color: var(--primary-color);
   border-bottom: none;
@@ -3801,6 +3819,9 @@ input[type=number] {
 .cs_site_header.cs_style_8.cs_sticky_active .cs_main_header_right .cs_search {
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+.cs_site_header.cs_style_8.cs_sticky_active .cs_main_header_right .cs_search input::-moz-placeholder {
+  color: var(--primary-color);
 }
 .cs_site_header.cs_style_8.cs_sticky_active .cs_main_header_right .cs_search input::placeholder {
   color: var(--primary-color);
@@ -3834,6 +3855,9 @@ input[type=number] {
   outline: none;
   background-color: transparent;
 }
+.cs_site_header.cs_style_8 .cs_main_header_right .cs_search input::-moz-placeholder {
+  color: var(--white-color);
+}
 .cs_site_header.cs_style_8 .cs_main_header_right .cs_search input::placeholder {
   color: var(--white-color);
 }
@@ -3860,6 +3884,11 @@ input[type=number] {
     max-width: 1600px;
   }
 }
+.cs_site_header {
+  /*=======================================================
+    Header Style 9 
+  =========================================================*/
+}
 .cs_site_header.cs_style_9 .cs_nav_list a:hover {
   color: var(--white-color);
   opacity: 0.75;
@@ -3870,6 +3899,11 @@ input[type=number] {
 .cs_site_header.cs_style_9.cs_sticky_active .cs_nav_list a:hover {
   color: var(--accent-color);
   opacity: 1;
+}
+.cs_site_header {
+  /*=======================================================
+    Header Style 10 
+  =========================================================*/
 }
 .cs_site_header.cs_style_10 {
   color: var(--primary-color);
@@ -4041,6 +4075,10 @@ input[type=number] {
 }
 .cs_side_header .cs_header_newsletter form input:focus {
   border-color: var(--accent-color);
+}
+.cs_side_header .cs_header_newsletter form input::-moz-placeholder {
+  font-size: 20px;
+  opacity: 0.5;
 }
 .cs_side_header .cs_header_newsletter form input::placeholder {
   font-size: 20px;
@@ -4245,6 +4283,10 @@ input[type=number] {
 .cs_footer_newsletter input:focus {
   border-color: var(--white-color);
 }
+.cs_footer_newsletter input::-moz-placeholder {
+  font-size: 20px;
+  opacity: 0.5;
+}
 .cs_footer_newsletter input::placeholder {
   font-size: 20px;
   opacity: 0.5;
@@ -4364,6 +4406,10 @@ input[type=number] {
 .cs_footer_style_2 .cs_footer_newsletter input:focus {
   border-color: var(--white-color);
 }
+.cs_footer_style_2 .cs_footer_newsletter input::-moz-placeholder {
+  font-size: 20px;
+  color: #696969;
+}
 .cs_footer_style_2 .cs_footer_newsletter input::placeholder {
   font-size: 20px;
   color: #696969;
@@ -4465,6 +4511,10 @@ input[type=number] {
   background: #f0f0f0;
   outline: none;
   border: none;
+}
+.cs_footer_style_3 input::-moz-placeholder {
+  text-align: center;
+  color: #707070;
 }
 .cs_footer_style_3 input::placeholder {
   text-align: center;
@@ -4916,11 +4966,11 @@ input[type=number] {
 .cs_footer_style_6 .cs_footer_text_widget p {
   opacity: 0.45;
 }
-.cs_footer_style_6 .cs_footer_widget .cs_footer_widget_menu li {
-  opacity: 0.45;
-}
 .cs_footer_style_6 .cs_footer_widget .cs_footer_widget_menu li:not(:last-child) {
   padding-bottom: 12px;
+}
+.cs_footer_style_6 .cs_footer_widget .cs_footer_widget_menu li {
+  opacity: 0.45;
 }
 .cs_footer_style_6 .cs_footer_widget .cs_footer_widget_menu li:hover {
   opacity: 1;
@@ -5764,7 +5814,6 @@ input[type=number] {
   margin: 0;
   cursor: pointer;
   position: relative;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding: 0;
   font-size: 0;
@@ -5804,7 +5853,6 @@ input[type=number] {
   margin: 0;
   cursor: pointer;
   position: relative;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding: 0;
   font-size: 0;
@@ -7362,7 +7410,8 @@ input[type=number] {
 .cs_card_style_1 .cs_card_thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 1s ease;
 }
 .cs_card_style_1 .cs_card_thumbnail::before {
@@ -7880,6 +7929,7 @@ input[type=number] {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  width: -moz-max-content;
   width: max-content;
 }
 .cs_card_style_12 .cs_price_range {
@@ -7897,6 +7947,7 @@ input[type=number] {
   overflow: hidden;
 }
 .cs_card_style_12 .cs_card_thumbnail img {
+  width: -moz-fit-content;
   width: fit-content;
   transition: all 0.6s ease;
 }
@@ -8263,7 +8314,6 @@ input[type=number] {
   position: relative;
   overflow: hidden;
   padding: 300px 0 110px 0;
-  /* ANIMATIONS */
 }
 .cs_cta_style_4 .cs_section_heading_style_1 {
   margin-bottom: 200px;
@@ -8334,6 +8384,9 @@ input[type=number] {
   border-radius: 50%;
   border: 10px solid rgba(255, 255, 255, 0.5);
   position: relative;
+}
+.cs_cta_style_4 {
+  /* ANIMATIONS */
 }
 .cs_cta_style_4 .x1 {
   animation: animateBubble 35s linear infinite, sideWays 4s ease-in-out infinite alternate;
@@ -8532,6 +8585,9 @@ input[type=number] {
   width: 100%;
   padding: 15px 0 10px;
   cursor: pointer;
+}
+.cs_cta_style_6 .cs_cta_form input::-moz-placeholder, .cs_cta_style_6 .cs_cta_form .cs_input_wrapper::-moz-placeholder {
+  color: var(--primary-color);
 }
 .cs_cta_style_6 .cs_cta_form input::placeholder,
 .cs_cta_style_6 .cs_cta_form .cs_input_wrapper::placeholder {
@@ -9361,6 +9417,7 @@ input[type=number] {
 }
 @media (max-width: 1199px) {
   .cs_iconbox_wrapper_10 .cs_iconbox_style_14 {
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
@@ -10314,7 +10371,8 @@ input[type=number] {
 .cs_product_details .cs_product_thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_product_details .cs_product_reviews {
   display: flex;
@@ -10414,7 +10472,8 @@ input[type=number] {
 .cs_client_review .cs_review_media_thumb img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_client_review .cs_review_media_right .cs_rating {
   width: 120px;
@@ -10688,8 +10747,10 @@ input[type=number] {
   padding: 100px 25px 50px 25px;
   height: 100%;
   width: 100%;
-  mask-image: url("../img/masking.svg");
-  mask-repeat: no-repeat;
+  -webkit-mask-image: url("../img/masking.svg");
+          mask-image: url("../img/masking.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
@@ -10725,7 +10786,8 @@ input[type=number] {
 }
 @media (max-width: 1199px) {
   .cs_testimonial_style_4 .cs_testimonial_in {
-    mask-size: cover;
+    -webkit-mask-size: cover;
+            mask-size: cover;
   }
   .cs_testimonial_style_4 .cs_testimonial_avatar {
     left: 27px;
@@ -10857,7 +10919,8 @@ input[type=number] {
   left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_instagram .cs_instagram_overlay {
   width: 100%;
@@ -11230,10 +11293,12 @@ input[type=number] {
   gap: 36px;
   padding-bottom: 38px;
   margin-left: 0;
-  position: relative;
 }
 .cs_counter_wrapper_2 .cs_counter_style_2:not(:last-child) {
   margin-bottom: 30px;
+}
+.cs_counter_wrapper_2 .cs_counter_style_2 {
+  position: relative;
 }
 .cs_counter_wrapper_2 .cs_counter_style_2 .cs_counter_info {
   width: min(340px, 100%);
@@ -11279,7 +11344,8 @@ input[type=number] {
 .cs_gallery_style_1 .cs_gallery_img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1199px) {
   .cs_gallery_style_1 {
@@ -11514,7 +11580,8 @@ input[type=number] {
 .cs_review > .cs_review_img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_review > .cs_review_img::before {
   content: "";
@@ -11604,6 +11671,7 @@ input[type=number] {
 .cs_custom_radio {
   display: block;
   padding-left: 24px;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   cursor: pointer;
@@ -12065,4 +12133,4 @@ input[type=number] {
   .cs_product_featuars .cs_product_img {
     width: 80px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
