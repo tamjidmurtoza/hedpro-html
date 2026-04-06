@@ -2,7 +2,9 @@
   11. Accordians
 ================================================================*/
 .cs_accordian {
-  margin-bottom: 15px;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 
   .cs_accordian_head {
     position: relative;
@@ -156,7 +158,6 @@
   }
 
   .cs_accordian {
-
     .cs_accordian_toggle {
       border: 2px solid var(--primary-color);
       border-radius: 50%;
@@ -386,7 +387,6 @@
   }
 
   @media (max-width: 575px) {
-
     .cs_accordian {
       .cs_accordian_head {
         padding: 20px 45px 20px 15px;
@@ -397,13 +397,10 @@
         }
       }
 
-
-
       .cs_accordian_body {
         padding: 5px 15px 20px 15px;
       }
     }
-
   }
 }
 
@@ -421,14 +418,16 @@
   .cs_accordian {
     border: 0;
     padding: 0;
-    margin-bottom: 40px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
 
     .cs_accordian_body {
       padding: 30px 0 0 0;
     }
 
     .cs_accordian_head {
-      padding: 0 0 25px 0;
+      padding: 0 0 15px 0;
       color: var(--primary-color);
       border-bottom: 1px solid rgba(2, 6, 38, 0.07);
       cursor: pointer;

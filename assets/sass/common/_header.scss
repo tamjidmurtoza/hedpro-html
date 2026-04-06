@@ -193,6 +193,12 @@
       align-items: center;
       gap: 30px;
 
+      a {
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+
       .cs_cart_style_1 {
         &:hover {
           color: var(--accent-color);
@@ -247,7 +253,7 @@
       align-items: center;
       height: inherit;
 
-      >li {
+      > li {
         height: inherit;
         position: relative;
         margin-right: 44px;
@@ -261,7 +267,7 @@
           }
         }
 
-        >a {
+        > a {
           height: inherit;
           display: inline-flex;
           align-items: center;
@@ -272,7 +278,7 @@
         }
 
         &.menu-item-has-children {
-          >a {
+          > a {
             position: relative;
             padding-right: 22px;
 
@@ -324,7 +330,6 @@
             color: var(--accent-color);
           }
         }
-
       }
     }
 
@@ -388,12 +393,11 @@
           margin-right: 0 !important;
         }
 
-
-        >li {
+        > li {
           width: 100%;
           margin-right: 0;
 
-          >a {
+          > a {
             display: inline-block;
             padding: 10px 15px;
             border: 0;
@@ -551,13 +555,15 @@
   &.cs_style_9 {
     &.cs_sticky_active {
       .cs_site_brand img {
-        filter: brightness(0) saturate(100%) invert(13%) sepia(55%) saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
+        filter: brightness(0) saturate(100%) invert(13%) sepia(55%)
+          saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
       }
     }
 
     &.active {
       .cs_site_brand img {
-        filter: brightness(0) saturate(100%) invert(13%) sepia(55%) saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
+        filter: brightness(0) saturate(100%) invert(13%) sepia(55%)
+          saturate(773%) hue-rotate(189deg) brightness(97%) contrast(95%);
       }
     }
 
@@ -573,7 +579,7 @@
 
     @media (max-width: 1399px) {
       .cs_nav_list {
-        >li {
+        > li {
           margin-right: 30px;
         }
       }
@@ -628,6 +634,13 @@
       .cs_header_center {
         display: flex;
         align-items: center;
+
+        a,
+        .cs_phone_icon {
+          &:hover {
+            opacity: 0.8;
+          }
+        }
 
         .cs_header_right {
           margin-left: 30px;
@@ -836,7 +849,7 @@
     @media (min-width: 1200px) {
       .cs_nav_list {
         .menu-item-has-children {
-          >a {
+          > a {
             &::before {
               content: "+";
             }
@@ -967,10 +980,23 @@
           height: 50px;
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.11);
+          transition: all 0.3s ease;
 
           .cs_cart_label {
             top: 8px;
             left: 27px;
+          }
+
+          &:hover {
+            svg {
+              color: var(--accent-color);
+            }
+          }
+        }
+
+        .cs_btn_style_4 {
+          &:hover {
+            color: var(--white-color);
           }
         }
       }
@@ -1008,7 +1034,7 @@
 
       .cs_nav_list {
         .menu-item-has-children {
-          >a {
+          > a {
             &::before {
               content: "+";
             }
@@ -1043,7 +1069,6 @@
 
       .cs_language_switcher {
         width: 90px;
-
       }
     }
 
@@ -1074,6 +1099,12 @@
             align-items: center;
             font-size: 16px;
             font-weight: 400;
+          }
+
+          a {
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
       }
@@ -1128,7 +1159,7 @@
       }
     }
 
-    @media (max-width:450px) {
+    @media (max-width: 450px) {
       .cs_header_cart_btns {
         gap: 15px;
       }
@@ -1227,6 +1258,13 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        .cs_btn_text {
+          transition: all 0.3s ease;
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
       }
     }
 
@@ -1264,7 +1302,6 @@
     }
   }
 
-
   /*=======================================================
     Header Style 10 
   =========================================================*/
@@ -1290,6 +1327,19 @@
           width: 45px;
           height: 45px;
           border: none;
+        }
+        .cs_search {
+          transition: all 0.3s ease;
+          &:hover {
+            i {
+              color: var(--accent-color);
+            }
+          }
+        }
+        .cs_hamburger_btn {
+          &:hover {
+            color: var(--accent-color);
+          }
         }
       }
     }
@@ -1492,7 +1542,7 @@
     }
   }
 
-  @media (max-width:450px) {
+  @media (max-width: 450px) {
     .cs_side_header_in {
       padding: 70px 15px 50px;
     }

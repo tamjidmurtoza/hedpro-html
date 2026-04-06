@@ -388,7 +388,6 @@
   }
 
   @media (max-width: 575px) {
-
     .cs_rating_section {
       left: 15px;
       right: initial;
@@ -683,6 +682,9 @@
     max-width: 1440px;
   }
 
+  .cs_slide {
+    position: relative;
+  }
   .cs_hero_img {
     position: absolute;
     bottom: 0;
@@ -840,7 +842,7 @@
     top: 0;
   }
 
-  .breadcrumb-item+.breadcrumb-item::before {
+  .breadcrumb-item + .breadcrumb-item::before {
     content: "/";
     color: var(--white-color);
     font-family: "Font Awesome 6 Free";
