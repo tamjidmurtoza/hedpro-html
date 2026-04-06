@@ -72,13 +72,15 @@
   .cs_order_card {
     padding: 105px 44px 175px 35px;
     background-color: var(--accent-color);
-    clip-path: polygon(50% 2%,
-        100% 0,
-        100% 60%,
-        100% 100%,
-        50% 98%,
-        0 100%,
-        0 0);
+    clip-path: polygon(
+      50% 2%,
+      100% 0,
+      100% 60%,
+      100% 100%,
+      50% 98%,
+      0 100%,
+      0 0
+    );
 
     .cs_btn_style_4 {
       .cs_icon_left {
@@ -90,7 +92,6 @@
 
   @media (max-width: 1199px) {
     .cs_text_wrapper {
-
       .cs_text {
         &:nth-child(even) {
           padding-left: 40px;
@@ -122,8 +123,13 @@
 }
 
 .cs_card_style_2 {
+  .cs_card_thumbnail {
+    max-width: 630px;
 
-
+    img {
+      width: 100%;
+    }
+  }
   .cs_btn_style_4 {
     margin-top: auto;
   }
@@ -566,7 +572,6 @@
   border: 1px solid transparent;
 
   .cs_card_thumnail {
-
     img {
       width: 100%;
     }
@@ -725,7 +730,6 @@
 .cs_card_style_14 {
   padding-bottom: 15px;
 
-
   .cs_card_content {
     border: 1px solid var(--border-color);
     padding: 25px 15px 52px;
@@ -777,7 +781,6 @@
 }
 
 .cs_card_wrapper_1 {
-
   .cs_glowing_card_1,
   .cs_glowing_card_2 {
     display: flex;
@@ -814,7 +817,6 @@
   }
 
   @media (max-width: 991px) {
-
     .cs_glowing_card_1,
     .cs_glowing_card_2 {
       justify-content: center;
@@ -829,7 +831,6 @@
   }
 
   @media (max-width: 575px) {
-
     .cs_glowing_card_1,
     .cs_glowing_card_2 {
       flex-direction: column;

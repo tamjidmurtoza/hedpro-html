@@ -38,7 +38,6 @@
     }
 
     &:hover {
-
       &::after,
       &::before {
         animation-play-state: paused;
@@ -85,17 +84,24 @@
     img {
       width: 100%;
     }
+  }
+  .cs_play_img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 16s infinite;
 
-    .cs_play_img {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: rotate 16s infinite;
-
-      &:hover {
-        animation-play-state: paused;
-      }
+    &:hover {
+      animation-play-state: paused;
     }
+  }
+  .cs_play_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    letter-spacing: 2px;
   }
 }
 

@@ -35,10 +35,12 @@
 }
 
 .draggable {
-  cursor: url(../img/drag.png) 16 9, ew-resize !important;
+  cursor:
+    url(../img/drag.png) 16 9,
+    ew-resize !important;
 }
 
-.slick-slide>div {
+.slick-slide > div {
   display: flex;
   flex-direction: column;
 }
@@ -135,9 +137,10 @@
 
   li {
     button {
-      height: 13px;
-      width: 13px;
-      background-color: #c7c7c7;
+      height: 8px;
+      width: 8px;
+      background-color: transparent;
+      border: 1px solid var(--black-color);
       border-radius: 50%;
       margin: 0;
       cursor: pointer;
@@ -148,22 +151,22 @@
       font-size: 0;
       position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-        border: 1px solid var(--accent-color);
-        border-radius: 50%;
-        display: none;
-      }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: -4px;
+      //   left: -4px;
+      //   right: -4px;
+      //   bottom: -4px;
+      //   border: 1px solid var(--accent-color);
+      //   border-radius: 50%;
+      //   display: none;
+      // }
     }
 
     &.slick-active {
       button {
-        background-color: var(--accent-color);
+        background-color: var(--black-color);
 
         &::after {
           display: block;
@@ -286,7 +289,6 @@
 
     .cs_brand_slider_wrapper_style_1,
     .cs_brand_slider_wrapper_style_2 {
-
       .cs_brands_list,
       .cs_brands_list_style_2 {
         gap: 0 40px;

@@ -56,7 +56,6 @@
   }
 
   @media (max-width: 575px) {
-
     .cs_cta_thumbnail {
       min-height: 400px;
     }
@@ -84,7 +83,6 @@
 }
 
 .cs_cta_style_2 {
-
   .cs_cta_thumbnail {
     width: calc(50vw + 14px);
     margin-left: calc(-50vw + 100%);
@@ -109,7 +107,6 @@
   }
 
   @media (max-width: 991px) {
-
     .cs_cta_thumbnail {
       margin-left: 0;
     }
@@ -123,6 +120,15 @@
     img {
       transform-origin: center center;
       animation: animo-y 22s linear infinite;
+    }
+    .cs_play_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      letter-spacing: 0.8px;
+      font-size: 8px;
     }
   }
 
@@ -273,21 +279,24 @@
 
   /* ANIMATIONS */
   .x1 {
-    animation: animateBubble 35s linear infinite,
+    animation:
+      animateBubble 35s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 5%;
     top: 15%;
   }
 
   .x2 {
-    animation: animateBubble 25s linear infinite,
+    animation:
+      animateBubble 25s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 8%;
     top: 0%;
   }
 
   .x3 {
-    animation: animateBubble 42s linear infinite,
+    animation:
+      animateBubble 42s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 40%;
     top: 80%;
@@ -295,21 +304,24 @@
   }
 
   .x4 {
-    animation: animateBubble 30s linear infinite,
+    animation:
+      animateBubble 30s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 60%;
     top: 5%;
   }
 
   .x5 {
-    animation: animateBubble 25s linear infinite,
+    animation:
+      animateBubble 25s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 80%;
     top: 10%;
   }
 
   .x6 {
-    animation: animateBubble 33s linear infinite,
+    animation:
+      animateBubble 33s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
     left: 95%;
     top: 5%;

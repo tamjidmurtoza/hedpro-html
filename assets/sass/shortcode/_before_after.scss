@@ -19,7 +19,8 @@
       padding: 6px 20px;
       position: absolute;
       top: 52px;
-      color: var(--white-color);
+      border-color: var(--black-color);
+      color: var(--black-color);
     }
   }
 
@@ -42,7 +43,6 @@
   .cs_after {
     span {
       right: 52px;
-      border-color: var(--white-color);
     }
   }
 
@@ -131,6 +131,11 @@
     .cs_shape_2 {
       right: 26%;
       top: 0;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid var(--border-color);
     }
 
     .cs_side_img_wrapper {
@@ -215,7 +220,6 @@
   }
 
   @media (max-width: 767px) {
-
     .cs_before_after {
       height: 350px;
     }

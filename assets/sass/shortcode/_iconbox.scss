@@ -37,7 +37,10 @@
 .cs_iconbox_style_3 {
   display: flex;
   gap: 20px 60px;
-  width: min(366px, 100%);
+
+  .cs_iconbox_info {
+    width: min(366px, 100%);
+  }
 
   .cs_iconbox_icon {
     position: relative;
@@ -82,6 +85,7 @@
       position: relative;
       z-index: 2;
       transition: all 0.4s ease;
+      border-radius: 0;
     }
 
     &::before {
@@ -113,7 +117,8 @@
   &:hover {
     .cs_iconbox_icon {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(4%)
+          saturate(394%) hue-rotate(248deg) brightness(112%) contrast(101%);
       }
 
       &::after {
@@ -141,7 +146,7 @@
 .cs_iconbox_style_5 {
   display: flex;
   gap: 15px;
-  padding: 14px;
+  padding: 14px 10px;
   border: 1px solid #d0d0d0;
   flex-wrap: wrap;
 }
@@ -159,7 +164,6 @@
   }
 
   &:hover {
-
     .cs_iconbox_icon {
       background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
     }
@@ -184,7 +188,6 @@
   }
 
   &:hover {
-
     .cs_iconbox_title {
       background: linear-gradient(90deg, #e026b2 0%, #007aff 100%);
       background-clip: text;
@@ -346,7 +349,7 @@
     top: 5px;
   }
 
-  @media (max-width:575px) {
+  @media (max-width: 575px) {
     padding-left: 75px;
 
     .cs_iconbox_icon {
@@ -366,10 +369,11 @@
 
 .cs_iconbox_wrapper_2 {
   display: flex;
-  gap: 30px;
+  gap: 12px;
 
-  @media (max-width: 767px) {
-    flex-direction: column;
+  @media (max-width: 1800px) {
+    // flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -465,7 +469,6 @@
 
   @media (max-width: 991px) {
     padding-left: 0px;
-
   }
 }
 
@@ -587,7 +590,7 @@
     }
   }
 
-  @media (max-width:1399px) {
+  @media (max-width: 1399px) {
     gap: 30px 20px;
 
     .cs_iconbox_style_14 {
@@ -596,22 +599,19 @@
     }
   }
 
-  @media (max-width:1199px) {
-
+  @media (max-width: 1199px) {
     .cs_iconbox_style_14 {
       width: fit-content;
     }
   }
 
-  @media (max-width:991px) {
-
+  @media (max-width: 991px) {
     .cs_iconbox_style_14 {
       width: calc(50% - 35px);
     }
   }
 
-  @media (max-width:767px) {
-
+  @media (max-width: 767px) {
     .cs_iconbox_style_14 {
       width: 100%;
     }
