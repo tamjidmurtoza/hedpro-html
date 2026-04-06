@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  @for $i from 1 through 40 {
+  @for $i from 1 through 50 {
     .cs_mb_lg_#{$i} {
       margin-bottom: $i + px;
     }

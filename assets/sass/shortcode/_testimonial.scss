@@ -75,7 +75,7 @@
     max-width: 520px;
     margin: auto;
 
-    > img {
+    >img {
       width: 100%;
       position: relative;
       z-index: 2;
@@ -217,7 +217,8 @@
     .cs_rating {
       overflow: visible;
       width: 120px;
-      color: #2e3a2a;
+      color: var(--border-color);
+
 
       &::before {
         font-weight: 900;
@@ -225,7 +226,7 @@
 
       .cs_rating_percentage {
         &::before {
-          color: var(--border-color);
+          color: #2e3a2a;
         }
       }
     }

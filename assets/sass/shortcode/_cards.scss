@@ -72,15 +72,13 @@
   .cs_order_card {
     padding: 105px 44px 175px 35px;
     background-color: var(--accent-color);
-    clip-path: polygon(
-      50% 2%,
-      100% 0,
-      100% 60%,
-      100% 100%,
-      50% 98%,
-      0 100%,
-      0 0
-    );
+    clip-path: polygon(50% 2%,
+        100% 0,
+        100% 60%,
+        100% 100%,
+        50% 98%,
+        0 100%,
+        0 0);
 
     .cs_btn_style_4 {
       .cs_icon_left {
@@ -130,6 +128,7 @@
       width: 100%;
     }
   }
+
   .cs_btn_style_4 {
     margin-top: auto;
   }
@@ -467,7 +466,7 @@
 
     @media (max-width: 575px) {
       &::after {
-        height: 1692px;
+        height: 85%;
       }
     }
   }
@@ -487,7 +486,13 @@
   }
 
   @media (max-width: 1199px) {
-    padding-top: 100px;
+    padding-top: 80px;
+  }
+
+  @media (max-width: 1199px) {
+    .container-fluid {
+      padding: 0 15px;
+    }
   }
 }
 
@@ -530,6 +535,12 @@
       .cs_counter_wrapper_in {
         margin-left: 0;
       }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_card_style_8 {
+      padding: 70px 15px;
     }
   }
 }
@@ -781,6 +792,7 @@
 }
 
 .cs_card_wrapper_1 {
+
   .cs_glowing_card_1,
   .cs_glowing_card_2 {
     display: flex;
@@ -817,6 +829,7 @@
   }
 
   @media (max-width: 991px) {
+
     .cs_glowing_card_1,
     .cs_glowing_card_2 {
       justify-content: center;
@@ -831,6 +844,7 @@
   }
 
   @media (max-width: 575px) {
+
     .cs_glowing_card_1,
     .cs_glowing_card_2 {
       flex-direction: column;
