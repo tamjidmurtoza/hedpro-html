@@ -222,16 +222,12 @@
       width: 120px;
       display: flex;
       align-items: center;
+      color: var(--border-color);
+      font-weight: 900;
 
-      &::before {
-        font-weight: 900;
-        color: var(--accent-color);
-      }
 
       .cs_rating_percentage {
-        &::before {
-          color: var(--border-color);
-        }
+        color: var(--accent-color);
       }
     }
 

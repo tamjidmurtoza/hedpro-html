@@ -47,17 +47,6 @@
   $(window).on("load", function () {
     preloader();
   });
-  $(window).on("scroll", function () {
-    stickyHeader();
-    showScrollUp();
-  });
-  $(window).on("resize", function () {
-    $(".cs_site_header").removeClass("active");
-    $(".cs_menu_toggle")
-      .removeClass("active")
-      .siblings(".cs_nav_list_wrap")
-      .removeClass("active");
-  });
 
   $(function () {
     mainNav();
@@ -97,7 +86,17 @@
       $(".cs_getting_year").text(date.getFullYear());
     }
   });
-
+  $(window).on("scroll", function () {
+    stickyHeader();
+    showScrollUp();
+  });
+  $(window).on("resize", function () {
+    $(".cs_site_header").removeClass("active");
+    $(".cs_menu_toggle")
+      .removeClass("active")
+      .siblings(".cs_nav_list_wrap")
+      .removeClass("active");
+  });
   /*=============================================================
     01. Preloader
   ===============================================================*/
@@ -112,7 +111,7 @@
   function mainNav() {
     $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
     $(".menu-item-has-children").append(
-      '<span class="cs_menu_dropdown_toggle"><span></span></span>'
+      '<span class="cs_menu_dropdown_toggle"><span></span></span>',
     );
     $(".cs_menu_toggle").on("click", function () {
       $(this)
@@ -236,7 +235,7 @@
         var centerVar = Boolean(parseInt($ts.attr("data-center"), 10));
         // Variable Width
         var variableWidthVar = Boolean(
-          parseInt($ts.attr("data-variable-width"), 10)
+          parseInt($ts.attr("data-variable-width"), 10),
         );
         // Pagination
         var paginaiton = $(this)
@@ -341,7 +340,7 @@
           $("html").removeClass("overflow-hidden");
           $(".cs_video_popup_container iframe").attr("src", "about:blank");
           e.preventDefault();
-        }
+        },
       );
     }
   }
@@ -355,7 +354,7 @@
         {
           scrollTop: 0,
         },
-        0
+        0,
       );
     });
   }
@@ -465,7 +464,7 @@
     AOS.init({
       offset: 100,
       duration: 800,
-      easing: "ease-in-out",
+      easing: "ease",
       once: true,
       mirror: false,
     });
@@ -622,7 +621,7 @@
               ? "prev"
               : "next";
             updateSlides(direction);
-          }
+          },
         );
         updateSlides("next");
       };

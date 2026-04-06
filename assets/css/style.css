@@ -4949,11 +4949,11 @@ input[type=number] {
 }
 .cs_footer_style_5 .cs_footer_widget_title::before {
   content: "";
-  width: 44%;
+  width: 45%;
   height: 1px;
   background: #3d3d3d;
   position: absolute;
-  bottom: -20px;
+  bottom: -15px;
 }
 .cs_footer_style_5 .cs_footer_bottom {
   padding: 30px;
@@ -5058,6 +5058,9 @@ input[type=number] {
 .cs_footer_style_6 .cs_newslatter .cs_btn_style_2::after, .cs_footer_style_6 .cs_newslatter .cs_btn_style_2::before {
   display: none;
 }
+.cs_footer_style_6 .cs_footer_row {
+  gap: 40px 60px;
+}
 .cs_footer_style_6 .cs_footer_col {
   flex: 1;
 }
@@ -5124,9 +5127,6 @@ input[type=number] {
   .cs_footer_style_6 .cs_newslatter .shape_2 {
     right: 12%;
   }
-  .cs_footer_style_6 .cs_footer_row {
-    flex-wrap: wrap;
-  }
   .cs_footer_style_6 .cs_3d_1 {
     display: none;
   }
@@ -5142,27 +5142,56 @@ input[type=number] {
     right: 6%;
   }
   .cs_footer_style_6 .cs_footer_row {
-    gap: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 40px 20px;
+  }
+  .cs_footer_style_6 .cs_footer_col {
+    grid-column: auto/span 2;
   }
   .cs_footer_style_6 .cs_footer_col:first-child {
-    flex: none;
-    width: calc(100% - 40px);
+    grid-column: auto/span 9;
   }
   .cs_footer_style_6 .cs_footer_col:last-child {
-    flex: none;
-    width: calc(100% - 40px);
+    grid-column: auto/span 3;
   }
 }
 @media (max-width: 991px) {
+  .cs_footer_style_6 .cs_newslatter {
+    padding: 40px 30px;
+    gap: 30px;
+  }
   .cs_footer_style_6 .cs_newslatter .shape_1,
   .cs_footer_style_6 .cs_newslatter .shape_2 {
     display: none;
+  }
+  .cs_footer_style_6 .cs_footer_row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cs_footer_style_6 .cs_footer_col {
+    grid-column: auto/span 1;
+  }
+  .cs_footer_style_6 .cs_footer_col:first-child {
+    grid-column: auto/span 3;
+  }
+  .cs_footer_style_6 .cs_footer_col:last-child {
+    grid-column: auto/span 3;
+  }
+}
+@media (max-width: 767px) {
+  .cs_footer_style_6 .cs_footer_row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cs_footer_style_6 .cs_footer_col {
+    grid-column: auto/span 1 !important;
   }
 }
 @media (max-width: 575px) {
   .cs_footer_style_6 .cs_newslatter {
     padding: 40px 15px;
+  }
+  .cs_footer_style_6 .cs_newslatter .cs_newslatter_input input {
+    padding: 16px 25px;
   }
   .cs_footer_style_6 .cs_newslatter .cs_btn_style_2 {
     position: initial;
@@ -5222,14 +5251,6 @@ input[type=number] {
 .cs_footer_style_7 .cs_footer_bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.cs_footer_style_7 .cs_footer_bottom .cs_footer_logo {
-  display: block;
-  width: 200px;
-  flex-shrink: 0;
-}
-.cs_footer_style_7 .cs_footer_bottom .cs_footer_logo img {
-  width: 100%;
-}
 @media (max-width: 1199px) {
   .cs_footer_style_7 .cs_footer_right {
     padding-left: 0;
@@ -5266,7 +5287,7 @@ input[type=number] {
   transform: translateX(-54%);
 }
 .cs_footer_style_8 .cs_shape_1 img {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 .cs_footer_style_8::after {
   content: "";
@@ -5375,11 +5396,11 @@ input[type=number] {
 }
 .cs_footer_style_8 .cs_footer_widget_title::before {
   content: "";
-  width: 44%;
+  width: 45%;
   height: 1px;
   background: #3d3d3d;
   position: absolute;
-  bottom: -20px;
+  bottom: -15px;
 }
 .cs_footer_style_8 .cs_footer_top {
   padding-bottom: 45px;
@@ -5490,8 +5511,11 @@ input[type=number] {
 .cs_footer_style_9 .cs_logo {
   width: min(180px, 100%);
 }
-.cs_footer_style_9 .cs_footer_img img {
+.cs_footer_style_9 .cs_footer_img {
   width: 100%;
+  height: 100%;
+  min-height: 860px;
+  background-repeat: no-repeat;
 }
 .cs_footer_style_9 .cs_footer_newsletter {
   padding: 70px 60px 40px;
@@ -5577,6 +5601,9 @@ input[type=number] {
   }
   .cs_footer_style_9 input {
     margin-bottom: 30px;
+  }
+  .cs_footer_style_9 .cs_footer_img {
+    min-height: 660px;
   }
 }
 @media (max-width: 767px) {
@@ -6703,10 +6730,13 @@ input[type=number] {
   padding: 0;
 }
 .cs_accordian_wrapper_3 .cs_accordian:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 .cs_accordian_wrapper_3 .cs_accordian .cs_accordian_body {
-  padding: 30px 0 0 0;
+  padding: 24px 0;
+}
+.cs_accordian_wrapper_3 .cs_accordian:last-child .cs_accordian_body {
+  padding: 24px 0 0;
 }
 .cs_accordian_wrapper_3 .cs_accordian .cs_accordian_head {
   padding: 0 0 15px 0;
@@ -6935,13 +6965,13 @@ input[type=number] {
   width: min(100%, 233px);
 }
 .cs_hero_style_3 .cs_hero_right_info .cs_rating {
-  color: var(--accent-color);
+  color: #c8c8c8;
 }
 .cs_hero_style_3 .cs_hero_right_info .cs_rating::before {
   font-weight: 900;
 }
 .cs_hero_style_3 .cs_hero_right_info .cs_rating .cs_rating_percentage {
-  color: #c8c8c8;
+  color: var(--accent-color);
 }
 @media (max-width: 1399px) {
   .cs_hero_style_3 .cs_hero_right_img {
@@ -7273,13 +7303,13 @@ input[type=number] {
   width: 120px;
 }
 .cs_hero_style_8 .cs_review .cs_rating {
-  color: var(--accent-color);
+  color: var(--border-color);
 }
 .cs_hero_style_8 .cs_review .cs_rating::before {
   font-weight: 900;
 }
 .cs_hero_style_8 .cs_review .cs_rating_percentage {
-  color: var(--border-color);
+  color: var(--accent-color);
 }
 .cs_hero_style_8 .cs_shape {
   position: absolute;
@@ -10570,13 +10600,11 @@ input[type=number] {
   width: 120px;
   display: flex;
   align-items: center;
-}
-.cs_product_style_6 .cs_product_info .cs_rating::before {
-  font-weight: 900;
-  color: var(--accent-color);
-}
-.cs_product_style_6 .cs_product_info .cs_rating .cs_rating_percentage::before {
   color: var(--border-color);
+  font-weight: 900;
+}
+.cs_product_style_6 .cs_product_info .cs_rating .cs_rating_percentage {
+  color: var(--accent-color);
 }
 .cs_product_style_6 .cs_product_info .cs_product_title:hover {
   color: var(--accent-color);
@@ -11064,13 +11092,13 @@ input[type=number] {
 .cs_testimonial_style_5 .cs_testimial_review .cs_rating {
   overflow: visible;
   width: 120px;
-  color: var(--accent-color);
+  color: var(--border-color);
 }
 .cs_testimonial_style_5 .cs_testimial_review .cs_rating::before {
   font-weight: 900;
 }
-.cs_testimonial_style_5 .cs_testimial_review .cs_rating .cs_rating_percentage::before {
-  color: var(--border-color);
+.cs_testimonial_style_5 .cs_testimial_review .cs_rating .cs_rating_percentage {
+  color: var(--accent-color);
 }
 .cs_testimonial_style_5 .cs_quote_img {
   top: -104px;
@@ -11783,7 +11811,6 @@ input[type=number] {
   position: absolute;
   right: -28%;
   top: -82px;
-  animation: rotate360 20s linear infinite;
   z-index: 33;
 }
 @media (max-width: 1199px) {

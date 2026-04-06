@@ -336,16 +336,14 @@
     .cs_rating {
       overflow: visible;
       width: 120px;
-      color: var(--accent-color);
+      color: var(--border-color);
 
       &::before {
         font-weight: 900;
       }
 
       .cs_rating_percentage {
-        &::before {
-          color: var(--border-color);
-        }
+        color: var(--accent-color);
       }
     }
   }

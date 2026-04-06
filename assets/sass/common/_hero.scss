@@ -174,14 +174,15 @@
     }
 
     .cs_rating {
-      color: var(--accent-color);
+      color: #c8c8c8;
+
 
       &::before {
         font-weight: 900;
       }
 
       .cs_rating_percentage {
-        color: #c8c8c8;
+        color: var(--accent-color);
       }
     }
   }
@@ -572,7 +573,7 @@
     }
 
     .cs_rating {
-      color: var(--accent-color);
+      color: var(--border-color);
 
       &::before {
         font-weight: 900;
@@ -580,7 +581,7 @@
     }
 
     .cs_rating_percentage {
-      color: var(--border-color);
+      color: var(--accent-color);
     }
   }
 
