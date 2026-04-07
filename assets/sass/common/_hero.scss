@@ -270,7 +270,7 @@
   padding: 320px 0 276px;
 
   .cs_hero_title {
-    padding-bottom: 83px;
+    padding-bottom: 70px;
     width: min(700px, 100%);
   }
 
@@ -364,7 +364,7 @@
     }
 
     .cs_rating_text {
-      h3 {
+      h2 {
         display: flex;
         align-items: center;
         gap: 17px;
@@ -916,7 +916,7 @@
   .breadcrumb-item+.breadcrumb-item::before {
     content: "/";
     color: var(--white-color);
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Free";
     font-weight: 900;
   }
 

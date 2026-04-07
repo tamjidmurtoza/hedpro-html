@@ -113,7 +113,7 @@
   .cs_about_detais {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 24px 48px;
     flex-wrap: wrap;
 
     .cs_about_list {
@@ -133,7 +133,7 @@
         }
 
         &:not(:last-child) {
-          margin-bottom: 17px;
+          margin-bottom: 7px;
         }
       }
     }

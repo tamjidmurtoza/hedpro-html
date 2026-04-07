@@ -121,6 +121,7 @@
       transform-origin: center center;
       animation: animo-y 22s linear infinite;
     }
+
     .cs_play_text {
       position: absolute;
       top: 50%;
@@ -545,7 +546,7 @@
 
     &::after {
       content: "\f107";
-      font-family: "Font Awesome 6 Free";
+      font-family: "Font Awesome 7 Free";
       font-weight: 900;
       position: absolute;
       right: 12px;

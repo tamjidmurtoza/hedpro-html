@@ -2411,7 +2411,7 @@ label {
 .cs_rating_percentage::before,
 .cs_rating::before {
   content: "\f005\f005\f005\f005\f005";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   position: absolute;
   top: 0;
   left: 0;
@@ -2755,7 +2755,7 @@ label {
   transform: translateY(-50%);
   pointer-events: none;
   font-size: 12px;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 900;
   color: var(--primary-color);
 }
@@ -2980,6 +2980,9 @@ input[type=number] {
 .cs_site_header.cs_sticky_active .cs_btn_style_1 {
   border-color: currentColor;
 }
+.cs_site_header.cs_sticky_active.cs_style_2 .cs_header_top .cs_header_top_in {
+  height: 60px;
+}
 .cs_site_header {
   /*======================================================
    Main Header
@@ -2993,69 +2996,8 @@ input[type=number] {
   transition: all 0.3s ease;
 }
 .cs_site_header {
-  /* =============== Language Switcher Styling ================ */
-}
-.cs_site_header .cs_language_select {
-  cursor: pointer;
-  position: relative;
-  z-index: 99;
-}
-.cs_site_header .cs_language_switcher {
-  width: 110px;
-  height: inherit;
-  padding: 20px 20px 20px 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.cs_site_header .cs_language_switcher::after {
-  content: "\f078";
-  font-family: "Font Awesome 6 Free";
-  font-size: 12px;
-  font-weight: 900;
-  color: currentColor;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.cs_site_header .flag-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  flex: none;
-  background-size: cover;
-  border: none;
-}
-.cs_site_header .cs_language_dropdown {
-  display: none;
-  width: auto;
-  padding: 15px;
-  background-color: var(--white-color);
-  box-shadow: 0px 4px 16px 1px rgba(2, 0, 181, 0.1);
-  color: var(--primary-color);
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-.cs_site_header .cs_language_dropdown button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  border: none;
-  padding: 0;
-  margin-bottom: 10px;
-}
-.cs_site_header .cs_language_dropdown button:last-child {
-  margin-bottom: 0;
-}
-.cs_site_header {
   /*====================================================
-    Mobile Menu Styling
+   Mobile Menu Styling
   ======================================================*/
 }
 .cs_site_header .cs_menu_toggle {
@@ -3065,7 +3007,8 @@ input[type=number] {
   position: absolute;
   top: 38px;
   right: 15px;
-  z-index: 999;
+  z-index: 1000;
+  /* Fixed: Higher than header z-index */
 }
 .cs_site_header .cs_menu_toggle span,
 .cs_site_header .cs_menu_toggle span:before,
@@ -3120,17 +3063,15 @@ input[type=number] {
   align-items: center;
   gap: 30px;
 }
-.cs_site_header .cs_main_header_right .cs_header_cart_btns .cs_cart_style_1:hover {
-  color: var(--accent-color);
-}
-.cs_site_header .cs_main_header_right .cs_header_cart_btns .cs_cart_style_1:hover {
-  color: var(--accent-color);
-}
 .cs_site_header .cs_main_header_right .cs_header_cart_btns .cs_cart_style_1 {
   width: 45px;
   height: 50px;
   border: 1px solid currentColor;
   position: relative;
+  transition: all 0.3s ease;
+}
+.cs_site_header .cs_main_header_right .cs_header_cart_btns .cs_cart_style_1:hover {
+  color: var(--accent-color);
 }
 .cs_site_header .cs_main_header_right .cs_header_cart_btns .cs_cart_style_1 .cs_cart_label {
   position: absolute;
@@ -3169,6 +3110,7 @@ input[type=number] {
   .cs_site_header .cs_nav_list > li {
     height: inherit;
     position: relative;
+    /* Fixed: Required for dropdown positioning */
     margin-right: 44px;
   }
   .cs_site_header .cs_nav_list > li:last-child {
@@ -3187,13 +3129,19 @@ input[type=number] {
   .cs_site_header .cs_nav_list > li > a:hover {
     color: var(--accent-color);
   }
+  .cs_site_header .cs_nav_list > li > a:focus-visible {
+    /* Fixed: Added accessibility focus state */
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
   .cs_site_header .cs_nav_list > li.menu-item-has-children > a {
     position: relative;
     padding-right: 22px;
   }
   .cs_site_header .cs_nav_list > li.menu-item-has-children > a::before {
     content: "\f078";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Free";
     font-size: 12px;
     font-weight: 900;
     position: absolute;
@@ -3205,7 +3153,8 @@ input[type=number] {
     top: 100%;
     opacity: 1;
     visibility: visible;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
+    /* Fixed: Consistent transition duration */
   }
   .cs_site_header .cs_nav_list .cs_dropdown_list {
     list-style: none;
@@ -3220,16 +3169,24 @@ input[type=number] {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
+    /* Fixed: Consistent transition duration */
   }
   .cs_site_header .cs_nav_list .cs_dropdown_list a {
     padding: 10px 20px;
     line-height: inherit;
     display: block;
     color: var(--primary-color);
+    transition: all 0.3s ease;
   }
   .cs_site_header .cs_nav_list .cs_dropdown_list a:hover {
     color: var(--accent-color);
+  }
+  .cs_site_header .cs_nav_list .cs_dropdown_list a:focus-visible {
+    /* Fixed: Added accessibility focus state */
+    outline: 2px solid var(--accent-color);
+    outline-offset: -2px;
+    background-color: rgba(0, 0, 0, 0.05);
   }
   .cs_site_header.cs_style_7 .cs_logo_wrap {
     height: calc(100% + 40px);
@@ -3270,12 +3227,21 @@ input[type=number] {
     height: 100%;
     line-height: 1.6em;
     overflow-y: auto;
-    overflow: auto;
-    scrollbar-width: none;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    /* Fixed: Changed from 'none' for accessibility */
     -ms-overflow-style: none;
   }
   .cs_site_header .cs_nav .cs_nav_list::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+    /* Fixed: Added width instead of hiding */
+  }
+  .cs_site_header .cs_nav .cs_nav_list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .cs_site_header .cs_nav .cs_nav_list::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5px;
   }
   .cs_site_header .cs_nav .cs_nav_list li {
     margin-right: 0 !important;
@@ -3406,9 +3372,6 @@ input[type=number] {
   .cs_site_header.cs_style_1 .container, .cs_site_header.cs_style_9 .container {
     max-width: 1620px;
   }
-  .cs_site_header.cs_style_1 .cs_main_header_left, .cs_site_header.cs_style_9 .cs_main_header_left {
-    left: 50%;
-  }
 }
 @media (max-width: 1399px) {
   .cs_site_header.cs_style_1 .cs_nav_list > li, .cs_site_header.cs_style_9 .cs_nav_list > li {
@@ -3421,6 +3384,7 @@ input[type=number] {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    /* Fixed: Added missing transform */
   }
 }
 @media (max-width: 1199px) {
@@ -3442,10 +3406,12 @@ input[type=number] {
   color: #0b0d26;
 }
 .cs_site_header.cs_style_2 .cs_header_top .cs_header_top_in {
-  padding: 13px 0 11px 0;
+  height: 70px;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.4s ease;
 }
 .cs_site_header.cs_style_2 .cs_header_top .cs_header_left .cs_location_icon {
   margin-right: 5px;
@@ -3464,7 +3430,7 @@ input[type=number] {
 .cs_site_header.cs_style_2 .cs_header_top .cs_user_area {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 .cs_site_header.cs_style_2 .cs_header_top .cs_user_area .cs_phone_icon {
   margin-right: 7px;
@@ -3558,8 +3524,9 @@ input[type=number] {
   border-right: none;
   width: 45px;
   height: 45px;
+  transition: all 0.3s ease;
 }
-.cs_site_header.cs_style_4 .cs_main_header_right .cs_border::after {
+.cs_site_header.cs_style_4 .cs_main_header_right .cs_border::before, .cs_site_header.cs_style_4 .cs_main_header_right .cs_border::after {
   content: "";
   position: absolute;
   top: -8px;
@@ -3570,7 +3537,11 @@ input[type=number] {
   transition: all 0.3s ease;
 }
 .cs_site_header.cs_style_4 .cs_main_header_right .cs_border::before {
-  display: none;
+  display: block;
+  /* Fixed: Added display property */
+}
+.cs_site_header.cs_style_4 .cs_main_header_right .cs_border::after {
+  content: "";
 }
 .cs_site_header.cs_style_4 .cs_main_header_right .cs_border:hover {
   color: var(--accent-color);
@@ -4236,6 +4207,71 @@ input[type=number] {
   transform: scale(1.05);
 }
 
+/*====================================================== 
+   Language Switcher Styling 
+  =========================================================*/
+.cs_language_select {
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+.cs_language_select .cs_language_switcher {
+  width: 110px;
+  height: inherit;
+  padding: 0 20px 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.cs_language_select .cs_language_switcher::after {
+  content: "\f078";
+  font-family: "Font Awesome 7 Free";
+  font-size: 12px;
+  font-weight: 900;
+  color: currentColor;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cs_language_select .flag-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex: none;
+  background-size: cover;
+  border: none;
+}
+.cs_language_select .cs_language_dropdown {
+  display: none;
+  width: auto;
+  padding: 15px;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 16px 1px rgba(2, 0, 181, 0.1);
+  color: var(--primary-color);
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+}
+.cs_language_select .cs_language_dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.cs_language_select .cs_language_dropdown button:last-child {
+  margin-bottom: 0;
+}
+.cs_language_select .cs_language_dropdown button:hover {
+  color: var(--accent-color);
+}
+
 /*====================================================
  Header Search
 ======================================================*/
@@ -4608,7 +4644,7 @@ input[type=number] {
 }
 .cs_footer_style_3 input {
   display: block;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   padding: 20px;
   width: min(1041px, 100%);
   border-radius: 7px;
@@ -6244,7 +6280,7 @@ input[type=number] {
 .cs_about_style_4 .cs_about_detais {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 24px 48px;
   flex-wrap: wrap;
 }
 .cs_about_style_4 .cs_about_detais .cs_about_list li {
@@ -6262,7 +6298,7 @@ input[type=number] {
   left: 0;
 }
 .cs_about_style_4 .cs_about_detais .cs_about_list li:not(:last-child) {
-  margin-bottom: 17px;
+  margin-bottom: 7px;
 }
 .cs_about_style_4 .cs_about_details_img img {
   width: 100%;
@@ -7044,7 +7080,7 @@ input[type=number] {
   padding: 320px 0 276px;
 }
 .cs_hero_style_4 .cs_hero_title {
-  padding-bottom: 83px;
+  padding-bottom: 70px;
   width: min(700px, 100%);
 }
 .cs_hero_style_4 .cs_hero_bottom {
@@ -7124,7 +7160,7 @@ input[type=number] {
 .cs_hero_style_5 .cs_rating_section .cs_rating_img .cs_img:last-child {
   bottom: 30px;
 }
-.cs_hero_style_5 .cs_rating_section .cs_rating_text h3 {
+.cs_hero_style_5 .cs_rating_section .cs_rating_text h2 {
   display: flex;
   align-items: center;
   gap: 17px;
@@ -7570,7 +7606,7 @@ input[type=number] {
 .cs_about_hero .breadcrumb-item + .breadcrumb-item::before {
   content: "/";
   color: var(--white-color);
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 900;
 }
 .cs_about_hero .breadcrumb {
@@ -8355,7 +8391,7 @@ input[type=number] {
 }
 .cs_card_wrapper_3 .cs_card_style_15::before {
   content: "\f192";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 400;
   font-size: 16px;
   line-height: 1em;
@@ -8845,7 +8881,7 @@ input[type=number] {
 }
 .cs_cta_style_6 .ts-control::after {
   content: "\f107";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 900;
   position: absolute;
   right: 12px;
@@ -11471,7 +11507,7 @@ input[type=number] {
 .cs_before_after_style_1 .cs_arrow_down::before {
   content: "\f107";
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free";
   position: absolute;
   top: 0;
   animation: dropDown 3s infinite;
@@ -12079,7 +12115,7 @@ input[type=number] {
   width: 100%;
   height: 100%;
 }
-.cs_cart_table .cs_cart_table_media h3 {
+.cs_cart_table .cs_cart_table_media h2 {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0;
